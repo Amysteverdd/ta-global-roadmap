@@ -1,0 +1,1326 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Ta Global Roadmap 2026 2027",
+  "schemaVersion": 1,
+  "description": "Global TA Ops Holistic Roadmap 2026–2027. Auto-refreshed daily. Password-protected. Covers Global Programs, TA Ops S&O, RecTech, G&A, PD&A, RPO Programs, and Global CE tracks.",
+  "mcpTools": [
+    "mcp__abec374e-d418-4a2d-b14d-1ba8405ef537__read_file_content"
+  ],
+  "mcpServerNames": [
+    "Google Drive"
+  ]
+}
+</script>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Global TA Ops Holistic Roadmap - 2026/2027</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f5f7;color:#1d1d1f;font-size:13px}
+.header{background:#1d1d1f;color:#fff;padding:20px 24px 16px}
+.header h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.header p{font-size:12px;color:#aaa;margin-top:4px}
+.header-meta{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.header-meta span{font-size:11px;color:#ccc}
+.header-meta strong{color:#fff}
+.tabs{background:#fff;border-bottom:1px solid #e0e0e0;padding:0 24px;display:flex;gap:0;overflow-x:auto}
+.tab{padding:12px 16px;font-size:12px;font-weight:600;color:#666;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.tab.active{color:#e3143c;border-bottom-color:#e3143c}
+.tab:hover:not(.active){color:#333;background:#f9f9f9}
+.panel{display:none;padding:20px 24px}
+.panel.active{display:block}
+.filters{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.filter-label{font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-right:2px}
+.filter-btn{padding:5px 12px;border-radius:20px;border:1px solid #ddd;background:#fff;font-size:11px;cursor:pointer;transition:all .15s;color:#555}
+.filter-btn:hover:not(.active){border-color:#999;color:#333}
+.filter-btn.active{background:#1d1d1f;color:#fff;border-color:#1d1d1f}
+.filter-btn[data-track="gp"].active{background:#7c3aed;border-color:#7c3aed}
+.filter-btn[data-track="ops"].active{background:#0077b6;border-color:#0077b6}
+.filter-btn[data-track="tech"].active{background:#2e7d32;border-color:#2e7d32}
+.filter-btn[data-track="ga"].active{background:#f57f17;border-color:#f57f17}
+.filter-btn[data-track="pda"].active{background:#880e4f;border-color:#880e4f}
+.filter-btn[data-track="rpo"].active{background:#00695c;border-color:#00695c}
+.filter-btn[data-track="ce"].active{background:#5c6bc0;border-color:#5c6bc0}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;margin-bottom:24px}
+.summary-card{background:#fff;border-radius:10px;padding:14px 16px;border:1px solid #e8e8e8}
+.summary-card .num{font-size:28px;font-weight:700;line-height:1}
+.summary-card .lbl{font-size:11px;color:#888;margin-top:4px}
+.card-green .num{color:#34c759}.card-orange .num{color:#ff9500}.card-red .num{color:#e3143c}.card-blue .num{color:#007aff}
+.gantt-wrapper{overflow-x:auto}
+.gantt{min-width:900px}
+.gantt-header{display:grid;grid-template-columns:260px 1fr;margin-bottom:8px}
+.gantt-quarters{display:grid;grid-template-columns:repeat(6,1fr);border-left:1px solid #e0e0e0}
+.gantt-q{text-align:center;font-size:11px;font-weight:700;color:#888;padding:6px 0;background:#f9f9f9;border-right:1px solid #e8e8e8}
+.gantt-q.yr2027{background:#fff4f0;color:#c0392b}
+.track{margin-bottom:20px}
+.track-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:6px 10px;border-radius:6px}
+.track-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.track-name{font-size:12px;font-weight:700;color:#1d1d1f}
+.track-count{font-size:11px;color:#888}
+.gantt-row{display:grid;grid-template-columns:260px 1fr;margin-bottom:4px;align-items:center}
+.row-label{font-size:12px;padding-right:12px;line-height:1.3;color:#333;cursor:default}
+.row-label .dri{font-size:10px;color:#999;display:block;margin-top:1px}
+.row-bar-container{display:grid;grid-template-columns:repeat(6,1fr);border-left:1px solid #e0e0e0;height:26px;position:relative;background:repeating-linear-gradient(90deg,transparent,transparent calc(100%/6 - 1px),#f0f0f0 calc(100%/6 - 1px),#f0f0f0 calc(100%/6))}
+.yr-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:#e3143c;opacity:.3;z-index:1}
+.bar{position:absolute;height:18px;top:4px;border-radius:4px;display:flex;align-items:center;padding:0 6px;font-size:10px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:opacity .15s;z-index:2}
+.bar:hover{opacity:.82;transform:scaleY(1.05)}
+.bar.status-completed{background:#34c759}
+.bar.status-in-progress{background:#007aff}
+.bar.status-not-started{background:#aaa}
+.bar.status-blocked{background:#ff3b30}
+.bar.status-parked,.bar.status-delayed{background:#ff9500}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;padding:12px 16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8;align-items:center}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:11px;color:#555}
+.legend-swatch{width:14px;height:14px;border-radius:3px;flex-shrink:0}
+.table-wrapper{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e8e8e8}
+th{background:#f5f5f7;font-size:11px;font-weight:700;color:#666;padding:10px 12px;text-align:left;text-transform:uppercase;letter-spacing:.5px;position:sticky;top:0;z-index:3;border-bottom:1px solid #e0e0e0}
+td{padding:9px 12px;font-size:12px;border-bottom:1px solid #f0f0f0;vertical-align:top;line-height:1.4}
+tr:hover td{background:#f9f9fb}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;white-space:nowrap}
+.badge-completed{background:#dcf5e7;color:#1a7a35}
+.badge-in-progress{background:#e3f0ff;color:#0062d1}
+.badge-not-started{background:#f0f0f0;color:#666}
+.badge-blocked{background:#ffe5e5;color:#c0392b}
+.badge-parked{background:#fff3e0;color:#b35a00}
+.badge-2026{background:#e3f0ff;color:#0062d1}
+.badge-2027{background:#fff0f5;color:#c0392b}
+.badge-track-gp{background:#f0e6ff;color:#7c3aed}
+.badge-track-ops{background:#e3f7ff;color:#0077b6}
+.badge-track-tech{background:#e8f5e9;color:#2e7d32}
+.badge-track-ga{background:#fff8e1;color:#f57f17}
+.badge-track-pda{background:#fce4ec;color:#880e4f}
+.badge-track-rpo{background:#e0f2f1;color:#00695c}
+.badge-track-ce{background:#ede7f6;color:#5c6bc0}
+.search-box{padding:7px 12px;border:1px solid #ddd;border-radius:8px;font-size:12px;width:220px;outline:none}
+.search-box:focus{border-color:#007aff}
+.dep-section{margin-bottom:24px}
+.dep-section h3{font-size:13px;font-weight:700;color:#333;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #e8e8e8}
+.dep-card{background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:14px;margin-bottom:10px;scroll-margin-top:80px;transition:outline .1s}
+.dep-card h4{font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:6px}
+.dep-chain{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.dep-node{padding:4px 10px;border-radius:4px;font-size:11px;font-weight:600}
+.dep-node.done{background:#dcf5e7;color:#1a7a35}
+.dep-node.active{background:#e3f0ff;color:#0062d1}
+.dep-node.future{background:#f0f0f0;color:#666}
+.dep-node.blocked{background:#ffe5e5;color:#c0392b}
+.dep-arrow{color:#bbb;font-size:14px}
+.dep-note{font-size:11px;color:#888;margin-top:4px}
+.dep-status-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.dep-status{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px}
+.dep-status-blocked{background:#ffe5e5;color:#c0392b}
+.dep-status-risk{background:#fff3e0;color:#b35a00}
+.dep-status-ontrack{background:#dcf5e7;color:#1a7a35}
+.dep-status-future{background:#f0f0f0;color:#666}
+.dep-next{font-size:11px;color:#555;font-style:italic}
+.dep-explainer{background:#f5f5f7;border-radius:10px;padding:14px 16px;margin-bottom:20px;font-size:12px;color:#555;line-height:1.6}
+.dep-explainer strong{color:#1d1d1f}
+.overlap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.overlap-card{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:16px}
+.overlap-card h4{font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:6px}
+.overlap-card ul{list-style:none}
+.overlap-card ul li{font-size:11px;color:#555;padding:4px 0;border-bottom:1px solid #f9f9f9;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.overlap-card ul li:last-child{border-bottom:none}
+.track-chip{font-size:10px;padding:1px 6px;border-radius:8px;white-space:nowrap;flex-shrink:0}
+.whats-new{background:#f0fff4;border:1px solid #b7ebc8;border-radius:10px;padding:14px 16px;margin-bottom:20px}
+.whats-new h3{font-size:12px;font-weight:700;color:#1a7a35;margin-bottom:10px}
+.whats-new ul{list-style:none;font-size:12px;color:#333}
+.whats-new ul li{padding:3px 0;display:flex;gap:8px}
+.change-tag{font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px}
+.tag-new{background:#dcf5e7;color:#1a7a35}
+.tag-updated{background:#e3f0ff;color:#0062d1}
+.tag-risk{background:#ffe5e5;color:#c0392b}
+.tag-milestone{background:#f0e6ff;color:#7c3aed}
+.doc-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:20px;margin-bottom:16px}
+.doc-card-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:12px}
+.doc-icon{width:42px;height:42px;background:#e3f0ff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.doc-title{font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:3px}
+.doc-meta{font-size:11px;color:#888}
+.doc-desc{font-size:12px;color:#555;line-height:1.6;margin-bottom:12px}
+.doc-related{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.doc-chip{font-size:11px;padding:3px 10px;border-radius:8px;background:#f0f0f0;color:#555}
+.doc-open-btn{display:inline-flex;align-items:center;gap:6px;background:#1d1d1f;color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;text-decoration:none}
+.doc-open-btn:hover{background:#333}
+.doc-add-placeholder{border:2px dashed #ddd;border-radius:12px;padding:24px;text-align:center;color:#aaa;font-size:12px;cursor:pointer;transition:border-color .2s}
+.doc-add-placeholder:hover{border-color:#999;color:#666}
+#gtt{position:fixed;z-index:9999;background:#fff;border:1px solid #ddd;border-radius:12px;padding:16px;width:310px;box-shadow:0 8px 32px rgba(0,0,0,.18);font-size:12px;line-height:1.5;display:none;max-height:80vh;overflow-y:auto}
+#gtt .gtt-title{font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:8px}
+#gtt .gtt-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+#gtt .gtt-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#999;margin-bottom:3px;margin-top:8px}
+#gtt .gtt-body{color:#444;font-size:11px}
+#gtt .gtt-blocked{background:#ffe5e5;border-radius:6px;padding:8px;margin-top:8px;font-size:11px;color:#c0392b}
+#gtt .gtt-deps{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+#gtt .gtt-dep-tag{background:#f0f0f0;color:#555;font-size:10px;padding:2px 8px;border-radius:8px}
+#gtt .gtt-doc-link{display:inline-flex;align-items:center;gap:4px;color:#007aff;font-size:11px;text-decoration:none;margin-top:6px;cursor:pointer}
+#gtt .gtt-jump-btn{display:inline-flex;align-items:center;gap:5px;background:#f0e6ff;color:#7c3aed;font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;border:none;cursor:pointer;margin-top:10px;width:100%}
+#gtt .gtt-jump-btn:hover{background:#e0d0ff}
+.gantt-header{position:sticky;top:44px;z-index:12;background:#f5f5f7}
+.gantt-header-inner{position:relative}
+.today-line{position:absolute;top:-2px;bottom:-2px;width:2.5px;background:#e3143c;z-index:5;pointer-events:none;border-radius:2px}
+.today-label{position:absolute;top:-20px;font-size:9px;font-weight:700;color:#e3143c;background:#fff;padding:1px 5px;border-radius:3px;border:1px solid #e3143c;white-space:nowrap;transform:translateX(-50%)}
+.gantt-quarters{position:relative}
+.track-collapsed .gantt-row{display:none !important}
+.track-toggle{background:none;border:1px solid rgba(0,0,0,.15);border-radius:4px;width:20px;height:20px;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-left:auto;flex-shrink:0;color:#555;line-height:1}
+.track-toggle:hover{background:rgba(0,0,0,.08)}
+</style></head><body>
+
+<style>
+#auth-gate{position:fixed;inset:0;z-index:99999;background:#1d1d1f;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+#auth-card{background:#fff;border-radius:16px;padding:40px 44px;width:360px;max-width:90vw;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+#auth-card .logo{font-size:28px;margin-bottom:8px}
+#auth-card h2{font-size:17px;font-weight:700;color:#1d1d1f;margin-bottom:4px}
+#auth-card p{font-size:12px;color:#888;margin-bottom:24px}
+#auth-pw{width:100%;padding:12px 14px;border:1.5px solid #ddd;border-radius:10px;font-size:14px;outline:none;text-align:center;letter-spacing:2px;box-sizing:border-box;transition:border-color .2s}
+#auth-pw:focus{border-color:#e3143c}
+#auth-btn{margin-top:12px;width:100%;padding:12px;background:#e3143c;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s}
+#auth-btn:hover{background:#c00f2f}
+#auth-err{font-size:12px;color:#e3143c;margin-top:10px;min-height:18px;transition:opacity .2s}
+#auth-gate.fade-out{animation:authFade .35s ease forwards}
+@keyframes authFade{to{opacity:0;pointer-events:none}}
+</style>
+<div id="auth-gate">
+  <div id="auth-card">
+    <div class="logo">🌍</div>
+    <h2>Global TA Roadmap 2026–2027</h2>
+    <p>Enter your access password to continue</p>
+    <input id="auth-pw" type="password" placeholder="Password" autocomplete="current-password" onkeydown="if(event.key==='Enter')checkAuth()">
+    <button id="auth-btn" onclick="checkAuth()">Access Roadmap</button>
+    <div id="auth-err"></div>
+  </div>
+</div>
+<script>
+(function(){
+  const HASH='fbd019f2066ed32b9919d3f7480f97bb1dc4cd6ea74f5ac0fc933bbfe867491b';
+  if(sessionStorage.getItem('ta_auth')==='1'){
+    document.getElementById('auth-gate').style.display='none';
+    return;
+  }
+  document.body.style.overflow='hidden';
+})();
+async function checkAuth(){
+  const pw=document.getElementById('auth-pw').value;
+  const err=document.getElementById('auth-err');
+  if(!pw){err.textContent='Please enter the password.';return;}
+  const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(pw));
+  const hash=Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  const HASH='fbd019f2066ed32b9919d3f7480f97bb1dc4cd6ea74f5ac0fc933bbfe867491b';
+  if(hash===HASH){
+    sessionStorage.setItem('ta_auth','1');
+    document.body.style.overflow='';
+    const gate=document.getElementById('auth-gate');
+    gate.classList.add('fade-out');
+    setTimeout(()=>gate.style.display='none',360);
+  } else {
+    err.textContent='Incorrect password. Try again.';
+    document.getElementById('auth-pw').value='';
+    document.getElementById('auth-pw').focus();
+  }
+}
+</script>
+<div class="header">
+  <h1>🌍 Global TA Ops Holistic Roadmap — 2026/2027</h1>
+  <p>Consolidated view across Global Programs · TA Ops S&amp;O · RecTech · G&amp;A Integration · PD&amp;A</p>
+  <div class="header-meta">
+    <span><strong>Sources:</strong> Global Unified Processes · Global Programmes Tracker · G&amp;A Compass · PD&amp;A Roadmap · RPO Roadmap · Global CE 2026 Project Plan</span>
+    <span><strong>Updated:</strong> July 17, 2026 &nbsp;🔄 Auto-refreshed</span>
+    <span><strong>Exec Sponsor:</strong> Amy Stever</span>
+  </div>
+</div>
+<div class="tabs">
+  <div class="tab active" onclick="showTab('timeline',this)">📅 Timeline / Gantt</div>
+  <div class="tab" onclick="showTab('overview',this)">Overview</div>
+  <div class="tab" onclick="showTab('items',this)">All Items</div>
+  <div class="tab" onclick="showTab('dependencies',this)">Interdependencies</div>
+  <div class="tab" onclick="showTab('overlap',this)">Overlaps</div>
+  <div class="tab" onclick="showTab('quarterly',this)">📅 Q3 &amp; Q4 Focus</div>
+  <div class="tab" onclick="showTab('docs',this)">📄 Docs</div>
+  <div class="tab" onclick="showTab('sources',this)">📂 Sources</div>
+  <div class="tab" onclick="showTab('hop',this)">👥 HoP</div>
+  <div class="tab" onclick="showTab('global-programs',this)">🌍 Global Programs</div>
+</div>
+
+</div>
+<!-- TIMELINE (default) -->
+<div id="panel-timeline" class="panel active">
+<div class="legend">
+  <strong style="font-size:11px;color:#555">Status:</strong>
+  <div class="legend-item"><div class="legend-swatch" style="background:#34c759"></div>Completed</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#007aff"></div>In Progress</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#aaa"></div>Not Started</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#ff3b30"></div>Blocked</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#ff9500"></div>Parked/Delayed</div>
+  <div style="margin-left:8px;padding-left:8px;border-left:1px solid #e0e0e0;font-size:11px;color:#888">Hover bars for detail &nbsp;·&nbsp; Click multiple tracks to compare</div>
+</div>
+<div class="filters">
+  <span class="filter-label">Track:</span>
+  <button id="filter-all" class="filter-btn active" onclick="filterTrack('all',this)">All</button>
+  <button id="filter-gp" class="filter-btn" data-track="gp" onclick="filterTrack('gp',this)">🟣 Global Programs</button>
+  <button id="filter-ops" class="filter-btn" data-track="ops" onclick="filterTrack('ops',this)">🔵 TA Ops S&amp;O</button>
+  <button id="filter-tech" class="filter-btn" data-track="tech" onclick="filterTrack('tech',this)">🟢 RecTech / Tools</button>
+  <button id="filter-ga" class="filter-btn" data-track="ga" onclick="filterTrack('ga',this)">🟠 G&amp;A</button>
+  <button id="filter-pda" class="filter-btn" data-track="pda" onclick="filterTrack('pda',this)">🩷 PD&amp;A</button>
+  <button id="filter-rpo" class="filter-btn" data-track="rpo" onclick="filterTrack('rpo',this)">🟤 RPO Programs</button>
+  <button id="filter-ce" class="filter-btn" data-track="ce" onclick="filterTrack('ce',this)">🔷 Global CE</button>
+</div>
+<div class="filters" style="margin-top:-8px">
+  <span class="filter-label">DRI:</span>
+  <select id="dri-filter" onchange="filterByDRI(this.value)" style="padding:5px 10px;border:1px solid #ddd;border-radius:20px;font-size:11px;color:#555;background:#fff;cursor:pointer;outline:none">
+    <option value="">All DRIs</option>
+    <option>H. Denhart</option><option>H. Donley</option><option>Ida Siljander</option>
+    <option>Nina Korobko</option><option>Fritz</option><option>Breanna</option>
+    <option>Clare</option><option>Danielle</option><option>Emily</option>
+    <option>Joey</option><option>Taleen</option><option>TA S&amp;O</option>
+    <option>Head of TA</option><option>RecTech / Tools+Data</option>
+    <option>Katie Redman</option><option>Gosia Szafraniec</option><option>Nina Olasz</option>
+  </select>
+  <button onclick="document.getElementById('dri-filter').value='';filterByDRI('')" style="padding:5px 10px;border-radius:20px;border:1px solid #ddd;background:#fff;font-size:11px;color:#888;cursor:pointer">Clear</button>
+  <button id="copy-link-btn" onclick="copyShareLink()" style="margin-left:auto;padding:5px 14px;border-radius:20px;border:1px solid #007aff;background:#fff;font-size:11px;font-weight:600;color:#007aff;cursor:pointer">🔗 Copy view link</button>
+</div>
+<div class="gantt-wrapper"><div class="gantt">
+<div class="gantt-header">
+  <div style="font-size:11px;font-weight:700;color:#888;padding:6px 0;background:#f9f9f9;padding-left:4px">INITIATIVE</div>
+  <div class="gantt-quarters">
+    <div class="gantt-q">Q2 2026<br><span style="font-weight:400">Apr–Jun</span></div>
+    <div class="gantt-q">Q3 2026<br><span style="font-weight:400">Jul–Sep</span></div>
+    <div class="gantt-q">Q4 2026<br><span style="font-weight:400">Oct–Dec</span></div>
+    <div class="gantt-q yr2027">Q1 2027<br><span style="font-weight:400">Jan–Mar</span></div>
+    <div class="gantt-q yr2027">Q2 2027<br><span style="font-weight:400">Apr–Jun</span></div>
+    <div class="gantt-q yr2027">Q3–Q4 2027<br><span style="font-weight:400">Jul–Dec</span></div>
+  </div>
+</div>
+<!-- GLOBAL PROGRAMS TRACK -->
+<div class="track" data-track="gp">
+<div class="track-header" style="background:#f7f0ff;cursor:pointer" onclick="toggleTrack(this)" data-track-id="gp"><div class="track-dot" style="background:#7c3aed"></div><div class="track-name">Global Programs</div><div class="track-count">Hannah Denhart · Hannah Donley · Ida Siljander · Nina Korobko</div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Global Hiring Philosophy (P0)<span class="dri">H. Denhart → Dec 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:10%;width:52%" data-tid="bar-ghp" onmouseenter="showTT(event,'bar-ghp')" onmouseleave="hideTT()">Global Hiring Philosophy Ph.1</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">TA Operating Model + Governance ⚠️<span class="dri">Denhart/Donley → Delayed, starts Jul 20</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:20%;width:16%" data-tid="bar-opmodel" onmouseenter="showTT(event,'bar-opmodel')" onmouseleave="hideTT()">Op Model Blueprint</div><div class="bar status-not-started" style="left:37%;width:16%" data-tid="bar-opmodel" onmouseenter="showTT(event,'bar-opmodel')" onmouseleave="hideTT()">Governance FW</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Project Rolex — TA Leveling<span class="dri">H. Donley ✅ COMPLETED Jun 9</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-completed" style="left:0%;width:22%" data-tid="bar-rolex" onmouseenter="showTT(event,'bar-rolex')" onmouseleave="hideTT()">✅ Completed Jun 9</div><div class="bar status-not-started" style="left:23%;width:22%" data-tid="bar-rolex" onmouseenter="showTT(event,'bar-rolex')" onmouseleave="hideTT()">Phase 2 rollout</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Internal Mobility — Phase 1<span class="dri">H. Donley → Jul 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:25%" data-tid="bar-mobility" onmouseenter="showTT(event,'bar-mobility')" onmouseleave="hideTT()">Phase 1 Live</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Employee Referrals — Phase 1<span class="dri">H. Donley → Aug 2026 (V1.0)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:18%" data-tid="bar-referrals" onmouseenter="showTT(event,'bar-referrals')" onmouseleave="hideTT()">Referrals Ph.1 ▶</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Rehire Eligibility Policy<span class="dri">H. Donley → Aug 31, 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:14%" data-tid="bar-rehire" onmouseenter="showTT(event,'bar-rehire')" onmouseleave="hideTT()">Rehire Policy ▶</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Representation Rule (P1)<span class="dri">H. Donley → Aug 3, 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:10%;width:20%" data-tid="bar-reprule" onmouseenter="showTT(event,'bar-reprule')" onmouseleave="hideTT()">Representation Rule</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Know-How / Keystone Training<span class="dri">Ida Siljander → Oct 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:5%;width:40%" data-tid="bar-keystone" onmouseenter="showTT(event,'bar-keystone')" onmouseleave="hideTT()">Know-How Training Program</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Deliveroo Integration (Processes)<span class="dri">H. Denhart → Dec 2026 — in scope Jun 1</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:16%;width:34%" data-tid="bar-roointegration" onmouseenter="showTT(event,'bar-roointegration')" onmouseleave="hideTT()">Deliveroo Process Integration</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">PwD / Disability Quota Program<span class="dri">Nina Korobko → Dec 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:49%" data-tid="bar-pwd" onmouseenter="showTT(event,'bar-pwd')" onmouseleave="hideTT()">PwD Program</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Standardized Interview Stages + Guardrails<span class="dri">H. Denhart → Q3 2026  📄</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:5%;width:18%" data-tid="bar-intstages" onmouseenter="showTT(event,'bar-intstages')" onmouseleave="hideTT()">Stage Framework</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Post-Offer Handoff Framework<span class="dri">H. Denhart → Q4 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:14%;width:22%" data-tid="bar-postoffer" onmouseenter="showTT(event,'bar-postoffer')" onmouseleave="hideTT()">Post-Offer FW</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Global Process Enablement Strategy<span class="dri">Ida Siljander → Dec 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:25%;width:25%" data-tid="bar-enablement" onmouseenter="showTT(event,'bar-enablement')" onmouseleave="hideTT()">Enablement Strategy</div></div></div>
+<div class="gantt-row" data-track="gp" style="opacity:.85"><div class="row-label" style="color:#c0392b">"Great Hiring" Competencies + Q-Bank<span class="dri">H. Donley → 2027 (values dep.)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:30%" data-tid="bar-greathiring" onmouseenter="showTT(event,'bar-greathiring')" onmouseleave="hideTT()">Competency + Q-Bank</div></div></div>
+<div class="gantt-row" data-track="gp" style="opacity:.85"><div class="row-label" style="color:#c0392b">Success Profiles + Assessment Framework<span class="dri">H. Donley → 2027 (XL)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:50%" data-tid="bar-successprofiles" onmouseenter="showTT(event,'bar-successprofiles')" onmouseleave="hideTT()">Success Profiles / Assessment</div></div></div>
+<div class="gantt-row" data-track="gp" style="opacity:.85"><div class="row-label" style="color:#c0392b">Global Bar Raiser Program<span class="dri">H. Denhart → 2027 (all brands)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:50%" data-tid="bar-barraiser" onmouseenter="showTT(event,'bar-barraiser')" onmouseleave="hideTT()">Bar Raiser (Global)</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Career-Track Internships (Fall '26 active)<span class="dri">H. Denhart → Fall on track · 2027 parked</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:33%" data-tid="bar-internships" onmouseenter="showTT(event,'bar-internships')" onmouseleave="hideTT()">Fall Internships ▶</div><div class="bar status-parked" style="left:50%;width:34%" data-tid="bar-internships" onmouseenter="showTT(event,'bar-internships')" onmouseleave="hideTT()">2027 Global Planning</div></div></div>
+</div>
+<!-- TA OPS S&O -->
+<div class="track" data-track="ops">
+<div class="gantt-row" data-track="gp"><div class="row-label">EU Pay Transparency ✅ Deadline Passed Jun 7<span class="dri">H. Denhart — Confirm compliance measures live</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:12%;background:#34c759" data-tid="bar-paytrans" onmouseenter="showTT(event,'bar-paytrans')" onmouseleave="hideTT()">✅ Pay Transparency</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Bar Raiser — Wolt Pilot ✅<span class="dri">H. Denhart — Completed/Sunset Mar 27</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-completed" style="left:0%;width:10%" data-tid="bar-barraiser-wolt" onmouseenter="showTT(event,'bar-barraiser-wolt')" onmouseleave="hideTT()">✅ Sunset</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Refugee Hiring — BAU (5 countries)<span class="dri">Nina Korobko</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-completed" style="left:0%;width:50%" data-tid="bar-refugee" onmouseenter="showTT(event,'bar-refugee')" onmouseleave="hideTT()">Refugee Hiring (BAU)</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">TA Onboarding — Wolt ✅ BAU<span class="dri">Ida Siljander</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-completed" style="left:0%;width:5%" data-tid="bar-taonboarding-wolt" onmouseenter="showTT(event,'bar-taonboarding-wolt')" onmouseleave="hideTT()">Done</div><div class="bar status-in-progress" style="left:6%;width:44%;background:#34c759" data-tid="bar-taonboarding-wolt" onmouseenter="showTT(event,'bar-taonboarding-wolt')" onmouseleave="hideTT()">BAU</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Director Hiring — Pilot<span class="dri">Ida Siljander · Kristin Parris</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:18%" data-tid="bar-director" onmouseenter="showTT(event,'bar-director')" onmouseleave="hideTT()">Director Hiring Pilot</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">PII Form Updates &amp; Translations<span class="dri">H. Denhart · Nate Sears → Q3-Q4</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:34%" data-tid="bar-pii" onmouseenter="showTT(event,'bar-pii')" onmouseleave="hideTT()">PII Forms</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Peer2Peer Learning (STA Pilot)<span class="dri">Ida Siljander · Dóra Szabó</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:50%" data-tid="bar-p2p" onmouseenter="showTT(event,'bar-p2p')" onmouseleave="hideTT()">P2P Learning Pilot</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">HVH Transformation (Fountain)<span class="dri">Gosia Szafraniec → H2 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:17%;width:33%" data-tid="bar-hvh" onmouseenter="showTT(event,'bar-hvh')" onmouseleave="hideTT()">HVH Transformation</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">TA Comms &amp; Governance<span class="dri">H. Donley → Discovery started Jul 1</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:17%;width:16%" data-tid="bar-tacomms" onmouseenter="showTT(event,'bar-tacomms')" onmouseleave="hideTT()">TA Comms ▶</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Global TA Onboarding<span class="dri">Ida Siljander → H2 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:17%;width:33%" data-tid="bar-gtonboarding" onmouseenter="showTT(event,'bar-gtonboarding')" onmouseleave="hideTT()">Global TA Onboarding</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">TA Block Consolidation<span class="dri">Gosia Szafraniec → H2 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:17%;width:33%" data-tid="bar-blockconsolidation" onmouseenter="showTT(event,'bar-blockconsolidation')" onmouseleave="hideTT()">Block Consolidation</div></div></div>
+<div class="track-header" style="background:#e8f4ff;cursor:pointer" onclick="toggleTrack(this)" data-track-id="ops"><div class="track-dot" style="background:#0077b6"></div><div class="track-name">TA Ops S&amp;O</div><div class="track-count">Breanna · Clare · Danielle · Emily · Fritz · Joey</div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Global Process Maps (Current State)<span class="dri">Fritz → Q3 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:14%;width:14%" data-tid="bar-processmaps" onmouseenter="showTT(event,'bar-processmaps')" onmouseleave="hideTT()">Process Maps</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Compliance + DEI Overlay on Maps<span class="dri">Fritz → Q3 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:28%;width:18%" data-tid="bar-compliance" onmouseenter="showTT(event,'bar-compliance')" onmouseleave="hideTT()">Compliance Overlay</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Stage-Level SLA Baselines<span class="dri">Breanna → Q3 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:10%;width:14%" data-tid="bar-slabaselines" onmouseenter="showTT(event,'bar-slabaselines')" onmouseleave="hideTT()">SLA Baselines ▶</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Standardized MBRs (All TA Leads)<span class="dri">Breanna → Piloting now</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:5%;width:22%" data-tid="bar-mbr" onmouseenter="showTT(event,'bar-mbr')" onmouseleave="hideTT()">MBR Pilot ▶</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Global Data Dictionary<span class="dri">Danielle → Q4 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:14%;width:18%" data-tid="bar-datadict" onmouseenter="showTT(event,'bar-datadict')" onmouseleave="hideTT()">Data Dictionary</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Data Accuracy Baseline Audit<span class="dri">Danielle → Q4 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:32%;width:18%" data-tid="bar-dataaccuracy" onmouseenter="showTT(event,'bar-dataaccuracy')" onmouseleave="hideTT()">Accuracy Audit</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Data Governance Forum + Alerts<span class="dri">Danielle → Q4 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:35%;width:15%" data-tid="bar-datagovforum" onmouseenter="showTT(event,'bar-datagovforum')" onmouseleave="hideTT()">Governance Charter</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Capacity Planning Methodology<span class="dri">Clare → Q3 2026 (dep: Rolex)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:20%;width:14%" data-tid="bar-capacity" onmouseenter="showTT(event,'bar-capacity')" onmouseleave="hideTT()">Capacity Model ▶</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Deliveroo Change Mgmt + Enablement<span class="dri">Clare → Dec 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:14%;width:36%" data-tid="bar-rooschange" onmouseenter="showTT(event,'bar-rooschange')" onmouseleave="hideTT()">Deliveroo Change Mgmt</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Quick Wins: Scheduling / SLAs / GH standards<span class="dri">Emily / Clare → Q2–Q3</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:25%" data-tid="bar-quickwins" onmouseenter="showTT(event,'bar-quickwins')" onmouseleave="hideTT()">15+ Quick Wins</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">QoH Metric Definitions<span class="dri">Joey / Emily → Q4 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:14%;width:30%" data-tid="bar-qohdefs" onmouseenter="showTT(event,'bar-qohdefs')" onmouseleave="hideTT()">QoH Definitions</div></div></div>
+<div class="gantt-row" data-track="ops" style="opacity:.85"><div class="row-label" style="color:#c0392b">TTH Bottleneck Analysis<span class="dri">Emily → 2027</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:22%" data-tid="bar-tth" onmouseenter="showTT(event,'bar-tth')" onmouseleave="hideTT()">Bottleneck Analysis</div></div></div>
+<div class="gantt-row" data-track="ops" style="opacity:.85"><div class="row-label" style="color:#c0392b">QoH Dashboard + Data Literacy<span class="dri">Joey → 2027</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:34%" data-tid="bar-qohdash" onmouseenter="showTT(event,'bar-qohdash')" onmouseleave="hideTT()">QoH Dashboard</div></div></div>
+<div class="gantt-row" data-track="ops"><div class="row-label">Predictive Insights + TA Insights Report<span class="dri">Breanna → V1 Pilot (NA Sales)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:5%;width:20%" data-tid="bar-predictive" onmouseenter="showTT(event,'bar-predictive')" onmouseleave="hideTT()">V1 Pilot</div><div class="bar status-not-started" style="left:50%;width:34%" data-tid="bar-predictive" onmouseenter="showTT(event,'bar-predictive')" onmouseleave="hideTT()">Full Rollout 2027</div></div></div>
+</div>
+<!-- RECTECH -->
+<div class="track" data-track="tech">
+<div class="track-header" style="background:#e8f5e9;cursor:pointer" onclick="toggleTrack(this)" data-track-id="tech"><div class="track-dot" style="background:#2e7d32"></div><div class="track-name">RecTech / Tools &amp; Data</div><div class="track-count">Talent Solutions team</div></div>
+<div class="gantt-row" data-track="tech"><div class="row-label">Audit + Fix Approval Chain Logic<span class="dri">Marcus → Mapping underway</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:10%;width:8%" data-tid="bar-approvalaudit" onmouseenter="showTT(event,'bar-approvalaudit')" onmouseleave="hideTT()">Audit ▶</div></div></div>
+<div class="gantt-row" data-track="tech"><div class="row-label">JD + Screening Q Permissions (Self-Service)<span class="dri">Jun–Sep 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:14%;width:20%" data-tid="bar-jdself" onmouseenter="showTT(event,'bar-jdself')" onmouseleave="hideTT()">TA Self-Service</div></div></div>
+<div class="gantt-row" data-track="tech"><div class="row-label">Interview Templates + Scorecard Automation<span class="dri">Aug 2026 — 2 months  📄</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:31%;width:14%" data-tid="bar-scorecards" onmouseenter="showTT(event,'bar-scorecards')" onmouseleave="hideTT()">Scorecard Templates</div></div></div>
+<div class="gantt-row" data-track="tech"><div class="row-label">AI: JD Generation + Outreach Drafting<span class="dri">Jul 2026 — 3 months</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:25%;width:8%" data-tid="bar-aijd" onmouseenter="showTT(event,'bar-aijd')" onmouseleave="hideTT()">AI JD</div><div class="bar status-not-started" style="left:34%;width:8%" data-tid="bar-aijd" onmouseenter="showTT(event,'bar-aijd')" onmouseleave="hideTT()">AI Outreach</div></div></div>
+<div class="gantt-row" data-track="tech"><div class="row-label">Global TA Metrics Framework<span class="dri">Oct 2026 (post-Roo migration)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:36%;width:14%" data-tid="bar-tametrics" onmouseenter="showTT(event,'bar-tametrics')" onmouseleave="hideTT()">TA Metrics FW</div></div></div>
+<div class="gantt-row" data-track="tech" style="opacity:.85"><div class="row-label" style="color:#c0392b">Automated Offer Builder Platform<span class="dri">2027</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:34%" data-tid="bar-offerbuilder" onmouseenter="showTT(event,'bar-offerbuilder')" onmouseleave="hideTT()">Offer Builder V1</div></div></div>
+<div class="gantt-row" data-track="tech" style="opacity:.85"><div class="row-label" style="color:#c0392b">HC App: HVH, Bulk Req ID, DM Trackers<span class="dri">2027</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:34%" data-tid="bar-hcapp" onmouseenter="showTT(event,'bar-hcapp')" onmouseleave="hideTT()">HC App Expansion</div></div></div>
+</div>
+<!-- G&A -->
+<div class="track" data-track="ga">
+<div class="track-header" style="background:#fff8e1;cursor:pointer" onclick="toggleTrack(this)" data-track-id="ga"><div class="track-dot" style="background:#f57f17"></div><div class="track-name">G&amp;A Global Integration</div><div class="track-count">TA S&O · Head of TA · TA Ops · TA Leads</div></div>
+<div class="gantt-row" data-track="ga"><div class="row-label">HC Approval Framework — ✅ COMPLETE (all 1.1.x)<span class="dri">TA S&O — Framework live globally Jun 9</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-completed" style="left:0%;width:16%" data-tid="bar-hcapproval" onmouseenter="showTT(event,'bar-hcapproval')" onmouseleave="hideTT()">✅ Complete</div></div></div>
+<div class="gantt-row" data-track="ga"><div class="row-label">Offer Approval Workflow — In Progress<span class="dri">TA S&O → Jul 15, 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:5%;width:17%" data-tid="bar-offerapproval" onmouseenter="showTT(event,'bar-offerapproval')" onmouseleave="hideTT()">Offer Approval ▶</div></div></div>
+<div class="gantt-row" data-track="ga"><div class="row-label">G&amp;A Competency + Assessment Matrix<span class="dri">Head of TA → Jul 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:17%;width:14%" data-tid="bar-gacompetency" onmouseenter="showTT(event,'bar-gacompetency')" onmouseleave="hideTT()">Competency Matrix</div></div></div>
+<div class="gantt-row" data-track="ga"><div class="row-label">G&amp;A Standardized Interview Process  📄<span class="dri">TA S&O → Sep 1, 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:17%;width:25%" data-tid="bar-gainterview" onmouseenter="showTT(event,'bar-gainterview')" onmouseleave="hideTT()">G&A Interview Process</div></div></div>
+<div class="gantt-row" data-track="ga"><div class="row-label">Cross-Brand Hiring Enablement<span class="dri">TA S&O → TBD</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:16%;width:22%" data-tid="bar-crossbrand" onmouseenter="showTT(event,'bar-crossbrand')" onmouseleave="hideTT()">Cross-Brand Enablement</div></div></div>
+<div class="gantt-row" data-track="ga" style="opacity:.85"><div class="row-label" style="color:#c0392b">G&amp;A Take-Home Assessment Library<span class="dri">Head of TA → Dec–Q1 2027</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:33%;width:25%" data-tid="bar-assessmentlib" onmouseenter="showTT(event,'bar-assessmentlib')" onmouseleave="hideTT()">Assessment Library</div></div></div>
+<div class="gantt-row" data-track="ga" style="opacity:.85"><div class="row-label" style="color:#c0392b">HC App Full Std. (Deliveroo)<span class="dri">TA S&O → 2027</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:50%;width:30%" data-tid="bar-hcappfull" onmouseenter="showTT(event,'bar-hcappfull')" onmouseleave="hideTT()">HC App Full Std.</div></div></div>
+</div>
+<!-- PD&A -->
+<div class="track" data-track="pda">
+<div class="gantt-row" data-track="pda"><div class="row-label">Global Hiring Process — PM &amp; Design (92%)<span class="dri">All → Q2 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:14%" data-tid="bar-pdaprocess" onmouseenter="showTT(event,'bar-pdaprocess')" onmouseleave="hideTT()">PM+Design Hiring</div></div></div>
+<div class="gantt-row" data-track="pda"><div class="row-label">Global Debrief Calendar + Slack<span class="dri">Taleen → Q2 (50%)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:14%" data-tid="bar-debriefcal" onmouseenter="showTT(event,'bar-debriefcal')" onmouseleave="hideTT()">Debrief Calendar</div></div></div>
+<div class="gantt-row" data-track="pda"><div class="row-label">Global Recruiting Operating Model (79%)<span class="dri">Joey / Taleen → Q3 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:20%" data-tid="bar-pdaopmodel" onmouseenter="showTT(event,'bar-pdaopmodel')" onmouseleave="hideTT()">Operating Model</div></div></div>
+<div class="gantt-row" data-track="pda"><div class="row-label">Global Operating Rhythms (25%)<span class="dri">Taleen → Jun 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:16%" data-tid="bar-rhythms" onmouseenter="showTT(event,'bar-rhythms')" onmouseleave="hideTT()">Op Rhythms</div></div></div>
+<div class="gantt-row" data-track="pda"><div class="row-label">Data &amp; Reporting Foundation (67%)<span class="dri">Joey → Q3 2026 — dep: Ashby/PA</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:20%" data-tid="bar-pdareporting" onmouseenter="showTT(event,'bar-pdareporting')" onmouseleave="hideTT()">Reporting Foundation</div></div></div>
+<div class="gantt-row" data-track="pda"><div class="row-label">2026 Hiring Demand Finalization<span class="dri">⛔ Blocked — entity/location strategy</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-blocked" style="left:0%;width:20%" data-tid="bar-demandplan" onmouseenter="showTT(event,'bar-demandplan')" onmouseleave="hideTT()">⛔ Demand Blocked</div></div></div>
+</div>
+</div><!-- /panel-timeline -->
+<!-- OVERVIEW -->
+<div id="panel-overview" class="panel">
+<div class="whats-new">
+  <h3>🗞️ What Changed — July 17, 2026 Refresh</h3>
+  <ul>
+    <li><span class="change-tag tag-new">✅ SOURCE FIXED</span><strong>Global Programmes Master Tracker + Global Unified Processes doc now fully readable:</strong> Both sources exceeded retrieval limits in prior refreshes and were flagged for manual verification. Both read successfully today, surfacing several corrections below.</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>Bar Raiser — Wolt Pilot was actually Completed months ago:</strong> Status corrected from "Delayed" to "Completed" — the pilot sunset/closed Mar 27, 2026 after facing lower-than-anticipated hiring volume. This had been stale for months.</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>TA Operating Model + Governance is Not Started, not In Progress:</strong> Master Tracker shows both the Blueprint (H. Denhart) and Governance Framework (H. Donley) delayed — start pushed from May/Jun to Jul 20, 2026.</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>Employee Referrals and Rehire Eligibility Policy were mislabeled "Delayed":</strong> Both are actually In Progress per the Master Tracker (Referrals targeting Aug 2026 V1.0 with SLA at 80% of goal; Rehire targeting Aug 31, 2026).</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>Representation Rule (P1) is not past target:</strong> The real Phase 1 end date is Aug 3, 2026, not Jun 30 — the "past target ⚠️" flag was based on a stale estimate.</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>Career-Track Internships — Fall 2026 pilot is active, not Parked:</strong> Only the 2027 global expansion planning is Parked; the current Fall Internships pilot is on track.</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>TA Comms &amp; Governance moved to In Progress:</strong> Intranet audit discovery started Jul 1, 2026; DRI corrected to H. Donley.</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>Four TA Ops / RecTech items already underway, not Not Started:</strong> Predictive Insights (V1 pilot for NA Sales), Standardized MBRs (piloting with 2 TA Leads), Stage-Level SLA Baselines (benchmarks drafted for Biz + G&amp;A), Capacity Planning Methodology (validating Wolt processes), and Audit + Fix Approval Chain Logic (mapping underway with S&amp;O) are all In Progress.</li>
+    <li><span class="change-tag tag-updated">NO CHANGE</span><strong>RPO Roadmap, G&amp;A Compass, and PD&amp;A Roadmap match prior refresh:</strong> No new completions, launches, or blockers detected in those sources since Jul 16.</li>
+    <li><span class="change-tag tag-risk">⚠️ INFRASTRUCTURE</span><strong>GitHub Pages mirror is down:</strong> The repo backing https://amystever-arch.github.io/ta-global-roadmap/ returns 404 and no longer exists under the connected GitHub account (which itself now authenticates as a different username than the one on file). This artifact is up to date; the public GitHub Pages mirror is not and needs Amy's attention to recreate the repo or reconnect the correct account.</li>
+  </ul>
+</div>
+<div class="summary-grid" id="overview-grid">
+  <div class="summary-card card-blue"><div class="num" id="cnt-total">—</div><div class="lbl">Total Items</div></div>
+  <div class="summary-card card-green"><div class="num" id="cnt-completed">—</div><div class="lbl">Completed ✅</div></div>
+  <div class="summary-card card-orange"><div class="num" id="cnt-active">—</div><div class="lbl">In Progress 🔄</div></div>
+  <div class="summary-card card-red"><div class="num" id="cnt-notstarted">—</div><div class="lbl">Not Started</div></div>
+  <div class="summary-card"><div class="num" id="cnt-blocked" style="color:#ff9500">—</div><div class="lbl">At Risk / Blocked ⚠️</div></div>
+  <div class="summary-card"><div class="num" style="color:#7c3aed" id="cnt-2027">—</div><div class="lbl">FY2027 Items</div></div>
+</div>
+<h3 style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:12px">By Track</h3>
+<div id="track-breakdown" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:20px"></div>
+<h3 style="font-size:13px;font-weight:700;color:#1d1d1f;margin-bottom:12px;margin-top:20px">Key Milestones — H2 2026 &amp; Beyond</h3>
+<div id="milestones-list" style="display:flex;flex-direction:column;gap:8px"></div>
+</div>
+<!-- ALL ITEMS -->
+<div id="panel-items" class="panel">
+<div class="filters">
+  <span class="filter-label">Track:</span>
+  <button class="filter-btn active" onclick="filterItems('track','all',this)">All</button>
+  <button class="filter-btn" onclick="filterItems('track','Global Programs',this)">Global Programs</button>
+  <button class="filter-btn" onclick="filterItems('track','TA Ops',this)">TA Ops</button>
+  <button class="filter-btn" onclick="filterItems('track','RecTech',this)">RecTech</button>
+  <button class="filter-btn" onclick="filterItems('track','G&A',this)">G&amp;A</button>
+  <button class="filter-btn" onclick="filterItems('track','PD&A',this)">PD&amp;A</button>
+  <button class="filter-btn" onclick="filterItems('track','RPO Programs',this)">RPO</button>
+  <button class="filter-btn" onclick="filterItems('track','Global CE',this)">CE</button>
+</div>
+<div class="filters" style="margin-top:-8px">
+  <span class="filter-label">Status:</span>
+  <button class="filter-btn active" onclick="filterItems('status','all',this)">All</button>
+  <button class="filter-btn" onclick="filterItems('status','Completed',this)">✅ Completed</button>
+  <button class="filter-btn" onclick="filterItems('status','In Progress',this)">🔄 In Progress</button>
+  <button class="filter-btn" onclick="filterItems('status','Not Started',this)">Not Started</button>
+  <button class="filter-btn" onclick="filterItems('status','Blocked',this)">⛔ Blocked</button>
+  <input class="search-box" id="items-search" placeholder="🔍 Search by name, DRI..." oninput="filterItems('search','',null)">
+</div>
+<div class="table-wrapper"><table id="items-table">
+<thead><tr>
+<th>#</th><th>Track</th><th>Initiative</th><th>DRI</th><th>Category</th><th>Size</th><th>Status</th><th>Year</th><th>Est. Completion</th>
+</tr></thead>
+<tbody id="items-body"></tbody>
+</table></div>
+</div>
+
+<!-- INTERDEPENDENCIES -->
+<div id="panel-dependencies" class="panel">
+<div class="dep-explainer">
+  <strong>How to read these:</strong> Each chain shows a sequence of dependent initiatives. Green = done/complete. Blue = active now. Grey = future/not started. Red = blocked. The ⚠️ / ⛔ labels flag where the chain has stalled or is at risk.
+</div>
+
+<div class="dep-section">
+<h3>🔴 Blocked / At-Risk Chains</h3>
+<div class="dep-card" id="dep-demand">
+  <div class="dep-status-row"><span class="dep-status dep-status-blocked">⛔ BLOCKED</span><span class="dep-next">Blocking: Capacity Planning, QoH Dashboards, HC App expansion</span></div>
+  <h4>Hiring Demand &amp; Entity Strategy</h4>
+  <div class="dep-chain"><div class="dep-node future">Entity/Location Strategy</div><div class="dep-arrow">→</div><div class="dep-node blocked">2026 Demand Finalization</div><div class="dep-arrow">→</div><div class="dep-node future">HC App Full Std.</div><div class="dep-arrow">→</div><div class="dep-node future">Capacity Planning</div><div class="dep-arrow">→</div><div class="dep-node future">Predictive Insights</div></div>
+  <div class="dep-note">2026 hiring demand is blocked on entity/location strategy. Until resolved, capacity planning methodology and QoH dashboards cannot be completed with accurate data.</div>
+</div>
+
+<div class="dep-card" id="dep-barraiser">
+  <div class="dep-status-row"><span class="dep-status dep-status-risk">⚠️ AT RISK</span><span class="dep-next">Bar Raiser Wolt pilot delayed due to hiring volume</span></div>
+  <h4>Bar Raiser Program Rollout</h4>
+  <div class="dep-chain"><div class="dep-node future">Global Hiring Philosophy</div><div class="dep-arrow">→</div><div class="dep-node active">Bar Raiser — Wolt Pilot ⚠️</div><div class="dep-arrow">→</div><div class="dep-node future">Global Bar Raiser (all brands)</div></div>
+  <div class="dep-note">Wolt pilot delayed due to lower hiring volume. Wolt pilot must succeed before global rollout can begin (2027 target).</div>
+</div>
+
+<div class="dep-card" id="dep-cesurvy">
+  <div class="dep-status-row"><span class="dep-status dep-status-blocked">⛔ BLOCKED</span><span class="dep-next">CE Survey / Sigma integration blocked</span></div>
+  <h4>Candidate Experience Measurement</h4>
+  <div class="dep-chain"><div class="dep-node active">CE Standards &amp; Doc Hub</div><div class="dep-arrow">→</div><div class="dep-node blocked">Unified CE Survey / Sigma ⛔</div><div class="dep-arrow">→</div><div class="dep-node future">CE Dashboard / Analytics</div></div>
+  <div class="dep-note">CE survey and Sigma integration is blocked. Without this, the team cannot measure candidate experience at scale or track improvements.</div>
+</div>
+</div>
+
+<div class="dep-section">
+<h3>🟡 In Progress — Key Dependency Chains</h3>
+<div class="dep-card" id="dep-ghp">
+  <div class="dep-status-row"><span class="dep-status dep-status-ontrack">✅ ON TRACK</span><span class="dep-next">GHP Phase 1 → competencies + bar raiser unlock</span></div>
+  <h4>Global Hiring Philosophy → Downstream Programs</h4>
+  <div class="dep-chain"><div class="dep-node active">Global Hiring Philosophy Ph.1</div><div class="dep-arrow">→</div><div class="dep-node future">"Great Hiring" Competencies</div><div class="dep-arrow">→</div><div class="dep-node future">Success Profiles + Assessment FW</div><div class="dep-arrow">→</div><div class="dep-node future">Bar Raiser (All Brands)</div></div>
+  <div class="dep-note">GHP Phase 1 is active. Completion (Dec 2026) unlocks "Great Hiring" competency frameworks and assessment development in 2027.</div>
+</div>
+
+<div class="dep-card" id="dep-rolex">
+  <div class="dep-status-row"><span class="dep-status dep-status-ontrack">✅ COMPLETED Jun 9</span><span class="dep-next">Capacity planning now unblocked</span></div>
+  <h4>Project Rolex (TA Leveling) → Ops + Reporting</h4>
+  <div class="dep-chain"><div class="dep-node done">Project Rolex ✅ Jun 9</div><div class="dep-arrow">→</div><div class="dep-node active">Capacity Planning Methodology</div><div class="dep-arrow">→</div><div class="dep-node future">SLA Baselines</div><div class="dep-arrow">→</div><div class="dep-node future">Standardized MBRs</div></div>
+  <div class="dep-note">Project Rolex completed Jun 9. Capacity planning methodology can now proceed (Clare, Q3 2026 target).</div>
+</div>
+
+<div class="dep-card" id="dep-hcapproval">
+  <div class="dep-status-row"><span class="dep-status dep-status-ontrack">✅ HC FRAMEWORK COMPLETE</span><span class="dep-next">Offer Approval in progress → Jun 25 target</span></div>
+  <h4>G&amp;A HC Approval → Offer Workflow → Std. Interview</h4>
+  <div class="dep-chain"><div class="dep-node done">HC Framework ✅</div><div class="dep-arrow">→</div><div class="dep-node active">Offer Approval Workflow</div><div class="dep-arrow">→</div><div class="dep-node future">Std. Interview Process</div><div class="dep-arrow">→</div><div class="dep-node future">Competency + Assessment Matrix</div></div>
+  <div class="dep-note">HC Approval Framework completed Jun 9. Offer Approval targeting Jun 25. These gate the standardized interview process (Sep 1 target).</div>
+</div>
+
+<div class="dep-card" id="dep-opmodel">
+  <div class="dep-status-row"><span class="dep-status dep-status-ontrack">✅ ON TRACK</span><span class="dep-next">Op Model → Governance → Enablement cascade</span></div>
+  <h4>TA Operating Model → Governance → Enablement</h4>
+  <div class="dep-chain"><div class="dep-node active">TA Op Model Blueprint</div><div class="dep-arrow">→</div><div class="dep-node future">Governance Framework</div><div class="dep-arrow">→</div><div class="dep-node future">Global Process Enablement</div><div class="dep-arrow">→</div><div class="dep-node future">TA Comms &amp; Governance</div></div>
+  <div class="dep-note">Operating Model blueprint in progress (Ida Siljander, Q3 2026). Governance Framework and Enablement Strategy follow sequentially.</div>
+</div>
+
+<div class="dep-card" id="dep-data">
+  <div class="dep-status-row"><span class="dep-status dep-status-risk">⚠️ DEPENDENCY WATCH</span><span class="dep-next">Ashby/Pipeline Analytics migration required first</span></div>
+  <h4>Reporting Foundation → Metrics → QoH → Predictive</h4>
+  <div class="dep-chain"><div class="dep-node active">Reporting Foundation (67%)</div><div class="dep-arrow">→</div><div class="dep-node future">Global Data Dictionary</div><div class="dep-arrow">→</div><div class="dep-node future">Data Accuracy Audit</div><div class="dep-arrow">→</div><div class="dep-node future">QoH Definitions</div><div class="dep-arrow">→</div><div class="dep-node future">QoH Dashboard + Literacy</div><div class="dep-arrow">→</div><div class="dep-node future">Predictive Insights</div></div>
+  <div class="dep-note">Reporting Foundation depends on Ashby/PA migration completion. Data dictionary and accuracy audit follow, then QoH (2027). This is the longest dependency chain in the program.</div>
+</div>
+
+<div class="dep-card" id="dep-processmaps">
+  <div class="dep-status-row"><span class="dep-status dep-status-ontrack">✅ ON TRACK</span></div>
+  <h4>Process Maps → Compliance Overlay → SLA Baselines</h4>
+  <div class="dep-chain"><div class="dep-node active">Global Process Maps</div><div class="dep-arrow">→</div><div class="dep-node future">Compliance + DEI Overlay</div><div class="dep-arrow">→</div><div class="dep-node future">SLA Baselines</div><div class="dep-arrow">→</div><div class="dep-node future">MBR Framework</div></div>
+  <div class="dep-note">Fritz is mapping current-state processes (Q3 2026). Compliance overlay follows, then Breanna applies SLA baselines for standardized MBRs.</div>
+</div>
+
+<div class="dep-card" id="dep-roo">
+  <div class="dep-status-row"><span class="dep-status dep-status-future">🔵 FUTURE</span><span class="dep-next">Scoped Jun 1 — Dec 2026 target</span></div>
+  <h4>Deliveroo Integration Cascade</h4>
+  <div class="dep-chain"><div class="dep-node future">Deliveroo Process Integration</div><div class="dep-arrow">→</div><div class="dep-node future">Deliveroo Change Mgmt</div><div class="dep-arrow">→</div><div class="dep-node future">TA Metrics (post-Roo migration)</div><div class="dep-arrow">→</div><div class="dep-node future">HC App Full Std.</div></div>
+  <div class="dep-note">Deliveroo integration scoped Jun 1 (H. Denhart). Process integration must precede change management enablement (Clare). TA Metrics and HC App standardization require Roo migration completion.</div>
+</div>
+</div>
+
+<div class="dep-section">
+<h3>🔵 Future Chains (2027+)</h3>
+<div class="dep-card" id="dep-interview">
+  <div class="dep-status-row"><span class="dep-status dep-status-future">2027 HORIZON</span></div>
+  <h4>Structured Interviewing → Bar Raiser Global</h4>
+  <div class="dep-chain"><div class="dep-node done">Int. Stages Guardrails ✅</div><div class="dep-arrow">→</div><div class="dep-node future">Q-Bank + Competencies</div><div class="dep-arrow">→</div><div class="dep-node future">Success Profiles</div><div class="dep-arrow">→</div><div class="dep-node future">Global Bar Raiser</div></div>
+  <div class="dep-note">Full structured interviewing program spans 2026–2027. Stages/guardrails are live; competency + Q-Bank and success profiles follow before global bar raiser launch.</div>
+</div>
+</div>
+</div>
+
+<!-- OVERLAPS -->
+<div id="panel-overlap" class="panel">
+<div class="dep-explainer">
+  <strong>Thematic overlaps</strong> highlight where multiple initiatives share a concern, need coordination, or could be combined/sequenced. Use these to spot resourcing conflicts and quick-win synergies.
+</div>
+<div class="overlap-grid">
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#e3143c;width:10px;height:10px;border-radius:50%;display:inline-block"></span> Deliveroo Integration</h4>
+  <ul>
+    <li>Deliveroo Process Integration<span class="track-chip badge-track-gp">GP</span></li>
+    <li>Deliveroo Change Mgmt + Enablement<span class="track-chip badge-track-ops">Ops</span></li>
+    <li>TA Metrics FW (post-Roo migration)<span class="track-chip badge-track-tech">Tech</span></li>
+    <li>HC App Full Std. (Deliveroo)<span class="track-chip badge-track-ga">G&A</span></li>
+    <li>Global TA Onboarding<span class="track-chip badge-track-gp">GP</span></li>
+  </ul>
+</div>
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#007aff;width:10px;height:10px;border-radius:50%;display:inline-block"></span> Data &amp; Reporting Foundation</h4>
+  <ul>
+    <li>Global Data Dictionary<span class="track-chip badge-track-ops">Ops</span></li>
+    <li>Data Accuracy Baseline Audit<span class="track-chip badge-track-ops">Ops</span></li>
+    <li>Data Governance Forum + Alerts<span class="track-chip badge-track-ops">Ops</span></li>
+    <li>Data &amp; Reporting Foundation<span class="track-chip badge-track-pda">PD&amp;A</span></li>
+    <li>TA Metrics Framework (RecTech)<span class="track-chip badge-track-tech">Tech</span></li>
+    <li>QoH Definitions + Dashboard<span class="track-chip badge-track-ops">Ops</span></li>
+  </ul>
+</div>
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#7c3aed;width:10px;height:10px;border-radius:50%;display:inline-block"></span> Structured Interviewing</h4>
+  <ul>
+    <li>Standardized Interview Stages + Guardrails<span class="track-chip badge-track-gp">GP</span></li>
+    <li>G&A Standardized Interview Process<span class="track-chip badge-track-ga">G&A</span></li>
+    <li>"Great Hiring" Competencies + Q-Bank<span class="track-chip badge-track-gp">GP</span></li>
+    <li>G&A Competency + Assessment Matrix<span class="track-chip badge-track-ga">G&A</span></li>
+    <li>Bar Raiser — Wolt Pilot<span class="track-chip badge-track-gp">GP</span></li>
+    <li>Global Bar Raiser Program (2027)<span class="track-chip badge-track-gp">GP</span></li>
+    <li>Interview Templates + Scorecard Automation<span class="track-chip badge-track-tech">Tech</span></li>
+  </ul>
+</div>
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#2e7d32;width:10px;height:10px;border-radius:50%;display:inline-block"></span> Process Standardization</h4>
+  <ul>
+    <li>Global Process Maps<span class="track-chip badge-track-ops">Ops</span></li>
+    <li>Compliance + DEI Overlay<span class="track-chip badge-track-ops">Ops</span></li>
+    <li>Global Process Enablement Strategy<span class="track-chip badge-track-gp">GP</span></li>
+    <li>TA Op Model Blueprint<span class="track-chip badge-track-gp">GP</span></li>
+    <li>Know-How / Keystone Training<span class="track-chip badge-track-gp">GP</span></li>
+    <li>G&A Full Process Std. stack<span class="track-chip badge-track-ga">G&A</span></li>
+  </ul>
+</div>
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#f57f17;width:10px;height:10px;border-radius:50%;display:inline-block"></span> Talent Systems / RecTech</h4>
+  <ul>
+    <li>Audit + Fix Approval Chain Logic<span class="track-chip badge-track-tech">Tech</span></li>
+    <li>JD + Screening Q Permissions<span class="track-chip badge-track-tech">Tech</span></li>
+    <li>AI: JD Generation + Outreach<span class="track-chip badge-track-tech">Tech</span></li>
+    <li>HC App Expansion (HVH, Bulk Req, DM)<span class="track-chip badge-track-tech">Tech</span></li>
+    <li>CE Survey / Sigma Integration<span class="track-chip badge-track-ce">CE</span></li>
+    <li>Tech &amp; Tools Optimization (CE)<span class="track-chip badge-track-ce">CE</span></li>
+    <li>Automated Offer Builder<span class="track-chip badge-track-tech">Tech</span></li>
+  </ul>
+</div>
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#880e4f;width:10px;height:10px;border-radius:50%;display:inline-block"></span> Representation &amp; Inclusion</h4>
+  <ul>
+    <li>Representation Rule (P1)<span class="track-chip badge-track-gp">GP</span></li>
+    <li>PwD / Disability Quota Program<span class="track-chip badge-track-gp">GP</span></li>
+    <li>Refugee Hiring — BAU<span class="track-chip badge-track-gp">GP</span></li>
+    <li>Compliance + DEI Overlay on Maps<span class="track-chip badge-track-ops">Ops</span></li>
+    <li>EU Pay Transparency (deadline Jun 7)<span class="track-chip badge-track-gp">GP</span></li>
+  </ul>
+</div>
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#00695c;width:10px;height:10px;border-radius:50%;display:inline-block"></span> RPO &amp; Sourcing Programs</h4>
+  <ul>
+    <li>HVH Full Cycle (CDMX/CXI/Labs)<span class="track-chip badge-track-rpo">RPO</span></li>
+    <li>DashMart Outbound Sourcing<span class="track-chip badge-track-rpo">RPO</span></li>
+    <li>PD&A (Tech) Sourcing<span class="track-chip badge-track-rpo">RPO</span></li>
+    <li>Security (Tech) Sourcing<span class="track-chip badge-track-rpo">RPO</span></li>
+    <li>G&A Sourcing (KellyOCG)<span class="track-chip badge-track-rpo">RPO</span></li>
+    <li>Sales Sourcing<span class="track-chip badge-track-rpo">RPO</span></li>
+    <li>EBRM Admin Discovery<span class="track-chip badge-track-rpo">RPO</span></li>
+    <li>RPO Governance &amp; Cross-Program<span class="track-chip badge-track-rpo">RPO</span></li>
+  </ul>
+</div>
+<div class="overlap-card">
+  <h4><span class="legend-swatch" style="background:#5c6bc0;width:10px;height:10px;border-radius:50%;display:inline-block"></span> Candidate Experience</h4>
+  <ul>
+    <li>RPO Governance for CE<span class="track-chip badge-track-ce">CE</span></li>
+    <li>Global CE Standards &amp; Doc Hub<span class="track-chip badge-track-ce">CE</span></li>
+    <li>Agile Pool &amp; Unification<span class="track-chip badge-track-ce">CE</span></li>
+    <li>CE Specialist Enablement<span class="track-chip badge-track-ce">CE</span></li>
+    <li>Post-Offer Handoff Framework<span class="track-chip badge-track-gp">GP</span></li>
+    <li>Candidate Experience (RC Team / RPO)<span class="track-chip badge-track-rpo">RPO</span></li>
+  </ul>
+</div>
+</div>
+</div>
+<!-- Q3 & Q4 FOCUS TAB -->
+<div id="panel-quarterly" class="panel">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div>
+<h3 style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #007aff">🔵 Q3 2026 — July → September</h3>
+<div style="display:flex;flex-direction:column;gap:8px" id="q3-list"></div>
+</div>
+<div>
+<h3 style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #f57f17">🟠 Q4 2026 — October → December</h3>
+<div style="display:flex;flex-direction:column;gap:8px" id="q4-list"></div>
+</div>
+</div>
+</div>
+
+<!-- DOCS -->
+<div id="panel-docs" class="panel">
+<div class="doc-card">
+  <div class="doc-card-header">
+    <div class="doc-icon">📋</div>
+    <div>
+      <div class="doc-title">Global TA Unified Processes Master List</div>
+      <div class="doc-meta">Google Drive · 112 items · April–June 2026 · DRI: TA S&O</div>
+    </div>
+  </div>
+  <div class="doc-desc">The canonical list of all 112 process items across Global Programs, TA Ops, RecTech, G&A, and PD&A tracks. Includes owners, status, estimated delivery, and notes for each. The primary source of truth for the roadmap.</div>
+  <div class="doc-related"><span class="doc-chip">Global Programs</span><span class="doc-chip">TA Ops</span><span class="doc-chip">RecTech</span><span class="doc-chip">G&A</span><span class="doc-chip">PD&A</span></div>
+  <a href="#" class="doc-open-btn" onclick="openDoc('1cD0_y2m3Z8BWMG9iMOCDI_5P4vRPa3YChzHPNGefkzk');return false">📂 Open in Drive</a>
+</div>
+<div class="doc-card">
+  <div class="doc-card-header">
+    <div class="doc-icon">🌍</div>
+    <div>
+      <div class="doc-title">Global Programmes Master Tracker</div>
+      <div class="doc-meta">Google Drive · H. Denhart / H. Donley / Ida Siljander / Nina Korobko</div>
+    </div>
+  </div>
+  <div class="doc-desc">Cross-program tracker for Global Programs initiatives — Global Hiring Philosophy, Internal Mobility, Referrals, Rehire Policy, Bar Raiser, PwD Program, and more. Includes status, DRI, and milestone tracking.</div>
+  <div class="doc-related"><span class="doc-chip">Global Programs</span><span class="doc-chip">H. Denhart</span><span class="doc-chip">H. Donley</span></div>
+  <a href="#" class="doc-open-btn" onclick="openDoc('10XIPbXRBvLqC-3qmzgXxH8qxTVH0RIzQCbO5HQjvLpo');return false">📂 Open in Drive</a>
+</div>
+<div class="doc-card">
+  <div class="doc-card-header">
+    <div class="doc-icon">🏢</div>
+    <div>
+      <div class="doc-title">G&A Global Integration Roadmap (Compass)</div>
+      <div class="doc-meta">Google Drive · TA S&O · Head of TA · Ops · DRI: Multiple</div>
+    </div>
+  </div>
+  <div class="doc-desc">Detailed integration roadmap for G&A TA standardization globally — HC Approval, Offer Approval, Competency Matrix, Standardized Interview Process, Cross-Brand Enablement, and Take-Home Assessment Library.</div>
+  <div class="doc-related"><span class="doc-chip">G&A</span><span class="doc-chip">Integration</span><span class="doc-chip">HC Approval</span><span class="doc-chip">Offer Approval</span></div>
+  <a href="#" class="doc-open-btn" onclick="openDoc('1fWCCNpQMeQlELNrjXF93c4K3yqBhVlPJ3UJp_bq8Y3s');return false">📂 Open in Drive</a>
+</div>
+<div class="doc-card">
+  <div class="doc-card-header">
+    <div class="doc-icon">📊</div>
+    <div>
+      <div class="doc-title">Global PD&A Recruiting Roadmap</div>
+      <div class="doc-meta">Google Drive · Joey Perlman · Taleen Shekerjian</div>
+    </div>
+  </div>
+  <div class="doc-desc">PD&A-specific roadmap covering PM & Design global hiring process, debrief cadence, operating model, operating rhythms, data and reporting foundation, and 2026 demand finalization (currently blocked).</div>
+  <div class="doc-related"><span class="doc-chip">PD&A</span><span class="doc-chip">Joey Perlman</span><span class="doc-chip">Taleen Shekerjian</span></div>
+  <a href="#" class="doc-open-btn" onclick="openDoc('1nDcDPMb7oGmxVB7oSX8w6DPBSaxgNbK6sUGF_kZpDaI');return false">📂 Open in Drive</a>
+</div>
+<div class="doc-card">
+  <div class="doc-card-header">
+    <div class="doc-icon">🔷</div>
+    <div>
+      <div class="doc-title">Global CE 2026 Project Plan</div>
+      <div class="doc-meta">Google Drive · Antonis · Georgia · Claudia · Vivian</div>
+    </div>
+  </div>
+  <div class="doc-desc">Global Candidate Experience project plan covering RPO Governance, CE Standards & Doc Hub, Agile Pool Unification, CE Specialist Enablement, Unified CE Survey/Sigma, and Tech & Tools Optimization. Includes phase timelines and leads.</div>
+  <div class="doc-related"><span class="doc-chip">Candidate Experience</span><span class="doc-chip">RPO CE</span><span class="doc-chip">CE Standards</span></div>
+  <a href="#" class="doc-open-btn" onclick="openDoc('1J5RI_ABnPuVyxHhiS5K_G_F8lV9IQBC_G0yRhBMb9wI');return false">📂 Open in Drive</a>
+</div>
+<div class="doc-add-placeholder" onclick="alert('To add a new source document, update the artifact configuration.')">
+  + Add source document
+</div>
+</div>
+
+<!-- SOURCES -->
+<div id="panel-sources" class="panel">
+<div style="max-width:700px">
+<h3 style="font-size:14px;font-weight:700;color:#1d1d1f;margin-bottom:16px">📂 Source Files</h3>
+<p style="font-size:12px;color:#666;margin-bottom:20px;line-height:1.6">This roadmap synthesizes data from 5 primary source documents. All files are stored in Google Drive and require DoorDash SSO access. Use the links below to open each source.</p>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px">
+  <div style="font-size:24px">📋</div>
+  <div style="flex:1"><div style="font-size:13px;font-weight:700;color:#1d1d1f">Global Unified Processes (112 items)</div><div style="font-size:11px;color:#888;margin-top:2px">Main process inventory · All tracks · TA S&O DRI</div></div>
+  <a href="#" onclick="openDoc('1cD0_y2m3Z8BWMG9iMOCDI_5P4vRPa3YChzHPNGefkzk');return false" style="font-size:11px;color:#007aff;font-weight:600">Open →</a>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px">
+  <div style="font-size:24px">🌍</div>
+  <div style="flex:1"><div style="font-size:13px;font-weight:700;color:#1d1d1f">Global Programmes Master Tracker</div><div style="font-size:11px;color:#888;margin-top:2px">H. Denhart / H. Donley / Ida / Nina Korobko</div></div>
+  <a href="#" onclick="openDoc('10XIPbXRBvLqC-3qmzgXxH8qxTVH0RIzQCbO5HQjvLpo');return false" style="font-size:11px;color:#007aff;font-weight:600">Open →</a>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px">
+  <div style="font-size:24px">🏢</div>
+  <div style="flex:1"><div style="font-size:13px;font-weight:700;color:#1d1d1f">G&A Global Integration Roadmap (Compass)</div><div style="font-size:11px;color:#888;margin-top:2px">TA S&O / Head of TA</div></div>
+  <a href="#" onclick="openDoc('1fWCCNpQMeQlELNrjXF93c4K3yqBhVlPJ3UJp_bq8Y3s');return false" style="font-size:11px;color:#007aff;font-weight:600">Open →</a>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px">
+  <div style="font-size:24px">📊</div>
+  <div style="flex:1"><div style="font-size:13px;font-weight:700;color:#1d1d1f">Global PD&A Recruiting Roadmap</div><div style="font-size:11px;color:#888;margin-top:2px">Joey Perlman · Taleen Shekerjian</div></div>
+  <a href="#" onclick="openDoc('1nDcDPMb7oGmxVB7oSX8w6DPBSaxgNbK6sUGF_kZpDaI');return false" style="font-size:11px;color:#007aff;font-weight:600">Open →</a>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px">
+  <div style="font-size:24px">🔷</div>
+  <div style="flex:1"><div style="font-size:13px;font-weight:700;color:#1d1d1f">Global CE 2026 Project Plan</div><div style="font-size:11px;color:#888;margin-top:2px">Antonis · Georgia · Claudia · Vivian</div></div>
+  <a href="#" onclick="openDoc('1J5RI_ABnPuVyxHhiS5K_G_F8lV9IQBC_G0yRhBMb9wI');return false" style="font-size:11px;color:#007aff;font-weight:600">Open →</a>
+</div>
+</div>
+<div style="background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:16px;margin-top:20px">
+<div style="font-size:12px;font-weight:700;color:#b35a00;margin-bottom:6px">ℹ️ About Auto-Refresh</div>
+<div style="font-size:12px;color:#666;line-height:1.6">This roadmap auto-refreshes daily via a scheduled Claude task (<code>ta-roadmap-daily-refresh</code>). Status updates, milestone completions, and new items are pulled from source documents and applied to all views. Last refresh timestamp is shown in the header.</div>
+</div>
+</div>
+</div>
+<!-- HoP TAB -->
+<div id="panel-hop" class="panel">
+<div style="background:#fff;border-radius:12px;border:1px solid #e8e8e8;padding:20px;margin-bottom:20px;max-width:820px">
+  <h2 style="font-size:16px;font-weight:700;color:#1d1d1f;margin-bottom:4px">👥 Head of Programs — Executive View</h2>
+  <p style="font-size:12px;color:#888;margin-bottom:20px">Portfolio view for VP conversations · Updated Jul 1, 2026</p>  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:24px" id="hop-stats-grid">
+    <div style="background:#f9f9f9;border-radius:10px;padding:14px 16px;border:1px solid #e8e8e8"><div style="font-size:26px;font-weight:700;color:#007aff" id="hop-inprogress">—</div><div style="font-size:11px;color:#888;margin-top:3px">In Progress</div></div>
+    <div style="background:#f9f9f9;border-radius:10px;padding:14px 16px;border:1px solid #e8e8e8"><div style="font-size:26px;font-weight:700;color:#34c759" id="hop-completed">—</div><div style="font-size:11px;color:#888;margin-top:3px">Completed ✅</div></div>
+    <div style="background:#f9f9f9;border-radius:10px;padding:14px 16px;border:1px solid #e8e8e8"><div style="font-size:26px;font-weight:700;color:#ff9500" id="hop-atrisk">—</div><div style="font-size:11px;color:#888;margin-top:3px">At Risk / Blocked ⚠️</div></div>
+    <div style="background:#f9f9f9;border-radius:10px;padding:14px 16px;border:1px solid #e8e8e8"><div style="font-size:26px;font-weight:700;color:#888" id="hop-notstarted">—</div><div style="font-size:11px;color:#888;margin-top:3px">Not Started</div></div>
+  </div>
+  <table style="width:100%;border-collapse:collapse;border:1px solid #e8e8e8;border-radius:8px;overflow:hidden">
+    <thead><tr style="background:#f5f5f7">
+      <th style="padding:10px 12px;font-size:11px;font-weight:700;color:#666;text-align:left;border-bottom:1px solid #e0e0e0">Track</th>
+      <th style="padding:10px 12px;font-size:11px;font-weight:700;color:#666;text-align:left;border-bottom:1px solid #e0e0e0">Initiative</th>
+      <th style="padding:10px 12px;font-size:11px;font-weight:700;color:#666;text-align:left;border-bottom:1px solid #e0e0e0">Status</th>
+      <th style="padding:10px 12px;font-size:11px;font-weight:700;color:#666;text-align:left;border-bottom:1px solid #e0e0e0">Target / ETA</th>
+      <th style="padding:10px 12px;font-size:11px;font-weight:700;color:#666;text-align:left;border-bottom:1px solid #e0e0e0">Exec Signal</th>
+    </tr></thead>
+    <tbody id="hop-tbody"></tbody>
+  </table>
+  <h3 style="font-size:13px;font-weight:700;color:#1d1d1f;margin:24px 0 12px">⚠️ Active Blockers / Escalations</h3>
+  <div id="hop-blockers" style="display:flex;flex-direction:column;gap:8px"></div>
+  <h3 style="font-size:13px;font-weight:700;color:#1d1d1f;margin:24px 0 12px">🔮 Q3/Q4 2026 — Key Deliverables</h3>
+  <div id="hop-deliverables" style="display:flex;flex-direction:column;gap:8px"></div>
+</div>
+</div>
+
+<!-- GLOBAL PROGRAMS DEEP DIVE -->
+<div id="panel-global-programs" class="panel">
+<div style="max-width:820px">
+<h2 style="font-size:16px;font-weight:700;color:#1d1d1f;margin-bottom:4px">🌍 Global Programs — Deep Dive</h2>
+<p style="font-size:12px;color:#888;margin-bottom:20px">Program-level view · Hannah Denhart · Hannah Donley · Ida Siljander · Nina Korobko</p>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🌐 Global Hiring Philosophy (GHP) — Phase 1</h3><span class="badge badge-in-progress">In Progress</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Core values-based hiring framework. Phase 1 targeting Dec 2026 (DRI: H. Denhart). Feeds "Great Hiring" competencies, Bar Raiser global rollout, and success profiles in 2027. PwD/disability and refugee hiring programs are aligned to GHP values pillars.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Dec 2026</span><span class="badge">DRI: H. Denhart</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🏆 Project Rolex — TA Leveling</h3><span class="badge badge-completed">✅ Completed Jun 9</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Global TA leveling framework completed Jun 9, 2026. Phase 2 rollout to follow. Unblocked capacity planning methodology (Clare, Q3). Key dependency for headcount modeling and standardized MBRs.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge badge-completed">Done Jun 9, 2026</span><span class="badge">DRI: H. Donley</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🔄 Internal Mobility — Phase 1</h3><span class="badge badge-in-progress">In Progress</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Phase 1 live and active (H. Donley). Target close Jul 2026. Runs in parallel with employee referrals and rehire policy programs. All three share similar stakeholder communication needs — TA Comms framework will cover all three.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Jul 2026</span><span class="badge">DRI: H. Donley</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">⚠️ Employee Referrals — Phase 1</h3><span class="badge badge-parked">Minor Delays</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Minor delays vs. plan. Active but behind. H. Donley is DRI. Stakeholder alignment in progress. Not blocking other programs — running independently.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge badge-parked">Minor Delays</span><span class="badge">DRI: H. Donley</span></div>
+</div><div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">⚠️ Representation Rule (P1)</h3><span class="badge badge-in-progress">In Progress — Past Target</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">P1 priority. Target: Jun 30, 2026 (passed). H. Donley is DRI. Source confirms In Progress as of refresh — confirm completion status. Policy mandates representation in interview panels. Linked to PwD program and refugee hiring BAU. Compliance dep. on Compliance + DEI overlay (Fritz).</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Jun 30, 2026</span><span class="badge">DRI: H. Donley</span><span class="badge badge-blocked">Priority 1</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🇪🇺 EU Pay Transparency</h3><span class="badge badge-completed">✅ Deadline Jun 7</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">EU Pay Transparency Directive deadline was Jun 7, 2026. Compliance measures live per H. Denhart confirmation. Monitor for any follow-up regulatory guidance in H2 2026.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge badge-completed">Deadline Passed ✅</span><span class="badge">DRI: H. Denhart</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🤝 PwD / Disability Quota Program</h3><span class="badge badge-in-progress">In Progress</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Active program through Dec 2026 (Nina Korobko). Covers quota compliance and disability-inclusive hiring practices across regions. Linked to GHP values and Representation Rule.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Dec 2026</span><span class="badge">DRI: Nina Korobko</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🎓 Know-How / Keystone Training</h3><span class="badge badge-in-progress">In Progress</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Recruiter training and upskilling program (Ida Siljander, target Oct 2026). Covers structured interviewing, process adherence, and compliance. Linked to P2P Learning pilot (Dóra Szabó) and Global TA Onboarding.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Oct 2026</span><span class="badge">DRI: Ida Siljander</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🔗 Deliveroo Integration (Processes)</h3><span class="badge badge-not-started">Scoped Jun 1</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Process integration for Deliveroo scoped Jun 1. H. Denhart DRI, Dec 2026 target. Drives Deliveroo-specific process maps, change management (Clare), and TA metrics framework (post-Roo migration). HC App full standardization follows in 2027.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Dec 2026</span><span class="badge">DRI: H. Denhart</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="gtt"></div>
+<script>
+const barData={
+'bar-ghp':{title:'Global Hiring Philosophy — Phase 1',track:'Global Programs',status:'In Progress',dri:'H. Denhart',target:'Dec 2026',what:'Core values-based hiring framework. Phase 1 targets Dec 2026. Feeds "Great Hiring" competencies, Bar Raiser, and success profiles (2027). PwD/disability and refugee programs aligned to GHP values pillars. Pay Transparency dep. confirmed.',deps:['Bar Raiser Wolt Pilot','Great Hiring Competencies (2027)','Success Profiles (2027)']},
+'bar-opmodel':{title:'TA Operating Model + Governance ⚠️ Delayed',track:'Global Programs',status:'Not Started',dri:'Ida Siljander (OKR) · H. Denhart (Blueprint) / H. Donley (Governance)',target:'⚠️ Delayed — start pushed to Jul 20, 2026',what:'Master Tracker (last edited Jul 16) shows both the Op Model Blueprint (DRI: H. Denhart) and Governance Framework (DRI: H. Donley) as Not Yet Started — start dates delayed from May/Jun to Jul 20, 2026. Corrects prior "In Progress" status. Drives Process Enablement Strategy and TA Comms & Governance H2 cascade.',deps:['Governance Framework','Global Process Enablement (Dec 2026)','TA Comms & Governance']},
+'bar-rolex':{title:'Project Rolex — TA Leveling ✅',track:'Global Programs',status:'Completed',dri:'H. Donley',target:'Completed Jun 9, 2026',what:'Global TA leveling completed ✅ Jun 9. Phase 2 rollout to follow. Unblocked Capacity Planning (Clare, Q3 2026).',deps:['Capacity Planning Methodology (now unblocked)','SLA Baselines','Standardized MBRs']},
+'bar-mobility':{title:'Internal Mobility — Phase 1',track:'Global Programs',status:'In Progress',dri:'H. Donley',target:'Jul 2026',what:'Phase 1 live and active. Runs in parallel with Employee Referrals and Rehire Policy. TA Comms framework will cover all three programs.',deps:['TA Comms Framework','Phase 2 TBD']},
+'bar-referrals':{title:'Employee Referrals — Phase 1',track:'Global Programs',status:'In Progress',dri:'H. Donley',target:'Aug 2026 (V1.0)',what:'Master Tracker confirms In Progress (not Delayed) — Phase 1 Planning, running through Sep 30, 2026. SLA targets currently at 80% of goal (below target — flagged for monitoring). Stakeholder alignment ongoing. Not blocking other programs.',deps:[]},
+'bar-rehire':{title:'Rehire Eligibility Policy',track:'Global Programs',status:'In Progress',dri:'H. Donley',target:'Aug 31, 2026',what:'Master Tracker confirms In Progress (not Delayed) — Phase 1 Planning, targeting process automation by Aug 31, 2026. Independent track, not blocking downstream programs.',deps:[]},
+'bar-reprule':{title:'Representation Rule (P1)',track:'Global Programs',status:'In Progress',dri:'H. Donley',target:'Aug 3, 2026 (timeline extended from Jun 30)',what:'P1 priority. Mandates representation in interview panels globally. Master Tracker shows the Phase 1 Planning end date was extended to Aug 3, 2026 — this is NOT actually past target as previously flagged; the original Jun 30 estimate was superseded. Started May 12. Linked to PwD program, refugee hiring, and Compliance + DEI overlay.',deps:['Compliance + DEI Overlay','PwD Program']},
+'bar-keystone':{title:'Know-How / Keystone Training',track:'Global Programs',status:'In Progress',dri:'Ida Siljander',target:'Oct 2026',what:'Recruiter upskilling: structured interviewing, process adherence, compliance. Linked to P2P Learning pilot and Global TA Onboarding.',deps:['Global TA Onboarding (H2 2026)','P2P Learning Pilot']},
+'bar-roointegration':{title:'Deliveroo Integration — Processes',track:'Global Programs',status:'Not Started',dri:'H. Denhart',target:'Dec 2026',what:'Process integration for Deliveroo scoped Jun 1. Drives Deliveroo change management (Clare), TA Metrics FW (post-migration), and HC App full standardization (2027).',deps:['Deliveroo Change Mgmt + Enablement (Clare)','TA Metrics FW','HC App Full Std.']},
+'bar-pwd':{title:'PwD / Disability Quota Program',track:'Global Programs',status:'In Progress',dri:'Nina Korobko',target:'Dec 2026',what:'Quota compliance and disability-inclusive hiring across regions through Dec 2026. Linked to GHP values and Representation Rule.',deps:['Representation Rule','GHP Phase 1']},
+'bar-intstages':{title:'Standardized Interview Stages + Guardrails',track:'Global Programs',status:'In Progress',dri:'H. Denhart',target:'Q3 2026',what:'Stage-level guardrails framework. In progress. Feeds Q-Bank and competency development (2027), and links to G&A Interview Process standardization.',deps:['G&A Interview Process','Q-Bank + Competencies (2027)']},
+'bar-postoffer':{title:'Post-Offer Handoff Framework',track:'Global Programs',status:'In Progress',dri:'H. Denhart',target:'Q4 2026',what:'Framework standardizing handoff from TA to HR/onboarding post-offer. Linked to CE programs and candidate experience continuity.',deps:['CE Standards & Doc Hub','Global CE programs']},
+'bar-enablement':{title:'Global Process Enablement Strategy',track:'Global Programs',status:'Not Started',dri:'Ida Siljander',target:'Dec 2026',what:'Enablement strategy for global process adoption. Follows Op Model and Governance Framework completion. Covers tooling, training, and comms.',deps:['TA Op Model Blueprint','Governance Framework']},
+'bar-greathiring':{title:'"Great Hiring" Competencies + Q-Bank',track:'Global Programs',status:'Not Started',dri:'H. Donley',target:'2027',what:'Values-linked competency framework and question bank. Requires GHP Phase 1 completion. 2027 horizon. Gates global Bar Raiser and Success Profiles programs.',deps:['GHP Phase 1 ✅','Success Profiles + Assessment FW','Bar Raiser (Global)']},
+'bar-successprofiles':{title:'Success Profiles + Assessment Framework',track:'Global Programs',status:'Not Started',dri:'H. Donley',target:'2027',what:'Role-level success profiles and assessment standards. Follows "Great Hiring" competency work. Large initiative — full 2027 scope.',deps:['"Great Hiring" Competencies','Bar Raiser (Global)']},
+'bar-barraiser':{title:'Global Bar Raiser Program',track:'Global Programs',status:'Not Started',dri:'H. Denhart',target:'2027 (all brands)',what:'Global Bar Raiser rollout across DoorDash, Wolt, and Deliveroo in 2027. Requires GHP Phase 1, Success Profiles, and Wolt pilot completion.',deps:['GHP Phase 1','Bar Raiser Wolt Pilot','Success Profiles']},
+'bar-internships':{title:'Career-Track Internships Program',track:'Global Programs',status:'In Progress',dri:'H. Denhart',target:'Fall Internships (2026) On Track · Global 2027 Expansion Parked',what:'Fresh source data shows Fall Internships 2026 pilot is actively In Progress and on track (Planning phase, running through Nov 2026), while the separate Global/2027 expansion planning effort remains Parked. Corrects prior single "Parked" status which conflated the two.',deps:[]},
+'bar-paytrans':{title:'EU Pay Transparency',track:'Global Programs',status:'Completed',dri:'H. Denhart',target:'Deadline: Jun 7, 2026 ✅',what:'EU Pay Transparency Directive deadline Jun 7, 2026 passed. Compliance measures live. Monitor for H2 regulatory follow-up.',deps:[]},
+'bar-barraiser-wolt':{title:'Bar Raiser — Wolt Pilot ✅ Sunset',track:'Global Programs',status:'Completed',dri:'H. Denhart',target:'Completed/Sunset Mar 27, 2026',what:'Master Tracker shows this program is Completed — Sunset/Closing phase, ended Mar 27, 2026, after facing delays from lower-than-anticipated hiring volume. Corrects prior "Delayed" status, which was stale by several months. Learnings feed the 2027 global Bar Raiser rollout.',deps:['Global Bar Raiser (2027)']},
+'bar-refugee':{title:'Refugee Hiring — BAU (5 countries)',track:'Global Programs',status:'Completed',dri:'Nina Korobko',target:'BAU Active',what:'Refugee hiring running in BAU across 5 countries. Fully operational. Linked to GHP values and representation programs.',deps:[]},
+'bar-taonboarding-wolt':{title:'TA Onboarding — Wolt ✅ BAU',track:'Global Programs',status:'Completed',dri:'Ida Siljander',target:'BAU',what:'TA onboarding for Wolt completed and running in BAU. Feeds Global TA Onboarding framework design for H2 2026.',deps:['Global TA Onboarding (H2)']},
+'bar-director':{title:'Director Hiring — Pilot',track:'Global Programs',status:'In Progress',dri:'Ida Siljander · Kristin Parris',target:'In Progress',what:'Director-level hiring pilot in progress. Structured process for senior roles across brands.',deps:[]},
+'bar-pii':{title:'PII Form Updates & Translations',track:'Global Programs',status:'In Progress',dri:'H. Denhart · Nate Sears',target:'Q3–Q4 2026',what:'PII compliance forms and multi-language translations. In progress through Q3-Q4 2026.',deps:[]},
+'bar-p2p':{title:'Peer2Peer Learning — STA Pilot',track:'Global Programs',status:'In Progress',dri:'Ida Siljander · Dóra Szabó',target:'H1 2026',what:'P2P learning pilot for STA (Student/Associate) track. Linked to Know-How/Keystone training rollout.',deps:['Know-How / Keystone Training']},
+'bar-hvh':{title:'HVH Transformation (Fountain)',track:'Global Programs',status:'In Progress',dri:'Gosia Szafraniec',target:'H2 2026',what:'High-Volume Hiring transformation using Fountain platform. In progress for H2 2026.',deps:['HC App Expansion (HVH)']},
+'bar-tacomms':{title:'TA Comms & Governance',track:'Global Programs',status:'In Progress',dri:'H. Donley',target:'Initiation & Discovery — started Jul 1, 2026',what:'Master Tracker shows this ("TA Comms and Governance: Intranet Audit") is now In Progress — Initiation & Discovery phase started Jul 1, 2026, DRI corrected to H. Donley. Covers Internal Mobility, Referrals, Rehire, and new processes comms.',deps:['Op Model Blueprint','Governance Framework']},
+'bar-gtonboarding':{title:'Global TA Onboarding',track:'Global Programs',status:'Not Started',dri:'Ida Siljander',target:'H2 2026',what:'Global TA onboarding framework building on Wolt BAU model. H2 2026 target.',deps:['TA Onboarding Wolt (BAU)','Know-How / Keystone']},
+'bar-blockconsolidation':{title:'TA Block Consolidation',track:'Global Programs',status:'Not Started',dri:'Gosia Szafraniec',target:'H2 2026',what:'Consolidation of TA capacity blocks and resource planning. H2 2026 initiative.',deps:['Capacity Planning Methodology']},
+'bar-processmaps':{title:'Global Process Maps (Current State)',track:'TA Ops S&O',status:'In Progress',dri:'Fritz',target:'Q3 2026',what:'Current-state process maps across all TA functions. Fritz DRI. Feeds Compliance + DEI Overlay and SLA Baselines. Q3 2026 target.',deps:['Compliance + DEI Overlay','SLA Baselines']},
+'bar-compliance':{title:'Compliance + DEI Overlay on Maps',track:'TA Ops S&O',status:'Not Started',dri:'Fritz',target:'Q3 2026',what:'Compliance and DEI overlay applied to process maps. Follows current-state mapping completion. Required for SLA baseline setting.',deps:['Global Process Maps','SLA Baselines']},
+'bar-slabaselines':{title:'Stage-Level SLA Baselines',track:'TA Ops S&O',status:'In Progress',dri:'Breanna',target:'Q3 2026',what:'Global Unified Processes doc shows benchmarks are already being drafted for Biz and G&A functions (not yet loaded into dashboards). Corrects prior "Not Started" status. Feeds standardized MBR framework.',deps:['Global Process Maps','Compliance Overlay','Standardized MBRs']},
+'bar-mbr':{title:'Standardized MBRs (All TA Leads)',track:'TA Ops S&O',status:'In Progress',dri:'Breanna',target:'Pilot w/ 2 TA Leads (Month 1) → Scale by Month 3',what:'Global Unified Processes doc shows this is already In Progress — single MBR template being built now, piloting with 2 TA Leads in month 1, scaling to all TA Leads by month 3. Corrects prior "Not Started" status.',deps:['Project Rolex ✅','SLA Baselines']},
+'bar-datadict':{title:'Global Data Dictionary',track:'TA Ops S&O',status:'Not Started',dri:'Danielle',target:'Q4 2026',what:'Canonical definitions for all TA metrics and data fields globally. Foundation for QoH and predictive analytics.',deps:['Data Accuracy Audit','Data Governance Forum']},
+'bar-dataaccuracy':{title:'Data Accuracy Baseline Audit',track:'TA Ops S&O',status:'Not Started',dri:'Danielle',target:'Q4 2026',what:'Audit of current data accuracy across ATS and BI systems. Prerequisite for QoH metric definitions.',deps:['Data Dictionary','QoH Definitions']},
+'bar-datagovforum':{title:'Data Governance Forum + Alerts',track:'TA Ops S&O',status:'Not Started',dri:'Danielle',target:'Q4 2026',what:'Governance charter and alert framework for TA data quality. Q4 2026 target.',deps:['Data Dictionary','Data Accuracy Audit']},
+'bar-capacity':{title:'Capacity Planning Methodology',track:'TA Ops S&O',status:'In Progress',dri:'Clare',target:'Q3 2026',what:'Global Unified Processes doc shows work is already underway — started validating Wolt processes, continuing to build out the capacity planning playbook alongside Workforce Staffing. Corrects prior "Not Started" status. Unblocked by Project Rolex ✅ Jun 9.',deps:['Project Rolex ✅ (unblocked)','SLA Baselines','Demand Plan (blocked)']},
+'bar-rooschange':{title:'Deliveroo Change Mgmt + Enablement',track:'TA Ops S&O',status:'Not Started',dri:'Clare',target:'Dec 2026',what:'Change management and enablement program for Deliveroo TA integration. Follows Deliveroo Process Integration scoped Jun 1.',deps:['Deliveroo Process Integration','TA Metrics FW']},
+'bar-quickwins':{title:'Quick Wins: Scheduling / SLAs / GH Standards',track:'TA Ops S&O',status:'In Progress',dri:'Emily / Clare',target:'Q2–Q3 2026',what:'15+ quick wins in scheduling, SLA setting, and Greenhouse standards. Actively in progress across Q2-Q3.',deps:[]},
+'bar-qohdefs':{title:'QoH Metric Definitions',track:'TA Ops S&O',status:'Not Started',dri:'Joey / Emily',target:'Q4 2026',what:'Quality of Hire metric definitions for global consistency. Q4 2026. Requires data foundation and dictionary.',deps:['Data Dictionary','Data Accuracy Audit']},
+'bar-tth':{title:'TTH Bottleneck Analysis',track:'TA Ops S&O',status:'Not Started',dri:'Emily',target:'2027',what:'Time-to-hire bottleneck analysis. 2027 initiative. Requires reporting foundation and SLA baselines.',deps:['SLA Baselines','Reporting Foundation']},
+'bar-qohdash':{title:'QoH Dashboard + Data Literacy',track:'TA Ops S&O',status:'Not Started',dri:'Joey',target:'2027',what:'QoH dashboard and data literacy program. 2027. Requires QoH definitions, data dictionary, and reporting foundation.',deps:['QoH Definitions','Data Dictionary','Reporting Foundation']},
+'bar-predictive':{title:'Predictive Insights + TA Insights Report',track:'TA Ops S&O',status:'In Progress',dri:'Breanna',target:'V1 Pilot (NA Sales) in build · full rollout 2027',what:'Global Unified Processes doc shows People Analytics is actively building a V1 baseline predictive model, piloting with North America Sales. Corrects prior "Not Started" status. Full multi-vertical rollout remains a 2027 horizon item.',deps:['QoH Dashboard','Data Foundation','Demand Plan']},
+'bar-approvalaudit':{title:'Audit + Fix Approval Chain Logic',track:'RecTech',status:'In Progress',dri:'Marcus (Tools + Data)',target:'Mapping underway',what:'Global Unified Processes doc shows mapping has commenced in partnership with S&O (Emily). Corrects prior "Not Started" status. Requirements build pending Workday report support from PTI.',deps:[]},
+'bar-jdself':{title:'JD + Screening Q Permissions (Self-Service)',track:'RecTech',status:'Not Started',dri:'RecTech / Tools+Data',target:'Jun–Sep 2026',what:'Enable TA self-service for JD and screening question management in GH. Jun–Sep 2026.',deps:[]},
+'bar-scorecards':{title:'Interview Templates + Scorecard Automation',track:'RecTech',status:'Not Started',dri:'RecTech / Tools+Data',target:'Aug 2026 — 2 months',what:'Automated scorecard templates and interview structure. Aug 2026 start, 2-month effort. Linked to Int. Stages + Guardrails.',deps:['Standardized Interview Stages']},
+'bar-aijd':{title:'AI: JD Generation + Outreach Drafting',track:'RecTech',status:'Not Started',dri:'RecTech / Tools+Data',target:'Jul 2026 — 3 months',what:'AI-assisted JD generation and outreach message drafting. Jul 2026 start.',deps:[]},
+'bar-tametrics':{title:'Global TA Metrics Framework',track:'RecTech',status:'Not Started',dri:'RecTech / Tools+Data',target:'Oct 2026 (post-Roo migration)',what:'TA metrics framework requiring Deliveroo ATS migration. Oct 2026 target.',deps:['Deliveroo ATS Migration','Data Dictionary']},
+'bar-offerbuilder':{title:'Automated Offer Builder Platform',track:'RecTech',status:'Not Started',dri:'RecTech / Tools+Data',target:'2027',what:'Automated offer letter generation platform. 2027 initiative.',deps:[]},
+'bar-hcapp':{title:'HC App: HVH, Bulk Req ID, DM Trackers',track:'RecTech',status:'Not Started',dri:'RecTech / Tools+Data',target:'2027',what:'HC App expansion: HVH workflows, bulk req ID management, and DM tracking. 2027.',deps:['Demand Plan (unblock needed)']},
+'bar-hcapproval':{title:'HC Approval Framework ✅',track:'G&A',status:'Completed',dri:'TA S&O',target:'Completed — Framework Live Jun 9',what:'HC Approval Framework completed ✅ Jun 9. All 1.1.x items done. Framework live globally.',deps:['Offer Approval Workflow (next)']},
+'bar-offerapproval':{title:'Offer Approval Workflow ⚠️ Target Missed',track:'G&A',status:'In Progress',dri:'TA S&O',target:'⚠️ Jul 15, 2026 target passed — sub-steps not started',what:'Offer approval workflow configuration in Greenhouse. Cost center audit (2.1) and current-process audit (2.2) In Progress. Future-state process definition (2.3), Finance/Comp approval (2.4), reporting cadence (2.6), enablement plan (2.7), and global launch (2.8) all still Not Started as of Jul 16 — the Jul 15 launch target has passed. Gates G&A Interview Process standardization.',deps:['HC Approval ✅','G&A Interview Process']},
+'bar-gacompetency':{title:'G&A Competency + Assessment Matrix ⚠️ Multiple Slips',track:'G&A',status:'In Progress',dri:'Head of TA',target:'⚠️ Mapping 13 days overdue · Sign-off 3 days overdue · Matrix build not started',what:'Competency mapping (3.1.1) In Progress since May 25 — target was Jul 3, now ~13 days overdue. Recommendations to PBP/HOP for sign-off (3.1.2) targeted Jul 13; still In Progress as of Jul 16 (3 days overdue). Level-specific competency/assessment matrix build (3.1.3), slated to start Jul 14, is still Not Started as of Jul 16.',deps:['G&A Interview Process']},
+'bar-gainterview':{title:'G&A Standardized Interview Process',track:'G&A',status:'Not Started',dri:'TA S&O',target:'Sep 1, 2026',what:'Standardized interview process for G&A global hiring. Sep 1, 2026 target. Requires Offer Approval Workflow completion.',deps:['Offer Approval Workflow','G&A Competency Matrix']},
+'bar-crossbrand':{title:'Cross-Brand Hiring Enablement',track:'G&A',status:'In Progress',dri:'TA S&O',target:'TBD',what:'Enablement framework for cross-brand G&A hiring. In progress.',deps:[]},
+'bar-assessmentlib':{title:'G&A Take-Home Assessment Library',track:'G&A',status:'Not Started',dri:'Head of TA',target:'Dec–Q1 2027',what:'Library of take-home assessments for G&A roles. Dec 2026 – Q1 2027.',deps:['G&A Competency Matrix','G&A Interview Process']},
+'bar-hcappfull':{title:'HC App Full Std. (Deliveroo)',track:'G&A',status:'Not Started',dri:'TA S&O',target:'2027',what:'Full HC App standardization for Deliveroo. Requires Deliveroo ATS migration and HC App expansion (RecTech). Note: sub-step 1.2.1 (approval/mapping requirements to IT & People Product) is currently Blocked per G&A Compass tracker — monitor for cascading delay.',deps:['Deliveroo ATS Migration','HC App Expansion','1.2.1 mapping to People Product (Blocked)']},
+'bar-pdaprocess':{title:'Global Hiring Process — PM & Design (92%)',track:'PD&A',status:'In Progress',dri:'All',target:'Q2 2026',what:'92% complete. PM and Design global hiring process. Q2 2026 target.',deps:[]},
+'bar-debriefcal':{title:'Global Debrief Calendar + Slack',track:'PD&A',status:'In Progress',dri:'Taleen',target:'Q2 2026 — 50%',what:'Debrief calendar automation and Slack integration. 50% complete. Q2 2026.',deps:['Global Hiring Process']},
+'bar-pdaopmodel':{title:'Global Recruiting Operating Model (79%)',track:'PD&A',status:'In Progress',dri:'Joey / Taleen',target:'Q3 2026',what:'79% complete. Global operating model for PD&A recruiting. Q3 2026.',deps:[]},
+'bar-rhythms':{title:'Global Operating Rhythms (25%)',track:'PD&A',status:'In Progress',dri:'Taleen',target:'Jun 2026',what:'25% complete. Operating rhythms (meeting cadences, review cycles) for global PD&A recruiting.',deps:['Operating Model']},
+'bar-pdareporting':{title:'Data & Reporting Foundation (67%)',track:'PD&A',status:'In Progress',dri:'Joey',target:'Q3 2026',what:'67% complete. Reporting foundation for PD&A. Blocked partially on Ashby/PA migration. Q3 2026 target.',deps:['Ashby / Pipeline Analytics migration']},
+'bar-demandplan':{title:'2026 Hiring Demand Finalization',track:'PD&A',status:'Blocked',dri:'All',target:'⛔ Blocked — entity/location strategy',what:'⛔ BLOCKED. 2026 demand plan cannot be finalized until entity/location strategy is resolved. Blocking capacity planning, HC App, and QoH dashboard accuracy.',deps:['Entity/Location Strategy (external)']},
+'bar-hvhfull':{title:'HVH Full Cycle (CDMX/CXI/Labs)',track:'RPO Programs',status:'In Progress',dri:'Katie Redman',target:'Business Intake to Jira Jun–Aug · Unified SOP Jun–Jul',what:'Foundational projects ✅ Completed: Class Tracking Mechanism, Reporting/Self-Service Dashboards, Audit + Offer Letter Process (100% audits), Fountain Integration with CXI Launch. Business Intake Direct to Jira Board In Progress (Jun–Aug 2026) — removes TA as intake intermediary. Unified HVH SOP In Progress: LABS SOP first draft done Jun; CXI/MX SOP due Jul 2026. CDMX BGC (background check) support Delayed — pending stakeholder sign-off on new Fountain-based process.',deps:['Business Intake to Jira Board','Unified HVH SOP (CXI/MX) — Jul','CDMX BGC support (Delayed)']},
+'bar-dashmart':{title:'DashMart Outbound Sourcing — BAU Active ✅',track:'RPO Programs',status:'Completed',dri:'Katie Redman',target:'BAU Active — Hypercare Closed Jun 25',what:'Fully in BAU ✅. Calibration ✅ Jun 22. Hypercare CLOSED ✅ Jun 25. MBR ✅ Jun 24 (completed). Process enhancements live: Fly-on-the-Wall tracking + recruiter tagging. Weekly calibration cadence active. Listening Tour Jun 8 ✅.',deps:['Weekly calibration cadence (BAU)']},
+'bar-pda-sourcing':{title:'PD&A (Tech) Sourcing',track:'RPO Programs',status:'In Progress',dri:'Gosia Szafraniec',target:'Active — Process Improvements Delayed',what:'PD&A (Tech) Sourcing active since Jan 2026, led by Gosia Szafraniec (DRI correction — not Nina Olasz). Discovery, process mapping, and SOP development all ✅ Completed. Calibration sessions concluded Jun 10 — team agreed to move to Slack for ongoing alignment. Process Improvements work Delayed — team currently focused on onboarding Manpower (Sales), Security, and G&A programs; will resume after ramp-up.',deps:['Sales/Security/G&A onboarding ramp-up']},
+'bar-security':{title:'Security (Tech) Sourcing — Onboarding/Shadowing Done, Calibration Pending',track:'RPO Programs',status:'In Progress',dri:'Gosia Szafraniec',target:'Calibration Not Started — pending full onboarding',what:'New outbound sourcer onboarding training plan finalized Jun 17–18; start date Jun 22. Hardware/system access delayed by customs clearance (James Bond & Kelsey Talbot coordinating with UPS). Shadowing sessions with internal team ✅ Completed Jun 22–23. SOP (Outbound & Inbound) ✅ Completed Jun 19. Calibration sessions Not Started — will kick off once new resource has full platform access.',deps:['Hardware/customs clearance','Calibration sessions']},
+'bar-ebrm':{title:'EBRM Admin — Launch & Hypercare',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Hypercare Jul 13–27, 2026',what:'EBRM (Eng Blog Management) admin support has progressed past discovery: Discovery/Scoping ✅, Planning ✅ Completed Jul 13, SOP Development ✅ (Eng Blog mgmt SOP), Go/No-Go ✅ Completed Jul 10. Now in Launch & Hypercare (Jul 13–27) — training RPO resource on the SOP with weekly EBRM team check-ins.',deps:['Hypercare wind-down Jul 27']},
+'bar-ga-sourcing':{title:'G&A Sourcing (KellyOCG)',track:'RPO Programs',status:'In Progress',dri:'TA Ops',target:'Inbound SOP ✅ Completed Jul 7 · G&A Recruiting (Full Cycle) launched',what:'Pipeline Hygiene onboarding ✅ Complete Jun 18; SOP ✅ Jun 12. Inbound Sourcing SOP ✅ Completed Jul 7 (date corrected — previously tracked as Jun 30). Full-time sourcer Iris Rocha onboarded ✅ Jun 19; Will Andrews shadowing ✅ Completed Jun 30. Implementation/Delivery Jun 15–Jul 30; Project closure In Progress (Jul 30–Aug 15). NEW: G&A Recruiting (Full Cycle) program launched (DRI: Katie Redman) — Discovery Session ✅ Completed Jun 22 (Emily Wheeler & Carol Tao); Intake & Needs Assessment In Progress (Jun 22–Jul 3); SOP Development next (Jul 6–15).',deps:['Inbound SOP ✅ Jul 7','G&A Recruiting Full Cycle — Intake through Jul 3']},
+'bar-sales-sourcing':{title:'Sales Sourcing — Hypercare Active',track:'RPO Programs',status:'In Progress',dri:'RPO Team',target:'Shadowing → Jul 17 · Hypercare Jul 1–Aug 1',what:'Sales outbound sourcing SOP ✅ Completed Jun. BAU start moved up to July (team onboarded week of Jun 22). Shadowing sessions extended through Jul 17 (Sofia Machuca + Baldomero Rivadeneira pairing with Theo Smith) — later than the Jul 2 date tracked in the prior refresh. Hypercare Support now confirmed In Progress (Jul 1–Aug 1): daily stakeholder check-ins + audits in week 1, weekly thereafter.',deps:['Shadowing complete Jul 17','Hypercare through Aug 1']},
+'bar-rpo-gov':{title:'RPO Governance & Cross-Program',track:'RPO Programs',status:'In Progress',dri:'RPO Leadership',target:'Confluence + Slack Feedback Log targeting Jul 2026',what:'RPO Reporting/Self-Service Dashboard In Progress (May–Oct 2026). RPO One-Stop-Shop Confluence Page In Progress, targeting Jul 2026 completion. Slack Feedback Log In Progress, targeting Jul 2026. RPO Program Review Cadence (MBR/QBR) ✅ established (Completed May 2026). HVH Cost Structure Review In Progress (May–Jul 2026). RPO Flash Comm now In Progress (weekly comms, Jul 2026). Supplier Scorecarding Not Started (Aug–Oct 2026).',deps:['Confluence page (Jul)','Slack Feedback Log (Jul)','Supplier Scorecarding (Aug–Oct)']},
+'bar-rpo-ce':{title:'Candidate Experience (RC Team / RPO)',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Referral WM Launch & Hypercare — Jul 2026',what:'Candidate Experience (Coordination) program active — ATS dashboard audit mechanisms live, onboarding plan development In Progress (May–Jul 2026), CE Operating Model + RPO RC SOP Design now In Progress (Apr–Sep 30, 2026 per Governance tracker; corrected from Delayed). NEW: Referral Support — Wolt Market (WM) program launched — SOP ✅ Completed, Go/No-Go ✅ Completed Jul 2026, now in Launch & Hypercare (Jul 2026) covering Hungary, Serbia, and Romania referral rollout. Existing Fountain referral program remains BAU (Active since May 2026).',deps:['Referral WM hypercare','Fountain referrals BAU']},
+'bar-rpo-rectech':{title:'RecTech Support (Administrative)',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Pre-Launch — Planning overdue (was Jul 13)',what:'RecTech admin RPO support. Discovery/scoping ✅ Completed Jun 19. Planning (SOP buildout, resourcing x2, SLAs/KPIs) still In Progress as of Jul 16 — 3 days past its Jul 13 target. Onboarding/Training Week next (Jul 20), Resource Ramp-Up to follow (Jul 27), BAU Ops targeted Aug 2026.',deps:['Onboarding/Training (Jul 20)','Resource Ramp-Up (Jul 27)']},
+'bar-rpo-peacock':{title:'Peacock Scheduling (RC Support)',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Pre-Launch — ⚠️ Planning overdue (was Jul 10)',what:'RPO program. Discovery/scoping ✅ Completed Jul 3. Planning (SOP buildout/structure) still In Progress as of Jul 16 — 6 days past its Jul 10 target. Onboarding/Training Week for existing HVH resources next (Jul 17). BAU RC Operations targeted Aug 2026.',deps:['Planning — overdue since Jul 10','Onboarding/Training (Jul 17)']},
+'bar-rpo-referral-wm':{title:'Referral Support — Wolt Market (WM) — New',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Launch & Hypercare — Jul 2026',what:'NEW referral program covering Wolt Market roles (Hungary, Serbia, Romania). Intake ✅ Completed Jun. SOP Development ✅ Completed Jul 2026 (intake, eligibility, credit reassignment, payout, country-specific rules). Go/No-Go ✅ Completed Jul 2026. Now in Launch & Hypercare — phased rollout with daily stakeholder check-ins.',deps:['Hypercare monitoring']},
+'bar-rpo-ga-recruiting':{title:'G&A Recruiting (Full Cycle) — Two Milestones Overdue',track:'RPO Programs',status:'In Progress',dri:'Katie Redman',target:'⚠️ Intake overdue (was Jul 3) · SOP now overdue (was Jul 15)',what:'Full-cycle RPO program for G&A recruiting. Discovery Session ✅ Completed Jun 22 (Emily Wheeler & Carol Tao). Intake & Business Needs Assessment still In Progress as of Jul 16 — 13 days past its Jul 3 target. SOP Development (targeted Jul 6–15) is now also overdue — still Not Started as of Jul 16, putting the Aug 17–21 Implementation/Onboarding and Aug 24–30 Ramp Period at risk of slipping.',deps:['Intake — overdue since Jul 3','SOP Development — overdue since Jul 15']},
+'bar-ce-gov':{title:'RPO Governance for CE',track:'Global CE',status:'In Progress',dri:'Antonis',target:'Jun–Sep 2026',what:'Governance framework for CE within RPO programs. Phase 1 Jun–Sep 2026.',deps:[]},
+'bar-ce-standards':{title:'Global CE Standards & Doc Hub',track:'Global CE',status:'In Progress',dri:'Georgia',target:'Jun–Sep 2026',what:'Standards documentation and hub for global candidate experience. Jun–Sep 2026 phase.',deps:['CE Survey / Sigma']},
+'bar-ce-agile':{title:'Agile Pool & Unification',track:'Global CE',status:'In Progress',dri:'Claudia',target:'Jun–Sep 2026',what:'Agile RC pool unification across brands. Jun–Sep 2026.',deps:[]},
+'bar-ce-enablement':{title:'CE Specialist Enablement',track:'Global CE',status:'In Progress',dri:'Vivian',target:'Jun–Sep 2026',what:'Enablement program for CE specialists. Jun–Sep 2026.',deps:['CE Standards & Doc Hub']},
+'bar-ce-survey':{title:'Unified CE Survey / Sigma Integration',track:'Global CE',status:'Blocked',dri:'CE Team',target:'⛔ Blocked',what:'⛔ BLOCKED. Unified candidate experience survey and Sigma integration. Cannot proceed until blocker is resolved. Blocks CE Dashboard.',deps:['Integration blocker (TBD)']},
+'bar-ce-tools':{title:'Tech & Tools Optimization',track:'Global CE',status:'Not Started',dri:'CE Team',target:'Sep–Dec 2026',what:'Technology and tooling optimization for CE program delivery. Sep–Dec 2026 phase.',deps:['CE Survey / Sigma (blocked)','CE Standards']}
+};
+
+const tableData=[
+{n:'Global Hiring Philosophy Ph.1',track:'Global Programs',dri:'H. Denhart',cat:'Program',sz:'XL',st:'In Progress',yr:'2026',est:'Dec 2026'},
+{n:'TA Op Model + Governance',track:'Global Programs',dri:'Ida Siljander',cat:'Framework',sz:'L',st:'Not Started',yr:'2026',est:'⚠️ Delayed — starts Jul 20'},
+{n:'Project Rolex — TA Leveling',track:'Global Programs',dri:'H. Donley',cat:'Program',sz:'L',st:'Completed',yr:'2026',est:'✅ Jun 9, 2026'},
+{n:'Internal Mobility Ph.1',track:'Global Programs',dri:'H. Donley',cat:'Program',sz:'M',st:'In Progress',yr:'2026',est:'Jul 2026'},
+{n:'Employee Referrals Ph.1',track:'Global Programs',dri:'H. Donley',cat:'Program',sz:'M',st:'In Progress',yr:'2026',est:'Aug 2026 (V1.0)'},
+{n:'Rehire Eligibility Policy',track:'Global Programs',dri:'H. Donley',cat:'Policy',sz:'S',st:'In Progress',yr:'2026',est:'Aug 31, 2026'},
+{n:'Representation Rule (P1)',track:'Global Programs',dri:'H. Donley',cat:'Policy',sz:'M',st:'In Progress',yr:'2026',est:'Aug 3, 2026'},
+{n:'Know-How / Keystone Training',track:'Global Programs',dri:'Ida Siljander',cat:'Enablement',sz:'L',st:'In Progress',yr:'2026',est:'Oct 2026'},
+{n:'Deliveroo Process Integration',track:'Global Programs',dri:'H. Denhart',cat:'Integration',sz:'XL',st:'Not Started',yr:'2026',est:'Dec 2026'},
+{n:'PwD / Disability Quota Program',track:'Global Programs',dri:'Nina Korobko',cat:'Program',sz:'L',st:'In Progress',yr:'2026',est:'Dec 2026'},
+{n:'Std. Interview Stages + Guardrails',track:'Global Programs',dri:'H. Denhart',cat:'Framework',sz:'M',st:'In Progress',yr:'2026',est:'Q3 2026'},
+{n:'Post-Offer Handoff Framework',track:'Global Programs',dri:'H. Denhart',cat:'Framework',sz:'M',st:'In Progress',yr:'2026',est:'Q4 2026'},
+{n:'Global Process Enablement Strategy',track:'Global Programs',dri:'Ida Siljander',cat:'Strategy',sz:'L',st:'Not Started',yr:'2026',est:'Dec 2026'},
+{n:'"Great Hiring" Competencies + Q-Bank',track:'Global Programs',dri:'H. Donley',cat:'Framework',sz:'XL',st:'Not Started',yr:'2027',est:'2027'},
+{n:'Success Profiles + Assessment FW',track:'Global Programs',dri:'H. Donley',cat:'Framework',sz:'XL',st:'Not Started',yr:'2027',est:'2027'},
+{n:'Global Bar Raiser Program',track:'Global Programs',dri:'H. Denhart',cat:'Program',sz:'XL',st:'Not Started',yr:'2027',est:'2027 (all brands)'},
+{n:'Career-Track Internships',track:'Global Programs',dri:'H. Denhart',cat:'Program',sz:'L',st:'In Progress',yr:'2026',est:'Fall \'26 active · 2027 parked'},
+{n:'EU Pay Transparency',track:'Global Programs',dri:'H. Denhart',cat:'Compliance',sz:'M',st:'Completed',yr:'2026',est:'✅ Jun 7, 2026'},
+{n:'Bar Raiser — Wolt Pilot',track:'Global Programs',dri:'H. Denhart',cat:'Program',sz:'M',st:'Completed',yr:'2026',est:'✅ Sunset Mar 27, 2026'},
+{n:'Refugee Hiring — BAU',track:'Global Programs',dri:'Nina Korobko',cat:'Program',sz:'M',st:'Completed',yr:'2026',est:'BAU Active'},
+{n:'TA Onboarding — Wolt BAU',track:'Global Programs',dri:'Ida Siljander',cat:'Enablement',sz:'S',st:'Completed',yr:'2026',est:'BAU Active'},
+{n:'Director Hiring Pilot',track:'Global Programs',dri:'Ida Siljander',cat:'Process',sz:'M',st:'In Progress',yr:'2026',est:'In Progress'},
+{n:'PII Form Updates & Translations',track:'Global Programs',dri:'H. Denhart',cat:'Compliance',sz:'M',st:'In Progress',yr:'2026',est:'Q3–Q4 2026'},
+{n:'P2P Learning — STA Pilot',track:'Global Programs',dri:'Ida Siljander',cat:'Enablement',sz:'M',st:'In Progress',yr:'2026',est:'H1 2026'},
+{n:'HVH Transformation (Fountain)',track:'Global Programs',dri:'Gosia Szafraniec',cat:'Program',sz:'L',st:'In Progress',yr:'2026',est:'H2 2026'},
+{n:'TA Comms & Governance',track:'Global Programs',dri:'H. Donley',cat:'Framework',sz:'M',st:'In Progress',yr:'2026',est:'Discovery started Jul 1'},
+{n:'Global TA Onboarding',track:'Global Programs',dri:'Ida Siljander',cat:'Enablement',sz:'L',st:'Not Started',yr:'2026',est:'H2 2026'},
+{n:'TA Block Consolidation',track:'Global Programs',dri:'Gosia Szafraniec',cat:'Ops',sz:'M',st:'Not Started',yr:'2026',est:'H2 2026'},
+{n:'Global Process Maps',track:'TA Ops',dri:'Fritz',cat:'Ops',sz:'M',st:'In Progress',yr:'2026',est:'Q3 2026'},
+{n:'Compliance + DEI Overlay',track:'TA Ops',dri:'Fritz',cat:'Compliance',sz:'M',st:'Not Started',yr:'2026',est:'Q3 2026'},
+{n:'Stage-Level SLA Baselines',track:'TA Ops',dri:'Breanna',cat:'Ops',sz:'M',st:'In Progress',yr:'2026',est:'Q3 2026'},
+{n:'Standardized MBRs',track:'TA Ops',dri:'Breanna',cat:'Ops',sz:'M',st:'In Progress',yr:'2026',est:'Piloting now'},
+{n:'Global Data Dictionary',track:'TA Ops',dri:'Danielle',cat:'Data',sz:'M',st:'Not Started',yr:'2026',est:'Q4 2026'},
+{n:'Data Accuracy Baseline Audit',track:'TA Ops',dri:'Danielle',cat:'Data',sz:'M',st:'Not Started',yr:'2026',est:'Q4 2026'},
+{n:'Data Governance Forum + Alerts',track:'TA Ops',dri:'Danielle',cat:'Data',sz:'M',st:'Not Started',yr:'2026',est:'Q4 2026'},
+{n:'Capacity Planning Methodology',track:'TA Ops',dri:'Clare',cat:'Ops',sz:'L',st:'In Progress',yr:'2026',est:'Q3 2026 (Rolex ✅ unblocked)'},
+{n:'Deliveroo Change Mgmt + Enablement',track:'TA Ops',dri:'Clare',cat:'Integration',sz:'L',st:'Not Started',yr:'2026',est:'Dec 2026'},
+{n:'Quick Wins: Scheduling/SLAs/GH Std.',track:'TA Ops',dri:'Emily / Clare',cat:'Ops',sz:'S',st:'In Progress',yr:'2026',est:'Q2–Q3 2026'},
+{n:'QoH Metric Definitions',track:'TA Ops',dri:'Joey / Emily',cat:'Data',sz:'M',st:'Not Started',yr:'2026',est:'Q4 2026'},
+{n:'TTH Bottleneck Analysis',track:'TA Ops',dri:'Emily',cat:'Analytics',sz:'L',st:'Not Started',yr:'2027',est:'2027'},
+{n:'QoH Dashboard + Data Literacy',track:'TA Ops',dri:'Joey',cat:'Analytics',sz:'XL',st:'Not Started',yr:'2027',est:'2027'},
+{n:'Predictive Insights + TA Report',track:'TA Ops',dri:'Breanna',cat:'Analytics',sz:'XL',st:'In Progress',yr:'2027',est:'V1 Pilot (NA Sales)'},
+{n:'Audit + Fix Approval Chain',track:'RecTech',dri:'RecTech / Tools+Data',cat:'Systems',sz:'S',st:'In Progress',yr:'2026',est:'Jun 2026 — 3 wks'},
+{n:'JD + Screening Q Self-Service',track:'RecTech',dri:'RecTech / Tools+Data',cat:'Systems',sz:'M',st:'Not Started',yr:'2026',est:'Jun–Sep 2026'},
+{n:'Interview Templates + Scorecards',track:'RecTech',dri:'RecTech / Tools+Data',cat:'Systems',sz:'M',st:'Not Started',yr:'2026',est:'Aug 2026 — 2mo'},
+{n:'AI: JD Gen + Outreach Drafting',track:'RecTech',dri:'RecTech / Tools+Data',cat:'AI/Tools',sz:'M',st:'Not Started',yr:'2026',est:'Jul 2026 — 3mo'},
+{n:'Global TA Metrics Framework',track:'RecTech',dri:'RecTech / Tools+Data',cat:'Analytics',sz:'L',st:'Not Started',yr:'2026',est:'Oct 2026 (post-Roo)'},
+{n:'Automated Offer Builder',track:'RecTech',dri:'RecTech / Tools+Data',cat:'Systems',sz:'XL',st:'Not Started',yr:'2027',est:'2027'},
+{n:'HC App Expansion (HVH/Bulk/DM)',track:'RecTech',dri:'RecTech / Tools+Data',cat:'Systems',sz:'XL',st:'Not Started',yr:'2027',est:'2027'},
+{n:'HC Approval Framework',track:'G&A',dri:'TA S&O',cat:'Framework',sz:'L',st:'Completed',yr:'2026',est:'✅ Complete — Framework Live Jun 9'},
+{n:'Offer Approval Workflow',track:'G&A',dri:'TA S&O',cat:'Process',sz:'M',st:'In Progress',yr:'2026',est:'⚠️ Target missed (was Jul 15)'},
+{n:'G&A Competency + Assessment Matrix',track:'G&A',dri:'Head of TA',cat:'Framework',sz:'M',st:'In Progress',yr:'2026',est:'⚠️ Mapping 13 days overdue · Matrix build not started'},
+{n:'G&A Std. Interview Process',track:'G&A',dri:'TA S&O',cat:'Process',sz:'L',st:'Not Started',yr:'2026',est:'Sep 1, 2026'},
+{n:'Cross-Brand Hiring Enablement',track:'G&A',dri:'TA S&O',cat:'Enablement',sz:'M',st:'In Progress',yr:'2026',est:'TBD'},
+{n:'G&A Take-Home Assessment Library',track:'G&A',dri:'Head of TA',cat:'Framework',sz:'L',st:'Not Started',yr:'2027',est:'Dec–Q1 2027'},
+{n:'HC App Full Std. (Deliveroo)',track:'G&A',dri:'TA S&O',cat:'Systems',sz:'XL',st:'Not Started',yr:'2027',est:'2027 (dep: Deliveroo ATS Migration; step 1.2.1 mapping to People Product Blocked)'},
+{n:'Global Hiring Process PM+Design',track:'PD&A',dri:'All',cat:'Process',sz:'L',st:'In Progress',yr:'2026',est:'Q2 2026 — 92%'},
+{n:'Global Debrief Calendar + Slack',track:'PD&A',dri:'Taleen',cat:'Process',sz:'M',st:'In Progress',yr:'2026',est:'Q2 2026 — 50%'},
+{n:'Global Recruiting Op Model',track:'PD&A',dri:'Joey / Taleen',cat:'Framework',sz:'L',st:'In Progress',yr:'2026',est:'Q3 2026 — 79%'},
+{n:'Global Operating Rhythms',track:'PD&A',dri:'Taleen',cat:'Ops',sz:'M',st:'In Progress',yr:'2026',est:'Jun 2026 — 25%'},
+{n:'Data & Reporting Foundation',track:'PD&A',dri:'Joey',cat:'Data',sz:'L',st:'In Progress',yr:'2026',est:'Q3 2026 — 67%'},
+{n:'2026 Hiring Demand Finalization',track:'PD&A',dri:'All',cat:'Planning',sz:'XL',st:'Blocked',yr:'2026',est:'⛔ Blocked — entity/location strategy'},
+{n:'HVH Full Cycle (CDMX/CXI/Labs)',track:'RPO Programs',dri:'Katie Redman',cat:'RPO',sz:'L',st:'In Progress',yr:'2026',est:'Business Intake to Jira Jun–Aug; Unified SOP (LABS/CXI-MX) Jun–Jul'},
+{n:'DashMart Outbound Sourcing',track:'RPO Programs',dri:'Katie Redman',cat:'RPO',sz:'L',st:'Completed',yr:'2026',est:'BAU Active ✅ — Hypercare Closed Jun 25'},
+{n:'PD&A (Tech) Sourcing',track:'RPO Programs',dri:'Gosia Szafraniec',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Active — Process Improvements Delayed'},
+{n:'Security (Tech) Sourcing',track:'RPO Programs',dri:'Gosia Szafraniec',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Onboarding ✅ Jun 22, Shadowing ✅ Jun 23, hardware delay (customs), calibration Not Started'},
+{n:'EBRM Admin — Launch & Hypercare',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Launch & Hypercare Jul 13–27'},
+{n:'Sales Sourcing',track:'RPO Programs',dri:'RPO Team',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Shadowing → Jul 17, Hypercare In Progress Jul 1–Aug 1'},
+{n:'G&A Sourcing (KellyOCG)',track:'RPO Programs',dri:'TA Ops',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Inbound SOP ✅ Completed Jul 7 — Delivery Jul 30–Aug 15'},
+{n:'RPO Governance & Cross-Program',track:'RPO Programs',dri:'RPO Leadership',cat:'Governance',sz:'M',st:'In Progress',yr:'2026',est:'Confluence + Slack Feedback Log → Jul 2026'},
+{n:'CE (RC Team / RPO)',track:'RPO Programs',dri:'Nina Olasz',cat:'CE',sz:'M',st:'In Progress',yr:'2026',est:'Referral WM Launch & Hypercare — Jul 2026'},
+{n:'RecTech Support (Administrative)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Pre-Launch — Planning overdue (was Jul 13)'},
+{n:'Peacock Scheduling (RC Support)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'S',st:'In Progress',yr:'2026',est:'Pre-Launch — ⚠️ Planning overdue (was Jul 10)'},
+{n:'Referral Support — Wolt Market (WM)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Launch & Hypercare — Jul 2026'},
+{n:'G&A Recruiting (Full Cycle)',track:'RPO Programs',dri:'Katie Redman',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'⚠️ Intake overdue (13 days) · SOP now overdue (was Jul 15)'},
+{n:'RPO Governance for CE',track:'Global CE',dri:'Antonis',cat:'CE',sz:'M',st:'In Progress',yr:'2026',est:'Jun–Sep 2026'},
+{n:'Global CE Standards & Doc Hub',track:'Global CE',dri:'Georgia',cat:'CE',sz:'L',st:'In Progress',yr:'2026',est:'Jun–Sep 2026'},
+{n:'Agile Pool & Unification',track:'Global CE',dri:'Claudia',cat:'CE',sz:'M',st:'In Progress',yr:'2026',est:'Jun–Sep 2026'},
+{n:'CE Specialist Enablement',track:'Global CE',dri:'Vivian',cat:'CE',sz:'M',st:'In Progress',yr:'2026',est:'Jun–Sep 2026'},
+{n:'Unified CE Survey / Sigma',track:'Global CE',dri:'CE Team',cat:'CE',sz:'L',st:'Blocked',yr:'2026',est:'⛔ Blocked'},
+{n:'Tech & Tools Optimization',track:'Global CE',dri:'CE Team',cat:'CE',sz:'M',st:'Not Started',yr:'2026',est:'Sep–Dec 2026'}
+];
+
+function renderRPOBars(){  const rpoRows=document.querySelectorAll('.gantt-row[data-track="rpo"]');
+  const rpoBarMap={
+    'HVH Full Cycle':'bar-hvhfull','DashMart':'bar-dashmart','PD&A (Tech)':'bar-pda-sourcing',
+    'Security (Tech)':'bar-security','EBRM':'bar-ebrm','G&A Sourcing':'bar-ga-sourcing',
+    'Sales':'bar-sales-sourcing','RPO Governance':'bar-rpo-gov','Candidate Experience':'bar-rpo-ce'
+  };
+}
+let ttTimer=null;
+function showTT(e,tid){
+  clearTimeout(ttTimer);
+  const d=barData[tid];
+  if(!d)return;
+  const tt=document.getElementById('gtt');
+  const stMap={Completed:'badge-completed',In_Progress:'badge-in-progress','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked',Parked:'badge-parked'};
+  const stKey=(d.status||'').replace(' ','_');
+  tt.innerHTML=`<div class="gtt-title">${d.title}</div>
+<div class="gtt-meta">
+  <span class="badge ${stMap[stKey]||'badge-not-started'}">${d.status}</span>
+  <span class="badge">${d.track}</span>
+  ${d.dri?`<span class="badge">DRI: ${d.dri}</span>`:''}
+  ${d.target?`<span class="badge">📅 ${d.target}</span>`:''}
+</div>
+${d.what?`<div class="gtt-label">WHAT</div><div class="gtt-body">${d.what}</div>`:''}
+${d.deps&&d.deps.length?`<div class="gtt-label">KEY DEPENDENCIES / NEXT STEPS</div><div class="gtt-deps">${d.deps.map(x=>`<span class="gtt-dep-tag">${x}</span>`).join('')}</div>`:''}
+${d.status==='Blocked'?`<div class="gtt-blocked">⛔ This initiative is currently blocked. See Interdependencies tab for details.</div>`:''}`;
+  tt.style.display='block';
+  positionTT(e,tt);
+}
+function positionTT(e,tt){
+  const x=e.clientX,y=e.clientY;
+  const w=tt.offsetWidth||310,h=tt.offsetHeight||200;
+  let left=x+16,top=y-20;
+  if(left+w>window.innerWidth-16)left=x-w-12;
+  if(top+h>window.innerHeight-16)top=window.innerHeight-h-16;
+  tt.style.left=left+'px';tt.style.top=top+'px';
+}
+function hideTT(){ttTimer=setTimeout(()=>{document.getElementById('gtt').style.display='none';},200);}
+
+function showTab(id,el){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  const p=document.getElementById('panel-'+id);
+  if(p)p.classList.add('active');
+  if(el)el.classList.add('active');
+  if(id==='overview')buildOverview();
+  if(id==='hop')buildHoP();
+  if(id==='quarterly')buildQuarterly();
+}
+
+let activeTrack='all',activeDRI='',multiTracks=[];
+function filterTrack(track,el){
+  const allBtn=document.getElementById('filter-all');
+  if(track==='all'){multiTracks=[];activeTrack='all';document.querySelectorAll('.filter-btn[data-track]').forEach(b=>b.classList.remove('active'));allBtn.classList.add('active');}
+  else{
+    allBtn.classList.remove('active');
+    const idx=multiTracks.indexOf(track);
+    if(idx>-1){multiTracks.splice(idx,1);el.classList.remove('active');}
+    else{multiTracks.push(track);el.classList.add('active');}
+    if(multiTracks.length===0){multiTracks=[];activeTrack='all';allBtn.classList.add('active');}
+    else activeTrack='multi';
+  }
+  applyFilters();
+}
+function filterByDRI(val){activeDRI=val;applyFilters();}
+function applyFilters(){
+  document.querySelectorAll('.track').forEach(t=>{
+    const tk=t.getAttribute('data-track');
+    if(activeTrack==='all'||multiTracks.includes(tk)){t.style.display='';}
+    else t.style.display='none';
+  });
+  if(activeDRI){
+    document.querySelectorAll('.gantt-row').forEach(row=>{
+      const dri=row.querySelector('.dri');
+      if(dri&&dri.textContent.toLowerCase().includes(activeDRI.toLowerCase()))row.style.opacity='1';
+      else row.style.opacity='0.2';
+    });
+  } else {
+    document.querySelectorAll('.gantt-row').forEach(row=>row.style.opacity='');
+  }
+}
+
+function toggleTrack(header){
+  const trackDiv=header.closest('.track');
+  if(trackDiv){trackDiv.classList.toggle('track-collapsed');}
+}
+
+function copyShareLink(){
+  const url=window.location.href;
+  navigator.clipboard.writeText(url).then(()=>{
+    const btn=document.getElementById('copy-link-btn');
+    const orig=btn.textContent;
+    btn.textContent='✅ Copied!';
+    setTimeout(()=>btn.textContent=orig,2000);
+  });
+}
+function openDoc(id){window.open('https://drive.google.com/file/d/'+id+'/view','_blank');}
+
+let itemTrackFilter='all',itemStatusFilter='all';
+function filterItems(type,val,el){
+  if(type==='track'){
+    itemTrackFilter=val;
+    document.querySelectorAll('#panel-items .filters:first-child .filter-btn').forEach(b=>b.classList.remove('active'));
+    if(el)el.classList.add('active');
+  } else if(type==='status'){
+    itemStatusFilter=val;
+    document.querySelectorAll('#panel-items .filters:nth-child(2) .filter-btn').forEach(b=>b.classList.remove('active'));
+    if(el)el.classList.add('active');
+  }
+  renderTable();
+}
+function renderTable(){
+  const search=(document.getElementById('items-search').value||'').toLowerCase();
+  const tbody=document.getElementById('items-body');
+  const stClass={Completed:'badge-completed','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked',Parked:'badge-parked'};
+  const trClass={2026:'badge-2026',2027:'badge-2027'};
+  const tkClass={'Global Programs':'badge-track-gp','TA Ops':'badge-track-ops',RecTech:'badge-track-tech','G&A':'badge-track-ga','PD&A':'badge-track-pda','RPO Programs':'badge-track-rpo','Global CE':'badge-track-ce'};
+  let rows=tableData.filter(r=>{
+    if(itemTrackFilter!=='all'&&r.track!==itemTrackFilter)return false;
+    if(itemStatusFilter!=='all'&&r.st!==itemStatusFilter)return false;
+    if(search&&!(r.n.toLowerCase().includes(search)||r.dri.toLowerCase().includes(search)))return false;
+    return true;
+  });
+  tbody.innerHTML=rows.map((r,i)=>`<tr>
+<td style="color:#999;font-size:11px">${i+1}</td>
+<td><span class="badge ${tkClass[r.track]||''}">${r.track}</span></td>
+<td style="font-weight:600">${r.n}</td>
+<td style="color:#666">${r.dri}</td>
+<td><span class="badge">${r.cat}</span></td>
+<td><span class="badge">${r.sz}</span></td>
+<td><span class="badge ${stClass[r.st]||'badge-not-started'}">${r.st}</span></td>
+<td><span class="badge ${trClass[r.yr]||''}">${r.yr}</span></td>
+<td style="font-size:11px;color:#555">${r.est}</td>
+</tr>`).join('');
+}
+
+function buildOverview(){
+  const cnt={total:0,completed:0,active:0,notstarted:0,blocked:0,yr2027:0};
+  tableData.forEach(r=>{cnt.total++;if(r.st==='Completed')cnt.completed++;else if(r.st==='In Progress')cnt.active++;else if(r.st==='Not Started')cnt.notstarted++;if(r.st==='Blocked'||r.st==='Delayed'||r.st==='Parked')cnt.blocked++;if(r.yr==='2027')cnt.yr2027++;});
+  document.getElementById('cnt-total').textContent=cnt.total;
+  document.getElementById('cnt-completed').textContent=cnt.completed;
+  document.getElementById('cnt-active').textContent=cnt.active;
+  document.getElementById('cnt-notstarted').textContent=cnt.notstarted;
+  document.getElementById('cnt-blocked').textContent=cnt.blocked;
+  document.getElementById('cnt-2027').textContent=cnt.yr2027;
+  const tracks=['Global Programs','TA Ops','RecTech','G&A','PD&A','RPO Programs','Global CE'];
+  const tkEl=document.getElementById('track-breakdown');
+  tkEl.innerHTML=tracks.map(t=>{
+    const rows=tableData.filter(r=>r.track===t);
+    const done=rows.filter(r=>r.st==='Completed').length;
+    const active=rows.filter(r=>r.st==='In Progress').length;
+    const col=tkColors[t]||'#555';
+    return `<div style="background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:12px 14px">
+<div style="font-size:12px;font-weight:700;color:${col};margin-bottom:8px">${t}</div>
+<div style="font-size:11px;color:#555">${rows.length} items · <span style="color:#34c759">${done} done</span> · <span style="color:#007aff">${active} active</span></div>
+<div style="margin-top:8px;background:#f0f0f0;border-radius:4px;height:6px;overflow:hidden"><div style="background:${col};height:100%;width:${rows.length?Math.round((done/rows.length)*100):0}%"></div></div>
+</div>`;
+  }).join('');
+  const milestones=[
+    {d:'Jun 30, 2026',n:'Representation Rule (P1) — ⚠️ Past target, In Progress',s:'done'},
+    {d:'Jul 7, 2026',n:'G&A Sourcing Inbound SOP ✅ Completed (date corrected)',s:'done'},
+    {d:'Jul 10, 2026',n:'Peacock Scheduling — Planning target ⚠️ missed, still In Progress · EBRM Go/No-Go ✅',s:'done'},
+    {d:'Jul 13–27, 2026',n:'EBRM Admin — Launch & Hypercare',s:'active'},
+    {d:'Jul 15, 2026',n:'Offer Approval Workflow target — ⚠️ missed, sub-steps not started',s:'active'},
+    {d:'Jul 17, 2026',n:'Sales Sourcing Shadowing complete → Hypercare through Aug 1',s:'active'},
+    {d:'Jul 2026',n:'Internal Mobility Ph.1 close · G&A Competency Matrix · Referral WM Hypercare',s:'future'},
+    {d:'Q3 2026',n:'TA Op Model · Process Maps · Capacity Planning · SLA Baselines',s:'future'},
+    {d:'Q4 2026',n:'Data Dictionary · MBR Framework · TA Metrics (post-Roo)',s:'future'},
+    {d:'Dec 2026',n:'GHP Ph.1 · Deliveroo Integration · PwD Program · Keystone Training',s:'future'},
+    {d:'2027',n:'Great Hiring Competencies · Success Profiles · Global Bar Raiser · QoH Dashboard',s:'future'}
+  ];
+  const mEl=document.getElementById('milestones-list');
+  mEl.innerHTML=milestones.map(m=>`<div style="background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;display:flex;gap:14px;align-items:center">
+<div style="font-size:11px;font-weight:700;color:#888;min-width:90px">${m.d}</div>
+<div style="font-size:12px;color:${m.s==='active'?'#007aff':'#555'};font-weight:${m.s==='active'?'600':'400'}">${m.n}</div>
+${m.s==='active'?'<span style="margin-left:auto;font-size:10px;background:#e3f0ff;color:#007aff;padding:2px 8px;border-radius:8px;font-weight:700;white-space:nowrap">This week</span>':''}
+</div>`).join('');
+}
+
+function buildHoP(){
+  const hopItems=[
+    {track:'Global Programs',n:'Global Hiring Philosophy Ph.1',st:'In Progress',target:'Dec 2026',signal:'On track — major 2027 unlock'},
+    {track:'Global Programs',n:'Project Rolex ✅',st:'Completed',target:'Done Jun 9',signal:'✅ Complete — unblocked capacity planning'},
+    {track:'Global Programs',n:'Representation Rule (P1)',st:'In Progress',target:'Jun 30 — Past target',signal:'⚠️ Target passed — confirm completion with H. Donley'},
+    {track:'Global Programs',n:'Deliveroo Process Integration',st:'Not Started',target:'Dec 2026',signal:'Large scope — scoped Jun 1'},
+    {track:'G&A',n:'HC Approval Framework ✅',st:'Completed',target:'Done Jun 9',signal:'✅ Complete'},
+    {track:'G&A',n:'Offer Approval Workflow',st:'In Progress',target:'⚠️ Jul 15 target missed',signal:'⚠️ Launch target passed — sub-steps not started'},
+    {track:'RPO Programs',n:'DashMart Outbound Sourcing',st:'Completed',target:'BAU Active',signal:'✅ Hypercare closed Jun 25 — fully BAU'},
+    {track:'RPO Programs',n:'G&A Sourcing (KellyOCG)',st:'In Progress',target:'Delivery Jul 30 · Inbound SOP Jul 7',signal:'✅ Inbound SOP Completed Jul 7 (date corrected) — delivery phase active'},
+    {track:'RPO Programs',n:'Sales Sourcing',st:'In Progress',target:'Shadowing → Jul 17 · Hypercare Jul 1–Aug 1',signal:'Hypercare now active — shadowing extended to Jul 17'},
+    {track:'RPO Programs',n:'Security (Tech) Sourcing',st:'In Progress',target:'Calibration pending',signal:'⚠️ Hardware customs delay — calibration blocked'},
+    {track:'RPO Programs',n:'EBRM Admin',st:'In Progress',target:'Hypercare Jul 13–27',signal:'✅ Advanced from Discovery to Launch & Hypercare'},
+    {track:'RPO Programs',n:'Peacock Scheduling',st:'In Progress',target:'Planning overdue (was Jul 10)',signal:'⚠️ Planning target missed — 6 days overdue'},
+    {track:'RPO Programs',n:'G&A Recruiting (Full Cycle)',st:'In Progress',target:'Intake overdue (was Jul 3)',signal:'⚠️ Intake 13 days overdue — SOP now also overdue'},
+    {track:'G&A',n:'G&A Competency + Assessment Matrix',st:'In Progress',target:'Recs overdue (was Jul 13)',signal:'Mapping now ~13 days overdue — matrix build has not started on schedule'},
+    {track:'PD&A',n:'2026 Hiring Demand',st:'Blocked',target:'⛔ Blocked',signal:'⛔ Entity/location strategy needed'},
+    {track:'Global CE',n:'Unified CE Survey / Sigma',st:'Blocked',target:'⛔ Blocked',signal:'⛔ Integration blocker — CE dashboard gated'}
+  ];
+  const stClass={Completed:'badge-completed','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked'};
+  let inprog=0,comp=0,risk=0,ns=0;
+  hopItems.forEach(r=>{if(r.st==='In Progress')inprog++;else if(r.st==='Completed')comp++;else if(r.st==='Blocked'||r.signal.includes('⚠️'))risk++;else ns++;});
+  document.getElementById('hop-inprogress').textContent=inprog;
+  document.getElementById('hop-completed').textContent=comp;
+  document.getElementById('hop-atrisk').textContent=risk;
+  document.getElementById('hop-notstarted').textContent=ns;
+  document.getElementById('hop-tbody').innerHTML=hopItems.map(r=>`<tr>
+<td><span class="badge badge-track-${r.track==='Global Programs'?'gp':r.track==='G&A'?'ga':r.track==='RPO Programs'?'rpo':r.track==='PD&A'?'pda':r.track==='Global CE'?'ce':'ops'}">${r.track}</span></td>
+<td style="font-weight:600;font-size:12px">${r.n}</td>
+<td><span class="badge ${stClass[r.st]||'badge-not-started'}">${r.st}</span></td>
+<td style="font-size:11px;color:#666">${r.target}</td>
+<td style="font-size:11px;color:${r.signal.includes('⛔')?'#c0392b':r.signal.includes('⚠️')?'#b35a00':r.signal.includes('✅')?'#1a7a35':'#555'}">${r.signal}</td>
+</tr>`).join('');
+  const blockers=[
+    {t:'⛔ 2026 Hiring Demand Finalization',d:'Blocked on entity/location strategy. Cascades to capacity planning, HC App, and QoH accuracy.',sev:'blocked'},
+    {t:'⛔ CE Survey / Sigma Integration',d:'Integration blocker unresolved. Gates CE dashboard and candidate experience measurement at scale.',sev:'blocked'},
+    {t:'⚠️ Security (Tech) Sourcing — Hardware Customs Delay',d:'New sourcer onboarding training plan finalized, shadowing ✅ Jun 22–23, but hardware still in customs. Platform access pending. Calibration Not Started.',sev:'risk'},
+    {t:'⚠️ Bar Raiser — Wolt Pilot',d:'Delayed due to lower hiring volume. Must succeed before global Bar Raiser (2027) can begin.',sev:'risk'},
+    {t:'⚠️ G&A HC App Full Standardization',d:'Step 1.2.1 (approval/mapping requirements to IT & People Product) is Blocked. Affects 2027 Deliveroo standardization timeline.',sev:'risk'},
+    {t:'⚠️ Peacock Scheduling — Planning Overdue',d:'Planning target was Jul 10; still In Progress as of Jul 16 (6 days past target). Onboarding/Training Week (Jul 17) next.',sev:'risk'},
+    {t:'⚠️ G&A Recruiting (Full Cycle) — Two Milestones Overdue',d:'Intake & Business Needs Assessment target was Jul 3; still In Progress as of Jul 16 (13 days past target). SOP Development (Jul 6–15) is now also overdue — still Not Started.',sev:'risk'},
+    {t:'⚠️ RecTech Support (Admin) — Planning Overdue',d:'SOP buildout, resourcing (x2), and SLA/KPI planning target was Jul 13; still In Progress as of Jul 16 (3 days past target). Onboarding/Training Week (Jul 20) next.',sev:'risk'},
+    {t:'⚠️ Offer Approval Workflow — Target Missed',d:'Launch target was Jul 15; sub-steps (Finance/Comp approval, reporting cadence, enablement plan, global launch) still Not Started as of Jul 16. Gates G&A Standardized Interview Process.',sev:'risk'}
+  ];
+  document.getElementById('hop-blockers').innerHTML=blockers.map(b=>`<div style="background:${b.sev==='blocked'?'#fff5f5':'#fffbf0'};border:1px solid ${b.sev==='blocked'?'#fcc':'#ffe082'};border-radius:8px;padding:12px 14px">
+<div style="font-size:12px;font-weight:700;color:${b.sev==='blocked'?'#c0392b':'#b35a00'};margin-bottom:4px">${b.t}</div>
+<div style="font-size:11px;color:#555">${b.d}</div>
+</div>`).join('');
+  const deliverables=[
+    'Jul 7 ✅: G&A Sourcing Inbound SOP Completed (date corrected from Jun 30)',
+    'Jul 10 ⚠️: Peacock Scheduling planning target passed (still In Progress as of Jul 16) · EBRM Go/No-Go ✅',
+    'Jul 13–27: EBRM Admin Launch & Hypercare',
+    'Jul 15 ⚠️: Offer Approval Workflow target missed — TA S&O',
+    'Jul 17: Sales Sourcing Shadowing complete → Hypercare through Aug 1',
+    'Q3: TA Op Model + Process Maps + Capacity Planning (Rolex ✅ unblocked)',
+    'Q4: MBR Framework + Data Dictionary + TA Metrics FW (post-Roo)',
+    'Dec 2026: GHP Ph.1 + Deliveroo Integration + PwD Program'
+  ];
+  document.getElementById('hop-deliverables').innerHTML=deliverables.map((d,i)=>`<div style="background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;display:flex;gap:12px;align-items:flex-start">
+<div style="background:#e3f0ff;color:#007aff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px;white-space:nowrap;flex-shrink:0;margin-top:1px">${i+1}</div>
+<div style="font-size:12px;color:#333">${d}</div>
+</div>`).join('');
+}
+
+function buildQuarterly(){
+  const q3=[
+    {track:'Global Programs',n:'TA Op Model Blueprint',dri:'Ida Siljander',pri:'P1'},
+    {track:'Global Programs',n:'Governance Framework',dri:'Ida Siljander',pri:'P1'},
+    {track:'Global Programs',n:'Know-How / Keystone Training',dri:'Ida Siljander',pri:'P2'},
+    {track:'Global Programs',n:'Std. Interview Stages + Guardrails',dri:'H. Denhart',pri:'P1'},
+    {track:'TA Ops',n:'Global Process Maps',dri:'Fritz',pri:'P1'},
+    {track:'TA Ops',n:'Compliance + DEI Overlay',dri:'Fritz',pri:'P1'},
+    {track:'TA Ops',n:'SLA Baselines',dri:'Breanna',pri:'P2'},
+    {track:'TA Ops',n:'Capacity Planning Methodology',dri:'Clare',pri:'P1'},
+    {track:'TA Ops',n:'Quick Wins closure',dri:'Emily / Clare',pri:'P2'},
+    {track:'G&A',n:'Offer Approval Workflow — ⚠️ Jul 15 target missed',dri:'TA S&O',pri:'P1'},
+    {track:'G&A',n:'G&A Competency Matrix (In Progress — mapping 13 days overdue)',dri:'Head of TA',pri:'P1'},
+    {track:'RPO Programs',n:'Sales Sourcing Hypercare Jul 1–Aug 1',dri:'RPO Team',pri:'P1'},
+    {track:'RPO Programs',n:'Security Sourcing — Calibration start',dri:'RPO Team',pri:'P1'},
+    {track:'RPO Programs',n:'EBRM Admin — Launch & Hypercare Jul 13–27',dri:'Nina Olasz',pri:'P1'},
+    {track:'RPO Programs',n:'Peacock Scheduling — Planning overdue (was Jul 10)',dri:'Nina Olasz',pri:'P1'},
+    {track:'RPO Programs',n:'RecTech Support (Admin) — Planning overdue (was Jul 13)',dri:'Nina Olasz',pri:'P1'},
+    {track:'RPO Programs',n:'G&A Recruiting (Full Cycle) — Intake & SOP overdue (was Jul 3 / Jul 15)',dri:'Katie Redman',pri:'P1'},
+    {track:'Global CE',n:'CE Standards & Doc Hub',dri:'Georgia',pri:'P2'},
+    {track:'Global CE',n:'Agile Pool & Unification',dri:'Claudia',pri:'P2'}
+  ];
+  const q4=[
+    {track:'Global Programs',n:'Global Comms & Governance FW',dri:'H. Denhart',pri:'P2'},
+    {track:'Global Programs',n:'Global TA Onboarding',dri:'Ida Siljander',pri:'P2'},
+    {track:'Global Programs',n:'Post-Offer Handoff Framework',dri:'H. Denhart',pri:'P2'},
+    {track:'TA Ops',n:'Standardized MBRs — All Leads',dri:'Breanna',pri:'P1'},
+    {track:'TA Ops',n:'Global Data Dictionary',dri:'Danielle',pri:'P1'},
+    {track:'TA Ops',n:'Data Accuracy Audit',dri:'Danielle',pri:'P2'},
+    {track:'TA Ops',n:'Data Governance Forum',dri:'Danielle',pri:'P2'},
+    {track:'TA Ops',n:'QoH Metric Definitions',dri:'Joey / Emily',pri:'P2'},
+    {track:'G&A',n:'G&A Std. Interview Process — Sep 1',dri:'TA S&O',pri:'P1'},
+    {track:'RecTech',n:'Global TA Metrics FW (post-Roo)',dri:'RecTech',pri:'P1'},
+    {track:'Global Programs',n:'GHP Ph.1 — Dec 2026 target',dri:'H. Denhart',pri:'P1'},
+    {track:'Global Programs',n:'Deliveroo Process Integration',dri:'H. Denhart',pri:'P1'},
+    {track:'Global Programs',n:'PwD Program — Dec 2026',dri:'Nina Korobko',pri:'P2'},
+    {track:'Global CE',n:'Tech & Tools Optimization',dri:'CE Team',pri:'P2'}
+  ];
+  const tkCol={'Global Programs':'#7c3aed','TA Ops':'#0077b6',RecTech:'#2e7d32','G&A':'#f57f17','PD&A':'#880e4f','RPO Programs':'#00695c','Global CE':'#5c6bc0'};
+  const priCol={P1:'#e3143c',P2:'#007aff'};
+  const renderList=(items,elId)=>{
+    document.getElementById(elId).innerHTML=items.map(it=>`<div style="background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;display:flex;gap:10px;align-items:flex-start">
+<span style="font-size:10px;font-weight:700;color:${priCol[it.pri]||'#555'};background:${it.pri==='P1'?'#ffe5e5':'#e3f0ff'};padding:2px 8px;border-radius:6px;flex-shrink:0;margin-top:1px">${it.pri}</span>
+<div style="flex:1"><div style="font-size:12px;font-weight:600;color:#1d1d1f">${it.n}</div><div style="font-size:11px;color:#888;margin-top:2px">${it.track} · ${it.dri}</div></div>
+</div>`).join('');
+  };
+  renderList(q3,'q3-list');
+  renderList(q4,'q4-list');
+}
+
+function initTodayLine(){
+  const containers=document.querySelectorAll('.row-bar-container,.gantt-quarters');
+  const now=new Date();
+  const start=new Date('2026-04-01');
+  const end=new Date('2027-12-31');
+  const total=end-start;
+  const elapsed=now-start;
+  const pct=Math.max(0,Math.min(100,(elapsed/total)*100));
+  containers.forEach(c=>{
+    if(c.classList.contains('gantt-quarters')){
+      const existing=c.querySelector('.today-line');
+      if(!existing){
+        const line=document.createElement('div');
+        line.className='today-line';
+        line.style.left=pct+'%';
+        const label=document.createElement('div');
+        label.className='today-label';
+        label.style.left=pct+'%';
+        label.textContent='Today';
+        c.appendChild(line);
+        c.appendChild(label);
+      }
+    } else {
+      const existing=c.querySelector('.today-line-bar');
+      if(!existing){
+        const line=document.createElement('div');
+        line.className='today-line-bar';
+        line.style.cssText=`position:absolute;left:${pct}%;top:0;bottom:0;width:1.5px;background:#e3143c;opacity:.35;z-index:3;pointer-events:none`;
+        c.appendChild(line);
+      }
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  renderTable();
+  initTodayLine();
+  buildOverview();
+});
+</script>
+</body></html>
