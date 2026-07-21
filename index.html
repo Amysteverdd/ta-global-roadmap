@@ -83,6 +83,7 @@ tr:hover td{background:#f9f9fb}
 .badge-not-started{background:#f0f0f0;color:#666}
 .badge-blocked{background:#ffe5e5;color:#c0392b}
 .badge-parked{background:#fff3e0;color:#b35a00}
+.badge-cancelled{background:#f0f0f0;color:#999;text-decoration:line-through}
 .badge-2026{background:#e3f0ff;color:#0062d1}
 .badge-2027{background:#fff0f5;color:#c0392b}
 .badge-track-gp{background:#f0e6ff;color:#7c3aed}
@@ -222,7 +223,7 @@ async function checkAuth(){
   <p>Consolidated view across Global Programs · TA Ops S&amp;O · RecTech · G&amp;A Integration · PD&amp;A</p>
   <div class="header-meta">
     <span><strong>Sources:</strong> Global Unified Processes · Global Programmes Tracker · G&amp;A Compass · PD&amp;A Roadmap · RPO Roadmap · Global CE 2026 Project Plan</span>
-    <span><strong>Updated:</strong> July 17, 2026 &nbsp;🔄 Auto-refreshed</span>
+    <span><strong>Updated:</strong> July 21, 2026 &nbsp;🔄 Auto-refreshed</span>
     <span><strong>Exec Sponsor:</strong> Amy Stever</span>
   </div>
 </div>
@@ -292,12 +293,12 @@ async function checkAuth(){
 <div class="track" data-track="gp">
 <div class="track-header" style="background:#f7f0ff;cursor:pointer" onclick="toggleTrack(this)" data-track-id="gp"><div class="track-dot" style="background:#7c3aed"></div><div class="track-name">Global Programs</div><div class="track-count">Hannah Denhart · Hannah Donley · Ida Siljander · Nina Korobko</div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Global Hiring Philosophy (P0)<span class="dri">H. Denhart → Dec 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:10%;width:52%" data-tid="bar-ghp" onmouseenter="showTT(event,'bar-ghp')" onmouseleave="hideTT()">Global Hiring Philosophy Ph.1</div></div></div>
-<div class="gantt-row" data-track="gp"><div class="row-label">TA Operating Model + Governance<span class="dri">Ida Siljander → Q3 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:5%;width:20%" data-tid="bar-opmodel" onmouseenter="showTT(event,'bar-opmodel')" onmouseleave="hideTT()">Op Model Blueprint</div><div class="bar status-not-started" style="left:26%;width:18%" data-tid="bar-opmodel" onmouseenter="showTT(event,'bar-opmodel')" onmouseleave="hideTT()">Governance FW</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">TA Operating Model + Governance<span class="dri">Ida Siljander → ⚠️ Delayed, restart Jul 20</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-delayed" style="left:5%;width:20%" data-tid="bar-opmodel" onmouseenter="showTT(event,'bar-opmodel')" onmouseleave="hideTT()">⚠️ Blueprint Delayed</div><div class="bar status-not-started" style="left:26%;width:18%" data-tid="bar-opmodel" onmouseenter="showTT(event,'bar-opmodel')" onmouseleave="hideTT()">Governance FW</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Project Rolex — TA Leveling<span class="dri">H. Donley ✅ COMPLETED Jun 9</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-completed" style="left:0%;width:22%" data-tid="bar-rolex" onmouseenter="showTT(event,'bar-rolex')" onmouseleave="hideTT()">✅ Completed Jun 9</div><div class="bar status-not-started" style="left:23%;width:22%" data-tid="bar-rolex" onmouseenter="showTT(event,'bar-rolex')" onmouseleave="hideTT()">Phase 2 rollout</div></div></div>
-<div class="gantt-row" data-track="gp"><div class="row-label">Internal Mobility — Phase 1<span class="dri">H. Donley → Jul 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:25%" data-tid="bar-mobility" onmouseenter="showTT(event,'bar-mobility')" onmouseleave="hideTT()">Phase 1 Live</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Internal Mobility — Phase 1<span class="dri">H. Donley → Sep 21, 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:25%" data-tid="bar-mobility" onmouseenter="showTT(event,'bar-mobility')" onmouseleave="hideTT()">Phase 1 Live</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Employee Referrals — Phase 1<span class="dri">H. Donley → ⚠️ Minor Delays</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-delayed" style="left:0%;width:18%" data-tid="bar-referrals" onmouseenter="showTT(event,'bar-referrals')" onmouseleave="hideTT()">⚠️ Minor Delays</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Rehire Eligibility Policy<span class="dri">H. Donley → ⚠️ Minor Delays</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-delayed" style="left:0%;width:14%" data-tid="bar-rehire" onmouseenter="showTT(event,'bar-rehire')" onmouseleave="hideTT()">⚠️ Minor Delays</div></div></div>
-<div class="gantt-row" data-track="gp"><div class="row-label">Representation Rule (P1)<span class="dri">H. Donley — ⚠️ Past target Jun 30</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:10%;width:13%" data-tid="bar-reprule" onmouseenter="showTT(event,'bar-reprule')" onmouseleave="hideTT()">Representation Rule ⚠️</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">Representation Rule (P1)<span class="dri">H. Donley → Aug 3, 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:10%;width:13%" data-tid="bar-reprule" onmouseenter="showTT(event,'bar-reprule')" onmouseleave="hideTT()">Representation Rule</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Know-How / Keystone Training<span class="dri">Ida Siljander → Oct 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:5%;width:40%" data-tid="bar-keystone" onmouseenter="showTT(event,'bar-keystone')" onmouseleave="hideTT()">Know-How Training Program</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Deliveroo Integration (Processes)<span class="dri">H. Denhart → Dec 2026 — in scope Jun 1</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:16%;width:34%" data-tid="bar-roointegration" onmouseenter="showTT(event,'bar-roointegration')" onmouseleave="hideTT()">Deliveroo Process Integration</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">PwD / Disability Quota Program<span class="dri">Nina Korobko → Dec 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:49%" data-tid="bar-pwd" onmouseenter="showTT(event,'bar-pwd')" onmouseleave="hideTT()">PwD Program</div></div></div>
@@ -319,7 +320,7 @@ async function checkAuth(){
 <div class="gantt-row" data-track="gp"><div class="row-label">PII Form Updates &amp; Translations<span class="dri">H. Denhart · Nate Sears → Q3-Q4</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:34%" data-tid="bar-pii" onmouseenter="showTT(event,'bar-pii')" onmouseleave="hideTT()">PII Forms</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Peer2Peer Learning (STA Pilot)<span class="dri">Ida Siljander · Dóra Szabó</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:0%;width:50%" data-tid="bar-p2p" onmouseenter="showTT(event,'bar-p2p')" onmouseleave="hideTT()">P2P Learning Pilot</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">HVH Transformation (Fountain)<span class="dri">Gosia Szafraniec → H2 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:17%;width:33%" data-tid="bar-hvh" onmouseenter="showTT(event,'bar-hvh')" onmouseleave="hideTT()">HVH Transformation</div></div></div>
-<div class="gantt-row" data-track="gp"><div class="row-label">TA Comms &amp; Governance<span class="dri">H. Denhart → Q3-Q4 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:17%;width:33%" data-tid="bar-tacomms" onmouseenter="showTT(event,'bar-tacomms')" onmouseleave="hideTT()">TA Comms FW</div></div></div>
+<div class="gantt-row" data-track="gp"><div class="row-label">TA Comms &amp; Governance<span class="dri">H. Denhart → Started Jul 1 (Q3-Q4 2026)</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-in-progress" style="left:17%;width:33%" data-tid="bar-tacomms" onmouseenter="showTT(event,'bar-tacomms')" onmouseleave="hideTT()">TA Comms FW</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">Global TA Onboarding<span class="dri">Ida Siljander → H2 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:17%;width:33%" data-tid="bar-gtonboarding" onmouseenter="showTT(event,'bar-gtonboarding')" onmouseleave="hideTT()">Global TA Onboarding</div></div></div>
 <div class="gantt-row" data-track="gp"><div class="row-label">TA Block Consolidation<span class="dri">Gosia Szafraniec → H2 2026</span></div><div class="row-bar-container"><div class="yr-line"></div><div class="bar status-not-started" style="left:17%;width:33%" data-tid="bar-blockconsolidation" onmouseenter="showTT(event,'bar-blockconsolidation')" onmouseleave="hideTT()">Block Consolidation</div></div></div>
 <div class="track-header" style="background:#e8f4ff;cursor:pointer" onclick="toggleTrack(this)" data-track-id="ops"><div class="track-dot" style="background:#0077b6"></div><div class="track-name">TA Ops S&amp;O</div><div class="track-count">Breanna · Clare · Danielle · Emily · Fritz · Joey</div></div>
@@ -373,6 +374,18 @@ async function checkAuth(){
 <!-- OVERVIEW -->
 <div id="panel-overview" class="panel">
 <div class="whats-new">
+  <h3>🗞️ What Changed — July 21, 2026 Refresh</h3>
+  <ul>
+    <li><span class="change-tag tag-risk">⚠️ CANCELLED</span><strong>G&amp;A Recruiting (Full Cycle) — entire program Cancelled:</strong> RPO Roadmap now shows program-level status flipped from Delayed to Cancelled. Intake &amp; Business Needs Assessment, SOP Development, Implementation/Onboarding (Aug 17–21), Ramp Period (Aug 24–30), and BAU Recruiting Operations are all Cancelled in lockstep. Discovery Session (✅ Completed Jun 22) is unaffected. No reason was logged in the source.</li>
+    <li><span class="change-tag tag-updated">RESOLVED</span><strong>Peacock Scheduling — unblocked, no longer Delayed:</strong> Onboarding/Training Week (previously 3 days overdue) is now ✅ Completed, and BAU RC Operations has moved to In Progress. Program status upgraded from Delayed to In Progress.</li>
+    <li><span class="change-tag tag-updated">RESOLVED</span><strong>RecTech Support (Administrative) — unblocked, no longer Delayed:</strong> The Onboarding/Training Week milestone (missed Jul 20 in the prior refresh) is now In Progress, and Resource Ramp-Up (Jul 27) is actively underway rather than at risk. Program status upgraded from Delayed to In Progress.</li>
+    <li><span class="change-tag tag-new">COMPLETED</span><strong>RPO Governance — Confluence page &amp; Slack Feedback Log done:</strong> The RPO One-Stop-Shop Confluence Page and the Slack Feedback Log both moved from In Progress to ✅ Completed.</li>
+    <li><span class="change-tag tag-risk">⚠️ ESCALATED</span><strong>TA Operating Model Blueprint — now Delayed:</strong> Global Unified Processes tracker (items #1–#2) shows the Op Model Blueprint flipping from In Progress to "Not Yet Started," with the start date pushed to Jul 20, 2026. Governance Framework (item #2) remains Not Yet Started on the same slipped timeline.</li>
+    <li><span class="change-tag tag-updated">UPDATED</span><strong>TA Comms &amp; Governance — now In Progress:</strong> The Intranet Audit workstream began Jul 1, 2026 per the Global Programmes Master Tracker, advancing this item from Not Started to In Progress ahead of the Op Model/Governance cascade it normally follows.</li>
+    <li><span class="change-tag tag-updated">CORRECTED</span><strong>Internal Mobility &amp; Representation Rule — display sync:</strong> Corrected target dates (Internal Mobility Sep 21, 2026; Representation Rule Aug 3, 2026, no longer past target) had already landed in the tooltip/table data in a prior refresh but hadn't propagated to the Timeline, Dependencies, and Overlaps views — now synced across all views.</li>
+  </ul>
+</div>
+<div class="whats-new">
   <h3>🗞️ What Changed — July 20, 2026 Refresh</h3>
   <ul>
     <li><span class="change-tag tag-risk">⚠️ REVERSED</span><strong>Candidate Experience — CE Operating Model / RPO RC SOP Design back to Delayed:</strong> The Jul 17 refresh had corrected this to "In Progress." The latest RPO Roadmap pull shows it flipped back to Delayed (May–Jul 2026 target).</li>
@@ -380,17 +393,6 @@ async function checkAuth(){
     <li><span class="change-tag tag-risk">⚠️ ESCALATED</span><strong>Peacock Scheduling — now Delayed:</strong> Planning is 10 days past its Jul 10 target; Onboarding/Training Week (due Jul 17) is now 3 days overdue and hasn't started.</li>
     <li><span class="change-tag tag-risk">⚠️ ESCALATED</span><strong>G&amp;A Recruiting (Full Cycle) — now Delayed:</strong> Intake &amp; Business Needs Assessment is 17 days past its Jul 3 target, and the SOP Development window (Jul 6–15) has fully elapsed with no work logged — putting the Aug 17–21 Implementation/Onboarding at risk.</li>
     <li><span class="change-tag tag-new">NEW</span><strong>RPO Governance &amp; Cross-Program — two items added:</strong> RPO Resource Onboarding/Offboarding SOP is ✅ Completed. SOW and Invoice Tracking Process is In Progress (adding cost savings data to the tracker).</li>
-  </ul>
-</div>
-<div class="whats-new">
-  <h3>🗞️ What Changed — July 13, 2026 Refresh</h3>
-  <ul>
-    <li><span class="change-tag tag-updated">CORRECTED</span><strong>G&amp;A Competency + Assessment Matrix — Actually In Progress:</strong> Competency mapping (3.1.1) has been In Progress since May 25 (target was Jul 3 — now ~10 days overdue). Recommendations to PBP/HOP for sign-off (3.1.2) are due today, Jul 13. Corrected from "Not Started."</li>
-    <li><span class="change-tag tag-updated">CORRECTED</span><strong>Candidate Experience — CE Operating Model + RPO RC SOP Design no longer Delayed:</strong> Governance tracker now shows this In Progress with an extended timeline (Apr–Sep 30, 2026), not Delayed (May–Jul) as previously tracked.</li>
-    <li><span class="change-tag tag-risk">⚠️ NEW RISK</span><strong>Peacock Scheduling — Planning Target Missed:</strong> Planning (SOP buildout/structure) was targeting Jul 10; still In Progress as of Jul 13 (3 days overdue). Onboarding/Training Week (Jul 17) is next.</li>
-    <li><span class="change-tag tag-risk">⚠️ NEW RISK</span><strong>G&amp;A Recruiting (Full Cycle) — Intake Overdue:</strong> Intake &amp; Business Needs Assessment targeted Jul 3; still In Progress as of Jul 13 (10 days overdue). SOP Development (Jul 6–15) has not yet started.</li>
-    <li><span class="change-tag tag-risk">⚠️ SOURCE ISSUE</span><strong>Global Programmes Master Tracker returned empty again:</strong> Global Programs track data held from prior refresh — issue persists, verify source sheet structure/access.</li>
-    <li><span class="change-tag tag-risk">⚠️ SOURCE ISSUE</span><strong>Global Unified Processes_Aggregate doc exceeded retrieval size limit:</strong> Could not be read this refresh (same limitation hit previously); no Global Programs data was sourced from it today.</li>
   </ul>
 </div>
 <div class="summary-grid" id="overview-grid">
@@ -491,10 +493,10 @@ async function checkAuth(){
 </div>
 
 <div class="dep-card" id="dep-opmodel">
-  <div class="dep-status-row"><span class="dep-status dep-status-ontrack">✅ ON TRACK</span><span class="dep-next">Op Model → Governance → Enablement cascade</span></div>
+  <div class="dep-status-row"><span class="dep-status dep-status-risk">⚠️ DELAYED</span><span class="dep-next">Blueprint restart pushed to Jul 20 — TA Comms already underway in parallel</span></div>
   <h4>TA Operating Model → Governance → Enablement</h4>
-  <div class="dep-chain"><div class="dep-node active">TA Op Model Blueprint</div><div class="dep-arrow">→</div><div class="dep-node future">Governance Framework</div><div class="dep-arrow">→</div><div class="dep-node future">Global Process Enablement</div><div class="dep-arrow">→</div><div class="dep-node future">TA Comms &amp; Governance</div></div>
-  <div class="dep-note">Operating Model blueprint in progress (Ida Siljander, Q3 2026). Governance Framework and Enablement Strategy follow sequentially.</div>
+  <div class="dep-chain"><div class="dep-node future">TA Op Model Blueprint ⚠️</div><div class="dep-arrow">→</div><div class="dep-node future">Governance Framework</div><div class="dep-arrow">→</div><div class="dep-node future">Global Process Enablement</div><div class="dep-arrow">→</div><div class="dep-node active">TA Comms &amp; Governance</div></div>
+  <div class="dep-note">Op Model Blueprint and Governance Framework both flipped to "Not Yet Started," restart pushed to Jul 20, 2026 (Ida Siljander). TA Comms & Governance has started its Intranet Audit workstream (Jul 1) ahead of the usual cascade, running in parallel rather than waiting on Enablement Strategy.</div>
 </div>
 
 <div class="dep-card" id="dep-data">
@@ -792,17 +794,17 @@ async function checkAuth(){
 </div>
 <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🔄 Internal Mobility — Phase 1</h3><span class="badge badge-in-progress">In Progress</span></div>
-  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Phase 1 live and active (H. Donley). Target close Jul 2026. Runs in parallel with employee referrals and rehire policy programs. All three share similar stakeholder communication needs — TA Comms framework will cover all three.</div>
-  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Jul 2026</span><span class="badge">DRI: H. Donley</span></div></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Phase 1 live and active (H. Donley). Target close now Sep 21, 2026 (extended from Jul 2026 per Global Programmes Master Tracker). Runs in parallel with employee referrals and rehire policy programs. All three share similar stakeholder communication needs — TA Comms framework will cover all three.</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Sep 21, 2026</span><span class="badge">DRI: H. Donley</span></div></div>
 <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">⚠️ Employee Referrals — Phase 1</h3><span class="badge badge-parked">Minor Delays</span></div>
   <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">Minor delays vs. plan. Active but behind. H. Donley is DRI. Stakeholder alignment in progress. Not blocking other programs — running independently.</div>
   <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge badge-parked">Minor Delays</span><span class="badge">DRI: H. Donley</span></div>
 </div>
 <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">⚠️ Representation Rule (P1)</h3><span class="badge badge-in-progress">In Progress — Past Target</span></div>
-  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">P1 priority. Target: Jun 30, 2026 (passed). H. Donley is DRI. Source confirms In Progress as of refresh — confirm completion status. Policy mandates representation in interview panels. Linked to PwD program and refugee hiring BAU. Compliance dep. on Compliance + DEI overlay (Fritz).</div>
-  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Jun 30, 2026</span><span class="badge">DRI: H. Donley</span><span class="badge badge-blocked">Priority 1</span></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">Representation Rule (P1)</h3><span class="badge badge-in-progress">In Progress</span></div>
+  <div style="font-size:12px;color:#555;line-height:1.7;margin-bottom:10px">P1 priority. Target corrected to Aug 3, 2026 (Master Tracker confirms this is the actual target, not Jun 30 — no longer past target). H. Donley is DRI. Policy mandates representation in interview panels. Linked to PwD program and refugee hiring BAU. Compliance dep. on Compliance + DEI overlay (Fritz).</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge badge-track-gp">Global Programs</span><span class="badge">Target: Aug 3, 2026</span><span class="badge">DRI: H. Donley</span><span class="badge badge-blocked">Priority 1</span></div>
 </div>
 <div style="background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:18px">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><h3 style="font-size:13px;font-weight:700;color:#1d1d1f">🇪🇺 EU Pay Transparency</h3><span class="badge badge-completed">✅ Deadline Jun 7</span></div>
@@ -832,7 +834,7 @@ async function checkAuth(){
 <script>
 const barData={
 'bar-ghp':{title:'Global Hiring Philosophy — Phase 1',track:'Global Programs',status:'In Progress',dri:'H. Denhart',target:'Dec 2026',what:'Core values-based hiring framework. Phase 1 targets Dec 2026. Feeds "Great Hiring" competencies, Bar Raiser, and success profiles (2027). PwD/disability and refugee programs aligned to GHP values pillars. Pay Transparency dep. confirmed.',deps:['Bar Raiser Wolt Pilot','Great Hiring Competencies (2027)','Success Profiles (2027)']},
-'bar-opmodel':{title:'TA Operating Model + Governance',track:'Global Programs',status:'In Progress',dri:'Ida Siljander',target:'Q3 2026',what:'Op Model blueprint in progress. Governance Framework follows Q3. Drives Process Enablement Strategy and TA Comms & Governance H2 cascade.',deps:['Governance Framework','Global Process Enablement (Dec 2026)','TA Comms & Governance']},
+'bar-opmodel':{title:'TA Operating Model + Governance',track:'Global Programs',status:'Delayed',dri:'Ida Siljander',target:'Delayed — restart Jul 20, 2026 (Q3 2026 overall)',what:'⚠️ UPDATED Jul 21: Global Unified Processes tracker (items #1–#2) now shows both the Op Model Blueprint and the Governance Framework as "Not Yet Started," with the start date pushed from the original May/June plan to Jul 20, 2026. Previously tracked as In Progress. Drives Process Enablement Strategy and TA Comms & Governance H2 cascade.',deps:['Governance Framework','Global Process Enablement (Dec 2026)','TA Comms & Governance']},
 'bar-rolex':{title:'Project Rolex — TA Leveling ✅',track:'Global Programs',status:'Completed',dri:'H. Donley',target:'Completed Jun 9, 2026',what:'Global TA leveling completed ✅ Jun 9. Phase 2 rollout to follow. Unblocked Capacity Planning (Clare, Q3 2026).',deps:['Capacity Planning Methodology (now unblocked)','SLA Baselines','Standardized MBRs']},
 'bar-mobility':{title:'Internal Mobility — Phase 1',track:'Global Programs',status:'In Progress',dri:'H. Donley',target:'Sep 21, 2026',what:'Phase 1 live and active, now tracked through Sep 21, 2026 (date update per Global Programmes Master Tracker). Baseline metrics defined: internal vs. external hire ratio, time-to-fill, cost-per-hire, retention post-transfer, candidate experience. Runs in parallel with Employee Referrals and Rehire Policy. TA Comms framework will cover all three programs.',deps:['TA Comms Framework','Phase 2 TBD']},
 'bar-referrals':{title:'Employee Referrals — Phase 1',track:'Global Programs',status:'In Progress',dri:'H. Donley',target:'Sep 30, 2026',what:'Unblocked from prior delay — Master Tracker now shows In Progress (previously Delayed). SLA targets improving but still missing goal (currently 80% vs. target). Runs through Sep 30, 2026. Parallel to Internal Mobility and Rehire Policy.',deps:[]},
@@ -857,7 +859,7 @@ const barData={
 'bar-pii':{title:'PII Form Updates & Translations',track:'Global Programs',status:'In Progress',dri:'H. Denhart · Nate Sears',target:'Q3–Q4 2026',what:'PII compliance forms and multi-language translations. In progress through Q3-Q4 2026.',deps:[]},
 'bar-p2p':{title:'Peer2Peer Learning — STA Pilot',track:'Global Programs',status:'In Progress',dri:'Ida Siljander · Dóra Szabó',target:'H1 2026',what:'P2P learning pilot for STA (Student/Associate) track. Linked to Know-How/Keystone training rollout.',deps:['Know-How / Keystone Training']},
 'bar-hvh':{title:'HVH Transformation (Fountain)',track:'Global Programs',status:'In Progress',dri:'Gosia Szafraniec',target:'H2 2026',what:'High-Volume Hiring transformation using Fountain platform. In progress for H2 2026.',deps:['HC App Expansion (HVH)']},
-'bar-tacomms':{title:'TA Comms & Governance',track:'Global Programs',status:'Not Started',dri:'H. Denhart',target:'Q3–Q4 2026',what:'TA Communications and governance framework for program updates and change management. Covers Internal Mobility, Referrals, Rehire, and new processes.',deps:['Op Model Blueprint','Governance Framework']},
+'bar-tacomms':{title:'TA Comms & Governance',track:'Global Programs',status:'In Progress',dri:'H. Denhart',target:'Started Jul 1, 2026 (Q3–Q4 2026)',what:'⚠️ UPDATED Jul 21: the Intranet Audit workstream (Initiation/Discovery) began Jul 1, 2026 per the Global Programmes Master Tracker, advancing this item from Not Started to In Progress — ahead of the Op Model Blueprint/Governance Framework it normally cascades from (those are currently Delayed). Covers Internal Mobility, Referrals, Rehire, and new processes.',deps:['Op Model Blueprint (Delayed)','Governance Framework']},
 'bar-gtonboarding':{title:'Global TA Onboarding',track:'Global Programs',status:'Not Started',dri:'Ida Siljander',target:'H2 2026',what:'Global TA onboarding framework building on Wolt BAU model. H2 2026 target.',deps:['TA Onboarding Wolt (BAU)','Know-How / Keystone']},
 'bar-blockconsolidation':{title:'TA Block Consolidation',track:'Global Programs',status:'Not Started',dri:'Gosia Szafraniec',target:'H2 2026',what:'Consolidation of TA capacity blocks and resource planning. H2 2026 initiative.',deps:['Capacity Planning Methodology']},
 'bar-processmaps':{title:'Global Process Maps (Current State)',track:'TA Ops S&O',status:'In Progress',dri:'Fritz',target:'Q3 2026',what:'Current-state process maps across all TA functions. Fritz DRI. Feeds Compliance + DEI Overlay and SLA Baselines. Q3 2026 target.',deps:['Compliance + DEI Overlay','SLA Baselines']},
@@ -899,14 +901,14 @@ const barData={
 'bar-pda-sourcing':{title:'PD&A (Tech) Sourcing',track:'RPO Programs',status:'In Progress',dri:'Gosia Szafraniec',target:'Active — Process Improvements Delayed',what:'PD&A (Tech) Sourcing active since Jan 2026, led by Gosia Szafraniec (DRI correction — not Nina Olasz). Discovery, process mapping, and SOP development all ✅ Completed. Calibration Sessions ✅ Completed — concluded after 6 sessions; team agreed the process is stable and will use Slack for ongoing alignment going forward. Monthly Touchpoints In Progress (ongoing). Process Improvements work Delayed — team currently prioritizing onboarding for Sales, Security, and G&A programs first; will resume after ramp-up.',deps:['Sales/Security/G&A onboarding ramp-up']},
 'bar-security':{title:'Security (Tech) Sourcing — Onboarding/Shadowing Done, Calibration Pending',track:'RPO Programs',status:'In Progress',dri:'Gosia Szafraniec',target:'Calibration Not Started — pending full onboarding',what:'SOP Development ✅ Completed Jun 19 (after an earlier delay). New 2nd sourcer onboarding: hardware/system access still In Progress — delayed by customs clearance (coordinating with UPS). Shadowing sessions with internal team ✅ Completed Jun 22–23. Calibration Sessions Not Started — waiting for the new resource to be fully onboarded with platform access.',deps:['Hardware/customs clearance','Calibration sessions']},
 'bar-ebrm':{title:'EBRM Admin — Launch & Hypercare',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Hypercare Jul 13–27, 2026',what:'EBRM (Eng Blog Management) admin support has progressed past discovery: Discovery/Scoping ✅ Completed, Planning ✅ Completed, SOP Development ✅ (Eng Blog mgmt SOP, dated 7/13), Go/No-Go ✅ Completed 7/13. Now in Launch & Hypercare (Jul 13–27) — training RPO resource on the SOP with weekly EBRM team check-ins.',deps:['Hypercare wind-down Jul 27']},
-'bar-ga-sourcing':{title:'G&A Sourcing (KellyOCG)',track:'RPO Programs',status:'In Progress',dri:'TA Ops',target:'Inbound SOP ✅ Completed Jul 7 · G&A Recruiting (Full Cycle) launched',what:'Pipeline Hygiene SOP ✅ Completed 6/12/2026; onboarding ✅ Complete Jun 18. Inbound Sourcing SOP ✅ Completed Jul 7 (date corrected — previously tracked as Jun 30). Full-time sourcer Iris Rocha onboarded ✅ Jun 19; Will Andrews shadowing ✅ Completed Jun 30. Implementation/Delivery Jun 15–Jul 30; Project closure In Progress (Jul 30–Aug 15). NEW: G&A Recruiting (Full Cycle) program launched (DRI: Katie Redman) — Discovery Session ✅ Completed Jun 22 (Emily Wheeler & Carol Tao); Intake & Needs Assessment still In Progress and 14 days past its Jul 3 target; SOP Development window (Jul 6–15) has closed without starting — see G&A Recruiting (Full Cycle) bar for details.',deps:['Inbound SOP ✅ Jul 7','G&A Recruiting Full Cycle — Delayed, see dedicated bar']},
+'bar-ga-sourcing':{title:'G&A Sourcing (KellyOCG)',track:'RPO Programs',status:'In Progress',dri:'TA Ops',target:'Inbound SOP ✅ Completed Jul 7 · G&A Recruiting (Full Cycle) launched',what:'Pipeline Hygiene SOP ✅ Completed 6/12/2026; onboarding ✅ Complete Jun 18. Inbound Sourcing SOP ✅ Completed Jul 7 (date corrected — previously tracked as Jun 30). Full-time sourcer Iris Rocha onboarded ✅ Jun 19; Will Andrews shadowing ✅ Completed Jun 30. Implementation/Delivery Jun 15–Jul 30; Project closure In Progress (Jul 30–Aug 15). G&A Recruiting (Full Cycle) program (DRI: Katie Redman) — Discovery Session ✅ Completed Jun 22 (Emily Wheeler & Carol Tao); ⚠️ UPDATED Jul 21: the program has since been Cancelled — see dedicated bar for details.',deps:['Inbound SOP ✅ Jul 7','G&A Recruiting Full Cycle — CANCELLED Jul 21']},
 'bar-sales-sourcing':{title:'Sales Sourcing — Hypercare Active',track:'RPO Programs',status:'In Progress',dri:'RPO Team',target:'Shadowing → Jul 17 · Hypercare Jul 1–Aug 1',what:'Sales outbound sourcing SOP ✅ Completed Jun. BAU launch date changed from Aug to July, as the team managed to onboard in the week of Jun 22nd — pulled forward from the original plan. Shadowing sessions extended through Jul 17 (Sofia Machuca + Baldomero Rivadeneira pairing with Theo Smith) — later than the Jul 2 date tracked in the prior refresh. Hypercare Support now confirmed In Progress (Jul 1–Aug 1): daily stakeholder check-ins + audits in week 1, weekly thereafter.',deps:['Shadowing complete Jul 17','Hypercare through Aug 1']},
-'bar-rpo-gov':{title:'RPO Governance & Cross-Program',track:'RPO Programs',status:'In Progress',dri:'RPO Leadership',target:'Confluence + Slack Feedback Log targeting Jul 2026',what:'RPO Reporting/Self-Service Dashboard In Progress (May–Oct 2026). RPO One-Stop-Shop Confluence Page In Progress, targeting Jul 2026 completion. Slack Feedback Log In Progress, targeting Jul 2026. RPO Program Review Cadence (MBR/QBR) ✅ established (Completed May 2026). HVH Cost Structure Review In Progress (May–Jul 2026). RPO Flash Comm now In Progress (weekly comms, Jul 2026). NEW: RPO Resource Onboarding/Offboarding SOP ✅ Completed. SOW and Invoice Tracking Process In Progress (adding cost savings data to the tracker). Supplier Scorecarding Not Started (Aug–Oct 2026).',deps:['Confluence page (Jul)','Slack Feedback Log (Jul)','SOW/Invoice Tracking (In Progress)','Supplier Scorecarding (Aug–Oct)']},
+'bar-rpo-gov':{title:'RPO Governance & Cross-Program',track:'RPO Programs',status:'In Progress',dri:'RPO Leadership',target:'Dashboard + HVH Cost Review In Progress · Scorecarding Aug–Oct',what:'RPO Reporting/Self-Service Dashboard In Progress (May–Oct 2026). ⚠️→✅ UPDATED Jul 21: RPO One-Stop-Shop Confluence Page is now ✅ Completed (was In Progress). Slack Feedback Log is now ✅ Completed (was In Progress). RPO Program Review Cadence (MBR/QBR) ✅ established (Completed May 2026). HVH Cost Structure Review In Progress (May–Jul 2026). RPO Flash Comm In Progress (weekly comms, Jul 2026). RPO Resource Onboarding/Offboarding SOP ✅ Completed. SOW and Invoice Tracking Process In Progress (adding cost savings data to the tracker). Supplier Scorecarding Not Started (Aug–Oct 2026).',deps:['SOW/Invoice Tracking (In Progress)','Supplier Scorecarding (Aug–Oct)']},
 'bar-rpo-ce':{title:'Candidate Experience (RC Team / RPO)',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'CE Operating Model Delayed (May–Jul) · Referral WM Launch & Hypercare Jul 2026',what:'Candidate Experience (Coordination) program active — ATS dashboard audit mechanisms live, onboarding plan development In Progress. ⚠️ UPDATED Jul 20: CE Operating Model + RPO RC SOP Design is back to Delayed (May–Jul 2026 target) per the latest RPO Roadmap — reverses the "corrected to In Progress" note from the prior refresh. Referral Support — Wolt Market (WM) program: SOP ✅ Completed, Go/No-Go ✅ Completed, now in Launch & Hypercare (Jul 2026) covering a phased rollout. Existing Fountain referral program remains fully BAU (Active since Apr 2026).',deps:['CE Operating Model / RPO RC SOP Design (Delayed)','Referral WM hypercare','Fountain referrals BAU']},
-'bar-rpo-rectech':{title:'RecTech Support (Administrative)',track:'RPO Programs',status:'Delayed',dri:'Nina Olasz',target:'Pre-Launch — ⚠️ Onboarding/Training (Jul 20) missed, Planning 7 days overdue',what:'RecTech admin RPO support. Discovery/scoping ✅ Completed Jun 19. Planning (SOP buildout, resourcing x2, SLAs/KPIs) still In Progress — now 7 days past its Jul 13 target. ⚠️ UPDATED Jul 20: the Onboarding/Training Week milestone was due today and has NOT started because Planning has not closed — this is now a missed date, not just a risk. Resource Ramp-Up (Jul 27) and BAU Ops (Aug 2026) are both at risk of slipping as a result.',deps:['Planning close-out (7 days overdue)','Onboarding/Training (missed Jul 20)','Resource Ramp-Up (Jul 27)']},
-'bar-rpo-peacock':{title:'Peacock Scheduling (RC Support) — New',track:'RPO Programs',status:'Delayed',dri:'Nina Olasz',target:'Pre-Launch — ⚠️ Planning 10 days overdue (was Jul 10)',what:'NEW RPO program. Discovery/scoping ✅ Completed Jul 3. Planning (SOP buildout/structure) still In Progress — now 10 days past its Jul 10 target. ⚠️ UPDATED Jul 20: Onboarding/Training Week for existing HVH resources was due Jul 17 and is now 3 days overdue and not started, since Planning has not closed out. BAU RC Operations targeted Aug 2026.',deps:['Planning — 10 days overdue since Jul 10','Onboarding/Training (3 days overdue since Jul 17)']},
+'bar-rpo-rectech':{title:'RecTech Support (Administrative)',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Onboarding/Training + Resource Ramp-Up In Progress — BAU Ops Aug 2026',what:'RecTech admin RPO support. Discovery/scoping ✅ Completed Jun 19. Planning (SOP buildout, resourcing x2, SLAs/KPIs) ✅ Completed (after running 7 days past its Jul 13 target). ⚠️→✅ UPDATED Jul 21: the Onboarding/Training Week milestone (missed Jul 20 in the prior refresh) is now In Progress, and Resource Ramp-Up (Jul 27) is actively underway — program upgraded from Delayed to In Progress. BAU Ops still targeted for Aug 2026.',deps:['Onboarding/Training — In Progress','Resource Ramp-Up (Jul 27) — In Progress']},
+'bar-rpo-peacock':{title:'Peacock Scheduling (RC Support)',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'RC Operations (BAU) In Progress — Aug 2026',what:'Discovery/scoping ✅ Completed Jul 3. Planning (SOP buildout/structure) ✅ Completed (after running 10 days past its Jul 10 target). ⚠️→✅ UPDATED Jul 21: Onboarding/Training Week for existing HVH resources (previously 3 days overdue) is now ✅ Completed. BAU RC Operations has moved to In Progress ahead of the Aug 2026 target — program upgraded from Delayed to In Progress.',deps:['RC Operations (BAU) — In Progress']},
 'bar-rpo-referral-wm':{title:'Referral Support — Wolt Market (WM) — New',track:'RPO Programs',status:'In Progress',dri:'Nina Olasz',target:'Launch & Hypercare — Jul 2026',what:'NEW referral program covering Wolt Market roles (Hungary, Serbia, Romania). Intake ✅ Completed Jun. SOP Development ✅ Completed Jul 2026 (intake, eligibility, credit reassignment, payout, country-specific rules). Go/No-Go ✅ Completed Jul 2026. Now in Launch & Hypercare — phased rollout with daily stakeholder check-ins.',deps:['Hypercare monitoring']},
-'bar-rpo-ga-recruiting':{title:'G&A Recruiting (Full Cycle) — New Program',track:'RPO Programs',status:'Delayed',dri:'Katie Redman',target:'⚠️ Intake 17 days overdue (was Jul 3) · SOP window (Jul 6–15) closed without starting',what:'NEW full-cycle RPO program for G&A recruiting. Discovery Session ✅ Completed Jun 22 (Emily Wheeler & Carol Tao). Intake & Business Needs Assessment still In Progress — now 17 days past its Jul 3 target. ⚠️ UPDATED Jul 20: the SOP Development window (Jul 6–15) has now fully elapsed with no work logged, putting the Aug 17–21 Implementation/Onboarding and Aug 24–30 Ramp Period at real risk of slipping.',deps:['Intake — 17 days overdue since Jul 3','SOP Development window closed, not started']},
+'bar-rpo-ga-recruiting':{title:'G&A Recruiting (Full Cycle) — CANCELLED',track:'RPO Programs',status:'Cancelled',dri:'Katie Redman',target:'Program Cancelled Jul 21, 2026 — all downstream projects halted',what:'Full-cycle RPO program for G&A recruiting. Discovery Session ✅ Completed Jun 22 (Emily Wheeler & Carol Tao) — unaffected. ⚠️ UPDATED Jul 21: RPO Roadmap now shows the program-level status flipped to Cancelled. Intake & Business Needs Assessment, SOP Development (Jul 6–15), Implementation/Onboarding (Aug 17–21), Ramp Period (Aug 24–30), and BAU Recruiting Operations are all Cancelled in lockstep. No reason was logged in the source.',deps:['Cancelled Jul 21 — no further activity planned']},
 'bar-ce-gov':{title:'RPO Governance for CE',track:'Global CE',status:'In Progress',dri:'Antonis',target:'Jun–Sep 2026',what:'Governance framework for CE within RPO programs. Phase 1 Jun–Sep 2026.',deps:[]},
 'bar-ce-standards':{title:'Global CE Standards & Doc Hub',track:'Global CE',status:'In Progress',dri:'Georgia',target:'Jun–Sep 2026',what:'Standards documentation and hub for global candidate experience. Jun–Sep 2026 phase.',deps:['CE Survey / Sigma']},
 'bar-ce-agile':{title:'Agile Pool & Unification',track:'Global CE',status:'In Progress',dri:'Claudia',target:'Jun–Sep 2026',what:'Agile RC pool unification across brands. Jun–Sep 2026.',deps:[]},
@@ -917,7 +919,7 @@ const barData={
 
 const tableData=[
 {n:'Global Hiring Philosophy Ph.1',track:'Global Programs',dri:'H. Denhart',cat:'Program',sz:'XL',st:'In Progress',yr:'2026',est:'Dec 2026'},
-{n:'TA Op Model + Governance',track:'Global Programs',dri:'Ida Siljander',cat:'Framework',sz:'L',st:'In Progress',yr:'2026',est:'Q3 2026'},
+{n:'TA Op Model + Governance',track:'Global Programs',dri:'Ida Siljander',cat:'Framework',sz:'L',st:'Delayed',yr:'2026',est:'Restart Jul 20, 2026 (Q3 2026 overall)'},
 {n:'Project Rolex — TA Leveling',track:'Global Programs',dri:'H. Donley',cat:'Program',sz:'L',st:'Completed',yr:'2026',est:'✅ Jun 9, 2026'},
 {n:'Internal Mobility Ph.1',track:'Global Programs',dri:'H. Donley',cat:'Program',sz:'M',st:'In Progress',yr:'2026',est:'Sep 21, 2026'},
 {n:'Employee Referrals Ph.1',track:'Global Programs',dri:'H. Donley',cat:'Program',sz:'M',st:'In Progress',yr:'2026',est:'Sep 30, 2026'},
@@ -942,7 +944,7 @@ const tableData=[
 {n:'PII Form Updates & Translations',track:'Global Programs',dri:'H. Denhart',cat:'Compliance',sz:'M',st:'In Progress',yr:'2026',est:'Q3–Q4 2026'},
 {n:'P2P Learning — STA Pilot',track:'Global Programs',dri:'Ida Siljander',cat:'Enablement',sz:'M',st:'In Progress',yr:'2026',est:'H1 2026'},
 {n:'HVH Transformation (Fountain)',track:'Global Programs',dri:'Gosia Szafraniec',cat:'Program',sz:'L',st:'In Progress',yr:'2026',est:'H2 2026'},
-{n:'TA Comms & Governance',track:'Global Programs',dri:'H. Denhart',cat:'Framework',sz:'M',st:'Not Started',yr:'2026',est:'Q3–Q4 2026'},
+{n:'TA Comms & Governance',track:'Global Programs',dri:'H. Denhart',cat:'Framework',sz:'M',st:'In Progress',yr:'2026',est:'Started Jul 1 — Q3–Q4 2026'},
 {n:'Global TA Onboarding',track:'Global Programs',dri:'Ida Siljander',cat:'Enablement',sz:'L',st:'Not Started',yr:'2026',est:'H2 2026'},
 {n:'TA Block Consolidation',track:'Global Programs',dri:'Gosia Szafraniec',cat:'Ops',sz:'M',st:'Not Started',yr:'2026',est:'H2 2026'},
 {n:'Global Process Maps',track:'TA Ops',dri:'Fritz',cat:'Ops',sz:'M',st:'In Progress',yr:'2026',est:'Q3 2026'},
@@ -988,10 +990,10 @@ const tableData=[
 {n:'G&A Sourcing (KellyOCG)',track:'RPO Programs',dri:'TA Ops',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Inbound SOP ✅ Completed Jul 7 — Delivery Jul 30–Aug 15'},
 {n:'RPO Governance & Cross-Program',track:'RPO Programs',dri:'RPO Leadership',cat:'Governance',sz:'M',st:'In Progress',yr:'2026',est:'Confluence + Slack Feedback Log → Jul 2026'},
 {n:'CE (RC Team / RPO)',track:'RPO Programs',dri:'Nina Olasz',cat:'CE',sz:'M',st:'In Progress',yr:'2026',est:'Referral WM Launch & Hypercare — Jul 2026'},
-{n:'RecTech Support (Administrative)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'M',st:'Delayed',yr:'2026',est:'Pre-Launch — ⚠️ Onboarding/Training (Jul 20) missed, Planning 7 days overdue'},
-{n:'Peacock Scheduling (RC Support)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'S',st:'Delayed',yr:'2026',est:'Pre-Launch — ⚠️ Planning 10 days overdue (was Jul 10)'},
+{n:'RecTech Support (Administrative)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Onboarding/Training + Resource Ramp-Up In Progress — BAU Ops Aug 2026'},
+{n:'Peacock Scheduling (RC Support)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'S',st:'In Progress',yr:'2026',est:'RC Operations (BAU) In Progress — Aug 2026'},
 {n:'Referral Support — Wolt Market (WM)',track:'RPO Programs',dri:'Nina Olasz',cat:'RPO',sz:'M',st:'In Progress',yr:'2026',est:'Launch & Hypercare — Jul 2026'},
-{n:'G&A Recruiting (Full Cycle)',track:'RPO Programs',dri:'Katie Redman',cat:'RPO',sz:'M',st:'Delayed',yr:'2026',est:'⚠️ Intake 17 days overdue · SOP window closed, not started'},
+{n:'G&A Recruiting (Full Cycle)',track:'RPO Programs',dri:'Katie Redman',cat:'RPO',sz:'M',st:'Cancelled',yr:'2026',est:'Program Cancelled Jul 21, 2026 — all projects halted'},
 {n:'RPO Governance for CE',track:'Global CE',dri:'Antonis',cat:'CE',sz:'M',st:'In Progress',yr:'2026',est:'Jun–Sep 2026'},
 {n:'Global CE Standards & Doc Hub',track:'Global CE',dri:'Georgia',cat:'CE',sz:'L',st:'In Progress',yr:'2026',est:'Jun–Sep 2026'},
 {n:'Agile Pool & Unification',track:'Global CE',dri:'Claudia',cat:'CE',sz:'M',st:'In Progress',yr:'2026',est:'Jun–Sep 2026'},
@@ -1006,7 +1008,7 @@ function showTT(e,tid){
   const d=barData[tid];
   if(!d)return;
   const tt=document.getElementById('gtt');
-  const stMap={Completed:'badge-completed',In_Progress:'badge-in-progress','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked',Parked:'badge-parked'};
+  const stMap={Completed:'badge-completed',In_Progress:'badge-in-progress','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked',Parked:'badge-parked',Cancelled:'badge-cancelled'};
   const stKey=(d.status||'').replace(' ','_');
   tt.innerHTML=`<div class="gtt-title">${d.title}</div>
 <div class="gtt-meta">
@@ -1106,7 +1108,7 @@ function filterItems(type,val,el){
 function renderTable(){
   const search=(document.getElementById('items-search').value||'').toLowerCase();
   const tbody=document.getElementById('items-body');
-  const stClass={Completed:'badge-completed','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked',Parked:'badge-parked'};
+  const stClass={Completed:'badge-completed','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked',Parked:'badge-parked',Cancelled:'badge-cancelled'};
   const trClass={2026:'badge-2026',2027:'badge-2027'};
   const tkClass={'Global Programs':'badge-track-gp','TA Ops':'badge-track-ops',RecTech:'badge-track-tech','G&A':'badge-track-ga','PD&A':'badge-track-pda','RPO Programs':'badge-track-rpo','Global CE':'badge-track-ce'};
   let rows=tableData.filter(r=>{
@@ -1152,7 +1154,7 @@ function buildOverview(){
 </div>`;
   }).join('');
   const milestones=[
-    {d:'Jun 30, 2026',n:'Representation Rule (P1) — ⚠️ Past target, In Progress',s:'done'},
+    {d:'Aug 3, 2026',n:'Representation Rule (P1) — In Progress, corrected target (was Jun 30)',s:'future'},
     {d:'Jul 7, 2026',n:'G&A Sourcing Inbound SOP ✅ Completed (date corrected)',s:'done'},
     {d:'Jul 10, 2026',n:'Peacock Scheduling — Planning target ⚠️ missed, still In Progress · EBRM Go/No-Go ✅',s:'done'},
     {d:'Jul 13–27, 2026',n:'EBRM Admin — Launch & Hypercare',s:'active'},
@@ -1176,7 +1178,7 @@ function buildHoP(){
   const hopItems=[
     {track:'Global Programs',n:'Global Hiring Philosophy Ph.1',st:'In Progress',target:'Dec 2026',signal:'On track — major 2027 unlock'},
     {track:'Global Programs',n:'Project Rolex ✅',st:'Completed',target:'Done Jun 9',signal:'✅ Complete — unblocked capacity planning'},
-    {track:'Global Programs',n:'Representation Rule (P1)',st:'In Progress',target:'Jun 30 — Past target',signal:'⚠️ Target passed — confirm completion with H. Donley'},
+    {track:'Global Programs',n:'Representation Rule (P1)',st:'In Progress',target:'Aug 3, 2026',signal:'On track for corrected Aug 3 target'},
     {track:'Global Programs',n:'Deliveroo Process Integration',st:'Not Started',target:'Dec 2026',signal:'Large scope — scoped Jun 1'},
     {track:'G&A',n:'HC Approval Framework ✅',st:'Completed',target:'Done Jun 9',signal:'✅ Complete'},
     {track:'G&A',n:'Offer Approval Workflow',st:'In Progress',target:'Jul 15, 2026',signal:'In progress — 2 weeks to target'},
@@ -1185,14 +1187,14 @@ function buildHoP(){
     {track:'RPO Programs',n:'Sales Sourcing',st:'In Progress',target:'Shadowing → Jul 17 · Hypercare Jul 1–Aug 1',signal:'Hypercare now active — shadowing extended to Jul 17'},
     {track:'RPO Programs',n:'Security (Tech) Sourcing',st:'In Progress',target:'Calibration pending',signal:'⚠️ Hardware customs delay — calibration blocked'},
     {track:'RPO Programs',n:'EBRM Admin',st:'In Progress',target:'Hypercare Jul 13–27',signal:'✅ Advanced from Discovery to Launch & Hypercare'},
-    {track:'RPO Programs',n:'Peacock Scheduling',st:'Delayed',target:'Planning 10 days overdue (was Jul 10)',signal:'⚠️ Planning 10 days overdue; Onboarding/Training (Jul 17) also 3 days overdue'},
-    {track:'RPO Programs',n:'G&A Recruiting (Full Cycle)',st:'Delayed',target:'Intake 17 days overdue (was Jul 3)',signal:'⚠️ Intake 17 days overdue; SOP window (Jul 6–15) closed, not started'},
-    {track:'RPO Programs',n:'RecTech Support (Administrative)',st:'Delayed',target:'Onboarding/Training (Jul 20) missed',signal:'⚠️ Onboarding/Training due today, not started — Planning 7 days overdue'},
+    {track:'RPO Programs',n:'Peacock Scheduling',st:'In Progress',target:'RC Operations (BAU) — Aug 2026',signal:'✅ Onboarding/Training complete — RC Operations now In Progress'},
+    {track:'RPO Programs',n:'G&A Recruiting (Full Cycle)',st:'Cancelled',target:'Cancelled Jul 21, 2026',signal:'⚠️ Program cancelled — all downstream projects halted'},
+    {track:'RPO Programs',n:'RecTech Support (Administrative)',st:'In Progress',target:'Resource Ramp-Up (Jul 27) In Progress',signal:'✅ Onboarding/Training underway — Planning closed, Ramp-Up on track'},
     {track:'G&A',n:'G&A Competency + Assessment Matrix',st:'In Progress',target:'Recs due Jul 13',signal:'Mapping overdue since Jul 3 — recommendations due today'},
     {track:'PD&A',n:'2026 Hiring Demand',st:'Blocked',target:'⛔ Blocked',signal:'⛔ Entity/location strategy needed'},
     {track:'Global CE',n:'Unified CE Survey / Sigma',st:'Blocked',target:'⛔ Blocked',signal:'⛔ Integration blocker — CE dashboard gated'}
   ];
-  const stClass={Completed:'badge-completed','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked'};
+  const stClass={Completed:'badge-completed','In Progress':'badge-in-progress','Not Started':'badge-not-started',Blocked:'badge-blocked',Delayed:'badge-parked',Cancelled:'badge-cancelled'};
   let inprog=0,comp=0,risk=0,ns=0;
   hopItems.forEach(r=>{if(r.st==='In Progress')inprog++;else if(r.st==='Completed')comp++;else if(r.st==='Blocked'||r.st==='Delayed'||r.signal.includes('⚠️'))risk++;else ns++;});
   document.getElementById('hop-inprogress').textContent=inprog;
@@ -1212,9 +1214,6 @@ function buildHoP(){
     {t:'⚠️ Security (Tech) Sourcing — Hardware Customs Delay',d:'New sourcer onboarding training plan finalized, shadowing ✅ Jun 22–23, but hardware still in customs. Platform access pending. Calibration Not Started.',sev:'risk'},
     {t:'⚠️ Bar Raiser — Wolt Pilot',d:'Delayed due to lower hiring volume. Must succeed before global Bar Raiser (2027) can begin.',sev:'risk'},
     {t:'⚠️ G&A HC App Full Standardization',d:'Step 1.2.1 (approval/mapping requirements to IT & People Product) is Blocked. Affects 2027 Deliveroo standardization timeline.',sev:'risk'},
-    {t:'⚠️ Peacock Scheduling — Now Delayed',d:'Planning target was Jul 10; still In Progress as of Jul 20 (10 days past target). Onboarding/Training Week (due Jul 17) is also now 3 days overdue and not started.',sev:'risk'},
-    {t:'⚠️ G&A Recruiting (Full Cycle) — Now Delayed',d:'Intake & Business Needs Assessment target was Jul 3; still In Progress as of Jul 20 (17 days past target). SOP Development window (Jul 6–15) has fully elapsed with no work logged.',sev:'risk'},
-    {t:'⚠️ RecTech Support (Administrative) — Now Delayed',d:'Onboarding/Training Week was due today (Jul 20) and has not started because Planning (Jul 13 target) has not closed — now 7 days overdue. Resource Ramp-Up (Jul 27) is at risk.',sev:'risk'}
   ];
   document.getElementById('hop-blockers').innerHTML=blockers.map(b=>`<div style="background:${b.sev==='blocked'?'#fff5f5':'#fffbf0'};border:1px solid ${b.sev==='blocked'?'#fcc':'#ffe082'};border-radius:8px;padding:12px 14px">
 <div style="font-size:12px;font-weight:700;color:${b.sev==='blocked'?'#c0392b':'#b35a00'};margin-bottom:4px">${b.t}</div>
@@ -1222,11 +1221,11 @@ function buildHoP(){
 </div>`).join('');
   const deliverables=[
     'Jul 7 ✅: G&A Sourcing Inbound SOP Completed (date corrected from Jun 30)',
-    'Jul 10 ⚠️: Peacock Scheduling planning target passed, now Delayed (10 days overdue) · EBRM Go/No-Go ✅',
+    'Jul 10: Peacock Scheduling planning target passed (10 days overdue), later completed · EBRM Go/No-Go ✅',
     'Jul 13–27: EBRM Admin Launch & Hypercare',
     'Jul 15: Offer Approval Workflow — TA S&O',
     'Jul 17: Sales Sourcing Shadowing complete → Hypercare through Aug 1',
-    'Jul 20 ⚠️: RecTech Support Onboarding/Training Week missed — now Delayed',
+    'Jul 20→21: RecTech Support Onboarding/Training Week underway — no longer Delayed',
     'Q3: TA Op Model + Process Maps + Capacity Planning (Rolex ✅ unblocked)',
     'Q4: MBR Framework + Data Dictionary + TA Metrics FW (post-Roo)',
     'Dec 2026: GHP Ph.1 + Deliveroo Integration + PwD Program'
@@ -1253,9 +1252,9 @@ function buildQuarterly(){
     {track:'RPO Programs',n:'Sales Sourcing Hypercare Jul 1–Aug 1',dri:'RPO Team',pri:'P1'},
     {track:'RPO Programs',n:'Security Sourcing — Calibration start',dri:'RPO Team',pri:'P1'},
     {track:'RPO Programs',n:'EBRM Admin — Launch & Hypercare Jul 13–27',dri:'Nina Olasz',pri:'P1'},
-    {track:'RPO Programs',n:'Peacock Scheduling — Delayed (Planning 10 days overdue)',dri:'Nina Olasz',pri:'P1'},
-    {track:'RPO Programs',n:'G&A Recruiting (Full Cycle) — Delayed (Intake 17 days overdue)',dri:'Katie Redman',pri:'P1'},
-    {track:'RPO Programs',n:'RecTech Support (Administrative) — Delayed (Onboarding/Training missed)',dri:'Nina Olasz',pri:'P1'},
+    {track:'RPO Programs',n:'Peacock Scheduling — RC Operations (BAU) In Progress',dri:'Nina Olasz',pri:'P2'},
+    {track:'RPO Programs',n:'G&A Recruiting (Full Cycle) — CANCELLED Jul 21',dri:'Katie Redman',pri:'P2'},
+    {track:'RPO Programs',n:'RecTech Support (Administrative) — Onboarding/Training + Ramp-Up In Progress',dri:'Nina Olasz',pri:'P2'},
     {track:'Global CE',n:'CE Standards & Doc Hub',dri:'Georgia',pri:'P2'},
     {track:'Global CE',n:'Agile Pool & Unification',dri:'Claudia',pri:'P2'}
   ];
